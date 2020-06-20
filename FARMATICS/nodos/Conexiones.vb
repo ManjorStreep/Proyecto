@@ -16,9 +16,13 @@ Module Conexiones
         End Try
     End Sub
 
-    Public Function Productos(ByVal texto As String)
+    Public Sub registrar(ByVal texto As String)
         Conexion.Open()
 
+    End Sub
+
+    Public Function Productos(ByVal texto As String)
+        Conexion.Open()
         Dim datos As New DataSet
         Dim adaptador As OleDbDataAdapter = New OleDbDataAdapter(texto, Conexion)
         adaptador.Fill(datos, "Clientes")

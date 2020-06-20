@@ -1,0 +1,13 @@
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe.config
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.pdb
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.xml
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmCaja.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmFichas.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmHacer_Venta.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmLogin.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.Resources.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.exe
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.xml
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.pdb
