@@ -34,7 +34,7 @@ Public Class frmFichas
 
     End Sub
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        Dim myImagenConsulta As Image
+        'Dim myImagenConsulta As Image
 
         ' myImagenConsulta = BytesToImagen(Conexion.consultaByte(TextBox1.Text))
         'PictureBox2.Image = myImagenConsulta
