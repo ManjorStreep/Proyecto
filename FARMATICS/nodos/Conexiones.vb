@@ -22,6 +22,7 @@ Module Conexiones
         Dim datos As New DataSet
         Dim adaptador As OleDbDataAdapter = New OleDbDataAdapter(texto, Conexion)
         adaptador.Fill(datos, "Clientes")
+        Conexion.Close()
         Return datos
     End Function
 

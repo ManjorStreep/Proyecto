@@ -6,6 +6,7 @@
 
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.DataSource = Conexiones.Productos("Select * from Clientes")
+        DataGridView1.DataMember = "Clientes"
 
     End Sub
 
