@@ -113,6 +113,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="nodos\Conexiones.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="forms\frmCaja.resx">
@@ -152,9 +153,7 @@
   <ItemGroup>
     <None Include="Resources\logo-farmatic_vec_png.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="nodos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\doctor.png" />
   </ItemGroup>
