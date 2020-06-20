@@ -5,19 +5,6 @@
     End Sub
 
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-<<<<<<< HEAD
-
-        Conexiones.ObtenerTabla("Clientes", DataGridView1)
-=======
-        '
-        'carga de objeto datagridview
-        '
-        DataGridView1.DataSource = Conexiones.obtenerDataSet("Select * from Clientes", "Clientes")
-        DataGridView1.DataMember = "Clientes"
-        '
-        'carga del area de Identificacion del Cajero
-        '
->>>>>>> 9ac577c7aa89f085b74216bae718dbcbb8b8272f
 
     End Sub
 
