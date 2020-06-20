@@ -5,7 +5,6 @@ Module Conexiones
     ' Declaracion de variables a usar en el modulo.
     Public Conexion As OleDbConnection = New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & System.IO.Directory.GetCurrentDirectory() & "\Database.mdb;")
 
-
     Public Sub RegistrarDatos(ByVal texto As String, ByVal valores As List(Of String))
         Dim inicioConsulta As String = "INSERT INTO " & texto & " "
         Dim complementoConsulta As String = "Nombre de tabla equivocada"
@@ -47,6 +46,11 @@ Module Conexiones
         adaptador.Fill(datos, nombreTabla)
         tabla.DataSource = datos
         tabla.DataMember = nombreTabla
+        Conexion.Close()
+    End Sub
+
+    Public Sub ObtenerDatos()
+        Conexion.Open()
         Conexion.Close()
     End Sub
 
