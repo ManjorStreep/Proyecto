@@ -39,7 +39,7 @@ Namespace My.Resources
         Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("WindowsApplication1.Resources", GetType(Resources).Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("WindowsApplicationFARMATICS.Resources", GetType(Resources).Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property doctor() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("doctor", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property logo_farmatic_vec_png() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("logo-farmatic_vec_png", resourceCulture)
@@ -76,6 +86,16 @@ Namespace My.Resources
         Friend ReadOnly Property profile_2092113_960_720() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("profile-2092113_960_720", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property undraw_medical_research_qg4d() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("undraw_medical_research_qg4d", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
