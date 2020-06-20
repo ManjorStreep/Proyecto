@@ -26,12 +26,12 @@ Partial Class frmCaja
         Me.btn_salir = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.txt_DNI = New System.Windows.Forms.Label()
+        Me.lb_datocajero4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txt_charge = New System.Windows.Forms.Label()
-        Me.txt_ID = New System.Windows.Forms.Label()
-        Me.txt_lastname = New System.Windows.Forms.Label()
-        Me.txt_name = New System.Windows.Forms.Label()
+        Me.lb_datocajero3 = New System.Windows.Forms.Label()
+        Me.lb_datocajero2 = New System.Windows.Forms.Label()
+        Me.lb_datocajero1 = New System.Windows.Forms.Label()
+        Me.lb_datocajero0 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -67,12 +67,12 @@ Partial Class frmCaja
         Me.gbPerfil.Controls.Add(Me.btn_salir)
         Me.gbPerfil.Controls.Add(Me.PictureBox3)
         Me.gbPerfil.Controls.Add(Me.PictureBox1)
-        Me.gbPerfil.Controls.Add(Me.txt_DNI)
+        Me.gbPerfil.Controls.Add(Me.lb_datocajero4)
         Me.gbPerfil.Controls.Add(Me.Label5)
-        Me.gbPerfil.Controls.Add(Me.txt_charge)
-        Me.gbPerfil.Controls.Add(Me.txt_ID)
-        Me.gbPerfil.Controls.Add(Me.txt_lastname)
-        Me.gbPerfil.Controls.Add(Me.txt_name)
+        Me.gbPerfil.Controls.Add(Me.lb_datocajero3)
+        Me.gbPerfil.Controls.Add(Me.lb_datocajero2)
+        Me.gbPerfil.Controls.Add(Me.lb_datocajero1)
+        Me.gbPerfil.Controls.Add(Me.lb_datocajero0)
         Me.gbPerfil.Controls.Add(Me.Label4)
         Me.gbPerfil.Controls.Add(Me.Label3)
         Me.gbPerfil.Controls.Add(Me.Label2)
@@ -123,15 +123,15 @@ Partial Class frmCaja
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
-        'txt_DNI
+        'lb_datocajero4
         '
-        Me.txt_DNI.AutoSize = True
-        Me.txt_DNI.BackColor = System.Drawing.Color.Silver
-        Me.txt_DNI.Location = New System.Drawing.Point(100, 397)
-        Me.txt_DNI.Name = "txt_DNI"
-        Me.txt_DNI.Size = New System.Drawing.Size(43, 13)
-        Me.txt_DNI.TabIndex = 13
-        Me.txt_DNI.Text = "txt_DNI"
+        Me.lb_datocajero4.AutoSize = True
+        Me.lb_datocajero4.BackColor = System.Drawing.Color.Silver
+        Me.lb_datocajero4.Location = New System.Drawing.Point(100, 397)
+        Me.lb_datocajero4.Name = "lb_datocajero4"
+        Me.lb_datocajero4.Size = New System.Drawing.Size(40, 13)
+        Me.lb_datocajero4.TabIndex = 13
+        Me.lb_datocajero4.Text = "lb_DNI"
         '
         'Label5
         '
@@ -143,45 +143,45 @@ Partial Class frmCaja
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "DNI :"
         '
-        'txt_charge
+        'lb_datocajero3
         '
-        Me.txt_charge.AutoSize = True
-        Me.txt_charge.BackColor = System.Drawing.Color.Silver
-        Me.txt_charge.Location = New System.Drawing.Point(100, 369)
-        Me.txt_charge.Name = "txt_charge"
-        Me.txt_charge.Size = New System.Drawing.Size(57, 13)
-        Me.txt_charge.TabIndex = 11
-        Me.txt_charge.Text = "txt_charge"
+        Me.lb_datocajero3.AutoSize = True
+        Me.lb_datocajero3.BackColor = System.Drawing.Color.Silver
+        Me.lb_datocajero3.Location = New System.Drawing.Point(100, 369)
+        Me.lb_datocajero3.Name = "lb_datocajero3"
+        Me.lb_datocajero3.Size = New System.Drawing.Size(48, 13)
+        Me.lb_datocajero3.TabIndex = 11
+        Me.lb_datocajero3.Text = "lb_cargo"
         '
-        'txt_ID
+        'lb_datocajero2
         '
-        Me.txt_ID.AutoSize = True
-        Me.txt_ID.BackColor = System.Drawing.Color.Silver
-        Me.txt_ID.Location = New System.Drawing.Point(100, 345)
-        Me.txt_ID.Name = "txt_ID"
-        Me.txt_ID.Size = New System.Drawing.Size(35, 13)
-        Me.txt_ID.TabIndex = 10
-        Me.txt_ID.Text = "txt_ID"
+        Me.lb_datocajero2.AutoSize = True
+        Me.lb_datocajero2.BackColor = System.Drawing.Color.Silver
+        Me.lb_datocajero2.Location = New System.Drawing.Point(100, 345)
+        Me.lb_datocajero2.Name = "lb_datocajero2"
+        Me.lb_datocajero2.Size = New System.Drawing.Size(32, 13)
+        Me.lb_datocajero2.TabIndex = 10
+        Me.lb_datocajero2.Text = "lb_ID"
         '
-        'txt_lastname
+        'lb_datocajero1
         '
-        Me.txt_lastname.AutoSize = True
-        Me.txt_lastname.BackColor = System.Drawing.Color.Silver
-        Me.txt_lastname.Location = New System.Drawing.Point(100, 321)
-        Me.txt_lastname.Name = "txt_lastname"
-        Me.txt_lastname.Size = New System.Drawing.Size(66, 13)
-        Me.txt_lastname.TabIndex = 9
-        Me.txt_lastname.Text = "txt_lastname"
+        Me.lb_datocajero1.AutoSize = True
+        Me.lb_datocajero1.BackColor = System.Drawing.Color.Silver
+        Me.lb_datocajero1.Location = New System.Drawing.Point(100, 321)
+        Me.lb_datocajero1.Name = "lb_datocajero1"
+        Me.lb_datocajero1.Size = New System.Drawing.Size(63, 13)
+        Me.lb_datocajero1.TabIndex = 9
+        Me.lb_datocajero1.Text = "lb_lastname"
         '
-        'txt_name
+        'lb_datocajero0
         '
-        Me.txt_name.AutoSize = True
-        Me.txt_name.BackColor = System.Drawing.Color.Silver
-        Me.txt_name.Location = New System.Drawing.Point(100, 296)
-        Me.txt_name.Name = "txt_name"
-        Me.txt_name.Size = New System.Drawing.Size(50, 13)
-        Me.txt_name.TabIndex = 8
-        Me.txt_name.Text = "txt_name"
+        Me.lb_datocajero0.AutoSize = True
+        Me.lb_datocajero0.BackColor = System.Drawing.Color.Silver
+        Me.lb_datocajero0.Location = New System.Drawing.Point(100, 296)
+        Me.lb_datocajero0.Name = "lb_datocajero0"
+        Me.lb_datocajero0.Size = New System.Drawing.Size(47, 13)
+        Me.lb_datocajero0.TabIndex = 8
+        Me.lb_datocajero0.Text = "lb_name"
         '
         'Label4
         '
@@ -391,15 +391,15 @@ Partial Class frmCaja
     Friend WithEvents pb_profile As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btn_salir As System.Windows.Forms.Button
-    Friend WithEvents txt_lastname As System.Windows.Forms.Label
-    Friend WithEvents txt_name As System.Windows.Forms.Label
+    Friend WithEvents lb_datocajero1 As System.Windows.Forms.Label
+    Friend WithEvents lb_datocajero0 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents txt_charge As System.Windows.Forms.Label
-    Friend WithEvents txt_ID As System.Windows.Forms.Label
-    Friend WithEvents txt_DNI As System.Windows.Forms.Label
+    Friend WithEvents lb_datocajero3 As System.Windows.Forms.Label
+    Friend WithEvents lb_datocajero2 As System.Windows.Forms.Label
+    Friend WithEvents lb_datocajero4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
