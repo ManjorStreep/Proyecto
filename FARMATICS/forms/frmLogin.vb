@@ -9,7 +9,7 @@ Public Class frmLogin
         MsgBox("¿Seguro que desea salir de la plataforma?", MsgBoxStyle.OkOnly)
         Me.Close()
     End Sub
-    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_2(sender As Object, e As EventArgs)
         'abrir()
         x = TextBox1.Text
         Try
@@ -24,4 +24,7 @@ Public Class frmLogin
         'End If
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

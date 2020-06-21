@@ -24,3 +24,7 @@ C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\W
 C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmLogin.resources
 C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.Resources.resources
 C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
+C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe.config
+C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.exe
+C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.xml
+C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.pdb

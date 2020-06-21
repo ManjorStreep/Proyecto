@@ -162,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconfinder_12-lan-connected-512x512_265522.ico" />
+    <None Include="Resources\login_variant_icon_1384101.png" />
+    <None Include="Resources\login_variant_icon_138410.png" />
+    <None Include="Resources\cslogin_94432.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

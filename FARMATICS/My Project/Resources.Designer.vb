@@ -63,9 +63,39 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property cslogin_94432() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cslogin_94432", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property doctor() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("doctor", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property login_variant_icon_138410() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("login_variant_icon_138410", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property login_variant_icon_1384101() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("login_variant_icon_1384101", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

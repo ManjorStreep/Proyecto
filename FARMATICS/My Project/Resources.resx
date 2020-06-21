@@ -118,16 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cslogin_94432" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cslogin_94432.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="profile-2092113_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profile-2092113_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo-farmatic_vec_png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-farmatic_vec_png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="profile-2092113_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile-2092113_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_variant_icon_138410" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_variant_icon_138410.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="undraw_medical_research_qg4d" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undraw_medical_research_qg4d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_variant_icon_1384101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_variant_icon_1384101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
