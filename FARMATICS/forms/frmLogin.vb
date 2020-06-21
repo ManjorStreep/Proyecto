@@ -10,18 +10,12 @@ Public Class frmLogin
         Me.Close()
     End Sub
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
-        'abrir()
-        x = TextBox1.Text
-        Try
-            'conexion_1.Login(TextBox1.Text, TextBox2.Text)
 
-        Catch EX As Exception
-            MsgBox(EX.ToString)
-        End Try
-        'If conexion_1.conector = False Then
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        'End If
+        Dim datos As List(Of String) = Conexiones.ObtenerDatos("Empleados", "WHERE CEDULA ='" & TextBox1.Text & "'")
+        If datos.Item(10) = TextBox2.Text Then
+            MsgBox("Login exitoso")
+        End If
+
     End Sub
 
 End Class
