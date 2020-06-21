@@ -4,6 +4,10 @@ Module Conexiones
 
     ' Declaracion de variables a usar en el modulo.
     Public Conexion As OleDbConnection = New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & System.IO.Directory.GetCurrentDirectory() & "\Database.mdb;")
+    Public Comando As OleDbCommand
+    Public Lector As OleDbDataReader
+    Public Adaptador As OleDbDataAdapter
+
 
     Public Sub RegistrarDatos(ByVal texto As String, ByVal valores As List(Of String))
         Dim inicioConsulta As String = "INSERT INTO " & texto & " "
@@ -28,10 +32,10 @@ Module Conexiones
 
         Conexion.Open()
 
-        Dim comando As OleDbCommand = New OleDbCommand(Consulta, Conexion)
+        Comando = New OleDbCommand(Consulta, Conexion)
 
         Try
-            comando.ExecuteNonQuery()
+            Comando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -42,22 +46,35 @@ Module Conexiones
     Public Sub ObtenerTabla(ByVal nombreTabla As String, ByVal tabla As DataGridView)
         Conexion.Open()
         Dim datos As New DataSet
-        Dim adaptador As OleDbDataAdapter = New OleDbDataAdapter("Select * from " & nombreTabla, Conexion)
-        adaptador.Fill(datos, nombreTabla)
+        Adaptador = New OleDbDataAdapter("Select * from " & nombreTabla, Conexion)
+        Adaptador.Fill(datos, nombreTabla)
         tabla.DataSource = datos
         tabla.DataMember = nombreTabla
         Conexion.Close()
     End Sub
 
-    Public Sub ObtenerDatos()
+    Public Function ObtenerDatos(ByVal nombreTabla As String, ByVal were As String)
         Conexion.Open()
+        Dim Consulta As String = "SELECT * FROM " & nombreTabla & " " & were
+        MsgBox(Consulta)
+        Comando = New OleDbCommand(Consulta, Conexion)
+        Lector = Comando.ExecuteReader()
+        Dim datos As New List(Of String)
+
+        While Lector.Read()
+            For i As Integer = 0 To Lector.FieldCount - 1
+                datos.Add(Lector(i))
+            Next
+        End While
+        Lector.Close()
         Conexion.Close()
-    End Sub
+        Return datos
+    End Function
 
     Public Sub EliminarDatos(ByVal tabla As String, ByVal id As String)
         Conexion.Open()
-        Dim comando As New OleDbCommand("DELETE * FROM" & tabla & "WHERE ID = " & id)
-        comando.ExecuteNonQuery()
+        Comando = New OleDbCommand("DELETE * FROM" & tabla & "WHERE ID = " & id)
+        Comando.ExecuteNonQuery()
         Conexion.Close()
     End Sub
 
