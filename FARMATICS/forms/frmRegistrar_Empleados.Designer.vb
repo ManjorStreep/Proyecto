@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmGestion_Cliente
+Partial Class frmRegistrar_Empleados
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,9 +22,7 @@ Partial Class frmGestion_Cliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGestion_Cliente))
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -44,42 +42,33 @@ Partial Class frmGestion_Cliente
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtDNI = New System.Windows.Forms.TextBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Arista", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(5, 9)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(23, 9)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(342, 41)
+        Me.Label11.Size = New System.Drawing.Size(372, 46)
         Me.Label11.TabIndex = 36
-        Me.Label11.Text = "Gestion de Clientes"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(343, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(70, 59)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 37
-        Me.PictureBox1.TabStop = False
+        Me.Label11.Text = "Registrar Empleado"
         '
         'ComboBox3
         '
+        Me.ComboBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(164, 77)
+        Me.ComboBox3.Location = New System.Drawing.Point(164, 76)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(31, 21)
+        Me.ComboBox3.Size = New System.Drawing.Size(38, 21)
         Me.ComboBox3.TabIndex = 55
         '
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(307, 157)
+        Me.RadioButton4.Location = New System.Drawing.Point(217, 155)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(62, 17)
         Me.RadioButton4.TabIndex = 53
@@ -90,7 +79,7 @@ Partial Class frmGestion_Cliente
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(250, 157)
+        Me.RadioButton3.Location = New System.Drawing.Point(164, 155)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(51, 17)
         Me.RadioButton3.TabIndex = 54
@@ -132,7 +121,7 @@ Partial Class frmGestion_Cliente
         '
         'btConsuta
         '
-        Me.btConsuta.Location = New System.Drawing.Point(301, 76)
+        Me.btConsuta.Location = New System.Drawing.Point(298, 74)
         Me.btConsuta.Name = "btConsuta"
         Me.btConsuta.Size = New System.Drawing.Size(75, 23)
         Me.btConsuta.TabIndex = 46
@@ -141,9 +130,9 @@ Partial Class frmGestion_Cliente
         '
         'btSalir
         '
-        Me.btSalir.Location = New System.Drawing.Point(46, 238)
+        Me.btSalir.Location = New System.Drawing.Point(41, 240)
         Me.btSalir.Name = "btSalir"
-        Me.btSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btSalir.Size = New System.Drawing.Size(84, 23)
         Me.btSalir.TabIndex = 56
         Me.btSalir.Text = "Salir"
         Me.btSalir.UseVisualStyleBackColor = True
@@ -151,9 +140,9 @@ Partial Class frmGestion_Cliente
         'Button2
         '
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(307, 238)
+        Me.Button2.Location = New System.Drawing.Point(311, 240)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(84, 23)
         Me.Button2.TabIndex = 52
         Me.Button2.Text = "Editar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -179,18 +168,18 @@ Partial Class frmGestion_Cliente
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(217, 238)
+        Me.Button3.Location = New System.Drawing.Point(221, 240)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(84, 23)
         Me.Button3.TabIndex = 47
         Me.Button3.Text = "Eliminar "
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(136, 238)
+        Me.Button5.Location = New System.Drawing.Point(131, 240)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(84, 23)
         Me.Button5.TabIndex = 45
         Me.Button5.Text = "Registrar"
         Me.Button5.UseVisualStyleBackColor = True
@@ -198,7 +187,7 @@ Partial Class frmGestion_Cliente
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(43, 159)
+        Me.Label16.Location = New System.Drawing.Point(43, 157)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(31, 13)
         Me.Label16.TabIndex = 44
@@ -216,7 +205,7 @@ Partial Class frmGestion_Cliente
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(43, 107)
+        Me.Label19.Location = New System.Drawing.Point(43, 108)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(47, 13)
         Me.Label19.TabIndex = 42
@@ -233,18 +222,18 @@ Partial Class frmGestion_Cliente
         '
         'txtDNI
         '
-        Me.txtDNI.Location = New System.Drawing.Point(202, 79)
+        Me.txtDNI.Location = New System.Drawing.Point(208, 76)
         Me.txtDNI.Name = "txtDNI"
-        Me.txtDNI.Size = New System.Drawing.Size(90, 20)
+        Me.txtDNI.Size = New System.Drawing.Size(87, 20)
         Me.txtDNI.TabIndex = 38
         Me.txtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'frmGestion_Cliente
+        'frmRegistrar_Empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ClientSize = New System.Drawing.Size(415, 286)
+        Me.ClientSize = New System.Drawing.Size(415, 275)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.RadioButton4)
         Me.Controls.Add(Me.RadioButton3)
@@ -264,20 +253,17 @@ Partial Class frmGestion_Cliente
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.txtDNI)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label11)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frmGestion_Cliente"
-        Me.Text = "Gestion Cliente"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "frmRegistrar_Empleados"
+        Me.Text = "Registrar"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton

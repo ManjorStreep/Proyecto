@@ -16,8 +16,7 @@ Module Conexiones
         For Each datos As String In valores
             constructor.Append("'" & datos & "'").Append(",")
         Next
-        Dim datosFinalizados = constructor.ToString()
-        datosFinalizados = datosFinalizados.Remove(datosFinalizados.LastIndexOf(","))
+        Dim datosFinalizados = constructor.ToString().Remove(constructor.ToString().LastIndexOf(", "))
         Select Case texto
             Case "Clientes"
                 complementoConsulta = "(NOMBRE, APELLIDO, CEDULA, TELEFONO, DIRECCION)"
@@ -56,7 +55,6 @@ Module Conexiones
     Public Function ObtenerDatos(ByVal nombreTabla As String, ByVal were As String)
         Conexion.Open()
         Dim Consulta As String = "SELECT * FROM " & nombreTabla & " " & were
-        MsgBox(Consulta)
         Comando = New OleDbCommand(Consulta, Conexion)
         Lector = Comando.ExecuteReader()
         Dim datos As New List(Of String)
@@ -71,9 +69,11 @@ Module Conexiones
         Return datos
     End Function
 
-    Public Sub EliminarDatos(ByVal tabla As String, ByVal id As String)
+    Public Sub EliminarDatos(ByVal tabla As String, ByVal where As String)
         Conexion.Open()
-        Comando = New OleDbCommand("DELETE * FROM" & tabla & "WHERE ID = " & id)
+        Dim Consulta As String = "DELETE * FROM " & tabla & " " & where
+        MsgBox(Consulta)
+        Comando = New OleDbCommand(Consulta, Conexion)
         Comando.ExecuteNonQuery()
         Conexion.Close()
     End Sub

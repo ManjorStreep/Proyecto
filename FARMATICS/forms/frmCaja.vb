@@ -8,8 +8,11 @@
 
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Usuario = frmLogin.Usuario()
-        Conexiones.ObtenerTabla("Clientes", DataGridView1)
+        Conexiones.ObtenerTabla("Productos", DataGridView1)
         lb_datocajero0.Text = Usuario.Nombre
+        lb_datocajero1.Text = Usuario.Apellido
+        lb_datocajero2.Text = Usuario.Cedula
+        lb_datocajero3.Text = Usuario.Cargo
     End Sub
 
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click

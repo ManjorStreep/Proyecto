@@ -15,9 +15,15 @@ Public Class frmLogin
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
 
         datos = Conexiones.ObtenerDatos("Empleados", "WHERE CEDULA ='" & TextBox1.Text & "'")
-        If datos.Item(10) = TextBox2.Text Then
-            Me.Hide()
-            My.Forms.frmCaja.Show()
+        If datos.Count > 0 Then
+            If datos.Item(10) = TextBox2.Text Then
+                Me.Hide()
+                My.Forms.frmCaja.Show()
+            Else
+                MsgBox("Contraseña Invalida")
+            End If
+        Else
+            MsgBox("Usuario no registrado")
         End If
 
     End Sub
