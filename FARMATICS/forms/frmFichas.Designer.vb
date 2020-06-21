@@ -28,6 +28,7 @@ Partial Class frmFichas
         Me.btbusqueda = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Usuarios1DataGridView = New System.Windows.Forms.DataGridView()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
@@ -66,7 +67,6 @@ Partial Class frmFichas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,14 +131,32 @@ Partial Class frmFichas
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Ingrese un Numero de Documento"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"V-", "E-", "J-", "P-"})
+        Me.ComboBox1.Location = New System.Drawing.Point(6, 61)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(41, 21)
+        Me.ComboBox1.TabIndex = 44
+        Me.ComboBox1.Text = "V-"
+        '
         'Usuarios1DataGridView
         '
         Me.Usuarios1DataGridView.AllowUserToAddRows = False
         Me.Usuarios1DataGridView.AllowUserToDeleteRows = False
+        Me.Usuarios1DataGridView.AllowUserToResizeColumns = False
+        Me.Usuarios1DataGridView.AllowUserToResizeRows = False
+        Me.Usuarios1DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Usuarios1DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Usuarios1DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.Usuarios1DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.Usuarios1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Usuarios1DataGridView.Location = New System.Drawing.Point(12, 380)
+        Me.Usuarios1DataGridView.MultiSelect = False
         Me.Usuarios1DataGridView.Name = "Usuarios1DataGridView"
         Me.Usuarios1DataGridView.ReadOnly = True
+        Me.Usuarios1DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Usuarios1DataGridView.Size = New System.Drawing.Size(985, 269)
         Me.Usuarios1DataGridView.TabIndex = 38
         '
@@ -149,9 +167,6 @@ Partial Class frmFichas
         Me.ProgressBar1.Size = New System.Drawing.Size(906, 21)
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.ProgressBar1.TabIndex = 39
-        '
-        'BackgroundWorker1
-        '
         '
         'btn_eliminar
         '
@@ -507,16 +522,6 @@ Partial Class frmFichas
         Me.GroupBox4.Size = New System.Drawing.Size(947, 313)
         Me.GroupBox4.TabIndex = 43
         Me.GroupBox4.TabStop = False
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"V-", "E-", "J-", "P-"})
-        Me.ComboBox1.Location = New System.Drawing.Point(6, 61)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(41, 21)
-        Me.ComboBox1.TabIndex = 44
-        Me.ComboBox1.Text = "V-"
         '
         'Panel1
         '

@@ -28,3 +28,6 @@ C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe.config
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.exe
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.xml
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.pdb
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmRegistrar_Empleados.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmMenu.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmRegistroproductos.resources
