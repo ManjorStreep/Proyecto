@@ -15,7 +15,19 @@ FARMATICS
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
+</member><member name="P:WindowsApplicationFARMATICS.My.Resources.Resources.cslogin_94432">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:WindowsApplicationFARMATICS.My.Resources.Resources.doctor">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:WindowsApplicationFARMATICS.My.Resources.Resources.login_variant_icon_138410">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:WindowsApplicationFARMATICS.My.Resources.Resources.login_variant_icon_1384101">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

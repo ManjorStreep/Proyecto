@@ -114,6 +114,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="nodos\Conexiones.vb" />
+    <Compile Include="nodos\Estructuras.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="forms\frmCaja.resx">
