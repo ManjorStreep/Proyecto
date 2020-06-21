@@ -86,6 +86,12 @@
     <Compile Include="forms\frmFichas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\frmGestion_Cliente.Designer.vb">
+      <DependentUpon>frmGestion_Cliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmGestion_Cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\frmHacer_Venta.Designer.vb">
       <DependentUpon>frmHacer_Venta.vb</DependentUpon>
     </Compile>
@@ -96,6 +102,18 @@
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRegistroproductos.Designer.vb">
+      <DependentUpon>frmRegistroproductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRegistroproductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -123,11 +141,20 @@
     <EmbeddedResource Include="forms\frmFichas.resx">
       <DependentUpon>frmFichas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmGestion_Cliente.resx">
+      <DependentUpon>frmGestion_Cliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmHacer_Venta.resx">
       <DependentUpon>frmHacer_Venta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRegistroproductos.resx">
+      <DependentUpon>frmRegistroproductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
