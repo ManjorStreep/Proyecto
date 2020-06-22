@@ -63,6 +63,506 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _001_syrup() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("001-syrup", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _002_online_appointment() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("002-online appointment", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _003_doctor() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("003-doctor", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _004_medical_app() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("004-medical app", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _005_Dental_care() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("005-Dental care", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _006_first_aid_kit() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("006-first aid kit", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _007_healthcare() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("007-healthcare", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _008_blood_test() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("008-blood test", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _009_nurse() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("009-nurse", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _010_fruit() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("010-fruit", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _011_thermometer() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("011-thermometer", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _012_medical_stretcher() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("012-medical stretcher", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _013_stethoscope() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("013-stethoscope", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _014_blood_donation() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("014-blood donation", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _015_medical_report() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("015-medical report", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _016_blood_bag() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("016-blood bag", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _017_x_ray() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("017-x ray", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _018_blood_pressure_meter() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("018-blood pressure meter", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _019_healthcare() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("019-healthcare", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _020_medical_prescription() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("020-medical prescription", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _021_hydroalcoholic_gel() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("021-hydroalcoholic gel", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _022_glucometer() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("022-glucometer", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _023_dna_structure() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("023-dna structure", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _024_test_tubes() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("024-test tubes", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _025_calendar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("025-calendar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _026_emergency_call() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("026-emergency call", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _027_fever() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("027-fever", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _028_doctor() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("028-doctor", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _029_pill() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("029-pill", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _030_helicopter() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("030-helicopter", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _031_hospital_bed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("031-hospital bed", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _032_red_cross() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("032-red cross", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _033_medical_mask() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("033-medical mask", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _034_ayurveda() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("034-ayurveda", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _035_microscope() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("035-microscope", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _036_hospital() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("036-hospital", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _037_pharmacy() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("037-pharmacy", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _038_wheelchair() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("038-wheelchair", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _039_injection() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("039-injection", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _040_medical_file() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("040-medical file", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _041_electrocardiogram() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("041-electrocardiogram", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _042_medical_book() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("042-medical book", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _043_diabetes() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("043-diabetes", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _044_doctor() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("044-doctor", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _045_capsules() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("045-capsules", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _046_eye_care() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("046-eye care", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _047_bandage() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("047-bandage", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _048_medical() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("048-medical", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _049_medical_insurance() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("049-medical insurance", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _050_ambulance() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("050-ambulance", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property cslogin_94432() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("cslogin_94432", resourceCulture)

@@ -43,19 +43,16 @@ Partial Class frmRegistroproductos
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-
         Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-      
         Me.GroupBox3.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -206,7 +203,7 @@ Partial Class frmRegistroproductos
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label18.BackColor = System.Drawing.Color.Gray
         Me.Label18.Location = New System.Drawing.Point(104, 70)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(115, 13)
@@ -234,22 +231,12 @@ Partial Class frmRegistroproductos
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Arial MT Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label9.Location = New System.Drawing.Point(0, 4)
+        Me.Label9.Location = New System.Drawing.Point(45, 4)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(267, 62)
         Me.Label9.TabIndex = 63
         Me.Label9.Text = "Panel de Control " & Global.Microsoft.VisualBasic.ChrW(13) & "Productos"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(256, 28)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 89)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 65
-        Me.PictureBox2.TabStop = False
         '
         'GroupBox1
         '
@@ -305,9 +292,8 @@ Partial Class frmRegistroproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(367, 403)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
@@ -321,10 +307,10 @@ Partial Class frmRegistroproductos
         Me.Text = "Registro de Producto"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -335,7 +321,6 @@ Partial Class frmRegistroproductos
     Friend WithEvents btSalir As System.Windows.Forms.Button
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox

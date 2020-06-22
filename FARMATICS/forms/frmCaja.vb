@@ -2,30 +2,43 @@
 
     Dim Usuario As Empleado
 
-    Private Sub btn_client_Click(sender As Object, e As EventArgs) Handles btn_client.Click
-
-    End Sub
-
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '
+        'Volcado de Informacion del Cajero
+        '
         Usuario = frmLogin.Usuario()
-        Conexiones.ObtenerTabla("Clientes", DataGridView1)
         lb_datocajero0.Text = Usuario.Nombre
+        lb_datocajero1.Text = Usuario.Apellido
+        lb_datocajero2.Text = Usuario.Cedula
+        lb_datocajero3.Text = Usuario.Cargo
+        '
+        'Rellenando la Tabla 
+        '
+        Conexiones.ObtenerTabla("Productos", DataGridView1)
+
+        '
+        'iniciando timer
+        '
+        tim_1.Start()
+
+
     End Sub
 
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
-        MsgBox("¿Seguro que desea salir de la plataforma?", MsgBoxStyle.OkOnly)
-        Me.Close()
+        MsgBox("Vuelva pronto :)", MsgBoxStyle.OkOnly)
+        End
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
+    Private Sub tim_1_Tick(sender As Object, e As EventArgs) Handles tim_1.Tick
+        ToolStripStatusLabel_ObtenerFecha.Text = DatosSistema.obtenerFecha()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
+    Private Sub btn_facturar_Click(sender As Object, e As EventArgs) Handles btn_facturar.Click
+        frmHacer_Venta.Show()
     End Sub
 
-    Private Sub lb_datocajero0_Click(sender As Object, e As EventArgs) Handles lb_datocajero0.Click
+    Private Sub gbPerfil_Enter(sender As Object, e As EventArgs) Handles gbPerfil.Enter
 
     End Sub
 End Class

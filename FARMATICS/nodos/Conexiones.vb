@@ -56,7 +56,7 @@ Module Conexiones
     Public Function ObtenerDatos(ByVal nombreTabla As String, ByVal were As String)
         Conexion.Open()
         Dim Consulta As String = "SELECT * FROM " & nombreTabla & " " & were
-        MsgBox(Consulta)
+        'MsgBox(Consulta)
         Comando = New OleDbCommand(Consulta, Conexion)
         Lector = Comando.ExecuteReader()
         Dim datos As New List(Of String)

@@ -3,7 +3,7 @@
         Public Nombre As String
         Public Apellido As String
         Public Cedula As Integer
-        Public Telefono As Integer
+        Public Telefono As Long
         Public Correo As String
         Public Direccion As String
         Public Sexo As String
@@ -14,7 +14,7 @@
             Nombre = datos.Item(1)
             Apellido = datos.Item(2)
             Cedula = Integer.Parse(datos.Item(3))
-            Telefono = Integer.Parse(datos.Item(4))
+            Telefono = Long.Parse(datos.Item(4))
             Correo = datos.Item(5)
             Direccion = datos.Item(6)
             Sexo = datos.Item(7)

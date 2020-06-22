@@ -132,6 +132,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="nodos\Conexiones.vb" />
+    <Compile Include="nodos\DatosSistema.vb" />
     <Compile Include="nodos\Estructuras.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +191,56 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconfinder_12-lan-connected-512x512_265522.ico" />
+    <None Include="Resources\050-ambulance.png" />
+    <None Include="Resources\049-medical insurance.png" />
+    <None Include="Resources\048-medical.png" />
+    <None Include="Resources\047-bandage.png" />
+    <None Include="Resources\046-eye care.png" />
+    <None Include="Resources\045-capsules.png" />
+    <None Include="Resources\044-doctor.png" />
+    <None Include="Resources\043-diabetes.png" />
+    <None Include="Resources\042-medical book.png" />
+    <None Include="Resources\041-electrocardiogram.png" />
+    <None Include="Resources\040-medical file.png" />
+    <None Include="Resources\039-injection.png" />
+    <None Include="Resources\038-wheelchair.png" />
+    <None Include="Resources\037-pharmacy.png" />
+    <None Include="Resources\036-hospital.png" />
+    <None Include="Resources\035-microscope.png" />
+    <None Include="Resources\034-ayurveda.png" />
+    <None Include="Resources\033-medical mask.png" />
+    <None Include="Resources\032-red cross.png" />
+    <None Include="Resources\031-hospital bed.png" />
+    <None Include="Resources\030-helicopter.png" />
+    <None Include="Resources\029-pill.png" />
+    <None Include="Resources\028-doctor.png" />
+    <None Include="Resources\027-fever.png" />
+    <None Include="Resources\026-emergency call.png" />
+    <None Include="Resources\025-calendar.png" />
+    <None Include="Resources\024-test tubes.png" />
+    <None Include="Resources\023-dna structure.png" />
+    <None Include="Resources\022-glucometer.png" />
+    <None Include="Resources\021-hydroalcoholic gel.png" />
+    <None Include="Resources\020-medical prescription.png" />
+    <None Include="Resources\019-healthcare.png" />
+    <None Include="Resources\018-blood pressure meter.png" />
+    <None Include="Resources\017-x ray.png" />
+    <None Include="Resources\016-blood bag.png" />
+    <None Include="Resources\015-medical report.png" />
+    <None Include="Resources\014-blood donation.png" />
+    <None Include="Resources\013-stethoscope.png" />
+    <None Include="Resources\012-medical stretcher.png" />
+    <None Include="Resources\011-thermometer.png" />
+    <None Include="Resources\010-fruit.png" />
+    <None Include="Resources\009-nurse.png" />
+    <None Include="Resources\008-blood test.png" />
+    <None Include="Resources\007-healthcare.png" />
+    <None Include="Resources\006-first aid kit.png" />
+    <None Include="Resources\005-Dental care.png" />
+    <None Include="Resources\004-medical app.png" />
+    <None Include="Resources\003-doctor.png" />
+    <None Include="Resources\002-online appointment.png" />
+    <None Include="Resources\001-syrup.png" />
     <None Include="Resources\login_variant_icon_1384101.png" />
     <None Include="Resources\login_variant_icon_138410.png" />
     <None Include="Resources\cslogin_94432.png" />

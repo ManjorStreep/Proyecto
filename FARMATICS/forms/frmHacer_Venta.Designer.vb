@@ -32,7 +32,6 @@ Partial Class frmHacer_Venta
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -45,15 +44,15 @@ Partial Class frmHacer_Venta
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -169,17 +168,6 @@ Partial Class frmHacer_Venta
         Me.Label6.Size = New System.Drawing.Size(82, 16)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Cantidad :"
-        '
-        'Button5
-        '
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button5.Location = New System.Drawing.Point(903, 466)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(84, 33)
-        Me.Button5.TabIndex = 39
-        Me.Button5.Text = "SALIR"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -314,6 +302,44 @@ Partial Class frmHacer_Venta
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "DATOS DEL CLIENTE"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(95, 113)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(132, 16)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "txt_telefonoDato"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(95, 92)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(138, 16)
+        Me.Label2.TabIndex = 37
+        Me.Label2.Text = "txt_direccionDato"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(95, 71)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(128, 16)
+        Me.Label7.TabIndex = 36
+        Me.Label7.Text = "txt_nombreDato"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(231, 29)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(113, 23)
+        Me.TextBox3.TabIndex = 14
+        '
         'Button1
         '
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
@@ -366,44 +392,6 @@ Partial Class frmHacer_Venta
         Me.Label16.TabIndex = 27
         Me.Label16.Text = "NOMBRE:"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(231, 29)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(113, 23)
-        Me.TextBox3.TabIndex = 14
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(95, 113)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 16)
-        Me.Label1.TabIndex = 38
-        Me.Label1.Text = "txt_telefonoDato"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(95, 92)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(138, 16)
-        Me.Label2.TabIndex = 37
-        Me.Label2.Text = "txt_direccionDato"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(95, 71)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(128, 16)
-        Me.Label7.TabIndex = 36
-        Me.Label7.Text = "txt_nombreDato"
-        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.White
@@ -424,7 +412,6 @@ Partial Class frmHacer_Venta
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(996, 581)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button4)
@@ -438,7 +425,10 @@ Partial Class frmHacer_Venta
         Me.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.Control
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmHacer_Venta"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "Ventas"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -465,7 +455,6 @@ Partial Class frmHacer_Venta
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
