@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmGestion_Cliente
+Partial Class frmRegistrar_Empleados
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -47,25 +47,45 @@ Partial Class frmGestion_Cliente
         'Label11
         '
         Me.Label11.AutoSize = True
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Label11.Font = New System.Drawing.Font("Arista", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(12, 9)
+=======
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(23, 9)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(342, 41)
+        Me.Label11.Size = New System.Drawing.Size(372, 46)
         Me.Label11.TabIndex = 36
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Label11.Text = "Gestion de Clientes"
+=======
+        Me.Label11.Text = "Registrar Empleado"
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         '
         'ComboBox3
         '
+        Me.ComboBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox3.FormattingEnabled = True
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.ComboBox3.Location = New System.Drawing.Point(142, 60)
+=======
+        Me.ComboBox3.Location = New System.Drawing.Point(164, 76)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(31, 21)
+        Me.ComboBox3.Size = New System.Drawing.Size(38, 21)
         Me.ComboBox3.TabIndex = 55
         '
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.RadioButton4.Location = New System.Drawing.Point(285, 140)
+=======
+        Me.RadioButton4.Location = New System.Drawing.Point(217, 155)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(62, 17)
         Me.RadioButton4.TabIndex = 53
@@ -76,7 +96,11 @@ Partial Class frmGestion_Cliente
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.RadioButton3.Location = New System.Drawing.Point(228, 140)
+=======
+        Me.RadioButton3.Location = New System.Drawing.Point(164, 155)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(51, 17)
         Me.RadioButton3.TabIndex = 54
@@ -118,7 +142,11 @@ Partial Class frmGestion_Cliente
         '
         'btConsuta
         '
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.btConsuta.Location = New System.Drawing.Point(279, 59)
+=======
+        Me.btConsuta.Location = New System.Drawing.Point(298, 74)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.btConsuta.Name = "btConsuta"
         Me.btConsuta.Size = New System.Drawing.Size(75, 23)
         Me.btConsuta.TabIndex = 46
@@ -127,9 +155,13 @@ Partial Class frmGestion_Cliente
         '
         'btSalir
         '
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.btSalir.Location = New System.Drawing.Point(24, 221)
+=======
+        Me.btSalir.Location = New System.Drawing.Point(41, 240)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.btSalir.Name = "btSalir"
-        Me.btSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btSalir.Size = New System.Drawing.Size(84, 23)
         Me.btSalir.TabIndex = 56
         Me.btSalir.Text = "Salir"
         Me.btSalir.UseVisualStyleBackColor = True
@@ -137,9 +169,13 @@ Partial Class frmGestion_Cliente
         'Button2
         '
         Me.Button2.Enabled = False
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Button2.Location = New System.Drawing.Point(285, 221)
+=======
+        Me.Button2.Location = New System.Drawing.Point(311, 240)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(84, 23)
         Me.Button2.TabIndex = 52
         Me.Button2.Text = "Editar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -165,18 +201,26 @@ Partial Class frmGestion_Cliente
         'Button3
         '
         Me.Button3.Enabled = False
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Button3.Location = New System.Drawing.Point(195, 221)
+=======
+        Me.Button3.Location = New System.Drawing.Point(221, 240)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(84, 23)
         Me.Button3.TabIndex = 47
         Me.Button3.Text = "Eliminar "
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button5
         '
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Button5.Location = New System.Drawing.Point(114, 221)
+=======
+        Me.Button5.Location = New System.Drawing.Point(131, 240)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(84, 23)
         Me.Button5.TabIndex = 45
         Me.Button5.Text = "Registrar"
         Me.Button5.UseVisualStyleBackColor = True
@@ -184,7 +228,11 @@ Partial Class frmGestion_Cliente
         'Label16
         '
         Me.Label16.AutoSize = True
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Label16.Location = New System.Drawing.Point(21, 142)
+=======
+        Me.Label16.Location = New System.Drawing.Point(43, 157)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(31, 13)
         Me.Label16.TabIndex = 44
@@ -202,7 +250,11 @@ Partial Class frmGestion_Cliente
         'Label19
         '
         Me.Label19.AutoSize = True
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Label19.Location = New System.Drawing.Point(21, 90)
+=======
+        Me.Label19.Location = New System.Drawing.Point(43, 108)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(47, 13)
         Me.Label19.TabIndex = 42
@@ -219,18 +271,26 @@ Partial Class frmGestion_Cliente
         '
         'txtDNI
         '
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.txtDNI.Location = New System.Drawing.Point(180, 62)
+=======
+        Me.txtDNI.Location = New System.Drawing.Point(208, 76)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.txtDNI.Name = "txtDNI"
-        Me.txtDNI.Size = New System.Drawing.Size(90, 20)
+        Me.txtDNI.Size = New System.Drawing.Size(87, 20)
         Me.txtDNI.TabIndex = 38
         Me.txtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'frmGestion_Cliente
+        'frmRegistrar_Empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.ClientSize = New System.Drawing.Size(373, 269)
+=======
+        Me.ClientSize = New System.Drawing.Size(415, 275)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.RadioButton4)
         Me.Controls.Add(Me.RadioButton3)
@@ -254,8 +314,13 @@ Partial Class frmGestion_Cliente
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD:FARMATICS/forms/frmGestion_Cliente.Designer.vb
         Me.Name = "frmGestion_Cliente"
         Me.Text = "Gestion Cliente"
+=======
+        Me.Name = "frmRegistrar_Empleados"
+        Me.Text = "Registrar"
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938:FARMATICS/forms/frmRegistrar_Empleados.Designer.vb
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

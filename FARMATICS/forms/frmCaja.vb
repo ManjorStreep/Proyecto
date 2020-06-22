@@ -7,10 +7,15 @@
         'Volcado de Informacion del Cajero
         '
         Usuario = frmLogin.Usuario()
+<<<<<<< HEAD
+=======
+        Conexiones.ObtenerTabla("Productos", DataGridView1)
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938
         lb_datocajero0.Text = Usuario.Nombre
         lb_datocajero1.Text = Usuario.Apellido
         lb_datocajero2.Text = Usuario.Cedula
         lb_datocajero3.Text = Usuario.Cargo
+<<<<<<< HEAD
         '
         'Rellenando la Tabla 
         '
@@ -22,6 +27,8 @@
         tim_1.Start()
 
 
+=======
+>>>>>>> e1d727629efac0976a90f69005a020eff1d26938
     End Sub
 
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click

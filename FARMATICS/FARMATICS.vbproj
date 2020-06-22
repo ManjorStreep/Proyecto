@@ -86,10 +86,10 @@
     <Compile Include="forms\frmFichas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmGestion_Cliente.Designer.vb">
-      <DependentUpon>frmGestion_Cliente.vb</DependentUpon>
+    <Compile Include="forms\frmRegistrar_Empleados.Designer.vb">
+      <DependentUpon>frmRegistrar_Empleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmGestion_Cliente.vb">
+    <Compile Include="forms\frmRegistrar_Empleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\frmHacer_Venta.Designer.vb">
@@ -142,8 +142,8 @@
     <EmbeddedResource Include="forms\frmFichas.resx">
       <DependentUpon>frmFichas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmGestion_Cliente.resx">
-      <DependentUpon>frmGestion_Cliente.vb</DependentUpon>
+    <EmbeddedResource Include="forms\frmRegistrar_Empleados.resx">
+      <DependentUpon>frmRegistrar_Empleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmHacer_Venta.resx">
       <DependentUpon>frmHacer_Venta.vb</DependentUpon>
