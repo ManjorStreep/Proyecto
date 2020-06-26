@@ -29,7 +29,7 @@ Public Class frmMenu
     End Sub
 
     Private Sub RegistrarClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarClienteToolStripMenuItem.Click
-        frmRegistrar_Empleados.Show()
+        frmRegistrar_clientes.Show()
 
     End Sub
 End Class

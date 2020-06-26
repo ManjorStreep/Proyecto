@@ -27,10 +27,12 @@ Partial Class frmVisualizarReportes
         '
         'ReportViewer1
         '
+        Me.ReportViewer1.AutoSize = True
+        Me.ReportViewer1.BackColor = System.Drawing.Color.DarkGray
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplicationFARMATICS.Plantilla.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, -1)
+        Me.ReportViewer1.Location = New System.Drawing.Point(1, -1)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(1068, 620)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1092, 620)
         Me.ReportViewer1.TabIndex = 0
         '
         'frmVisualizarReportes
@@ -42,6 +44,7 @@ Partial Class frmVisualizarReportes
         Me.Name = "frmVisualizarReportes"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer

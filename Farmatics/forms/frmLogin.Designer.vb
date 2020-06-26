@@ -51,9 +51,9 @@ Partial Class frmLogin
         Me.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btSalir.Font = New System.Drawing.Font("Mayberry Pro Semibold", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btSalir.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btSalir.Location = New System.Drawing.Point(3, 198)
+        Me.btSalir.Location = New System.Drawing.Point(3, 189)
         Me.btSalir.Name = "btSalir"
-        Me.btSalir.Size = New System.Drawing.Size(74, 22)
+        Me.btSalir.Size = New System.Drawing.Size(74, 31)
         Me.btSalir.TabIndex = 2
         Me.btSalir.Text = "SALIR"
         Me.btSalir.UseVisualStyleBackColor = False
@@ -125,6 +125,7 @@ Partial Class frmLogin
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gray
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.btSalir)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
@@ -196,7 +197,7 @@ Partial Class frmLogin
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button2.Font = New System.Drawing.Font("Mayberry Pro Semibold", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(197, 12)
+        Me.Button2.Location = New System.Drawing.Point(10, 17)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(167, 22)
         Me.Button2.TabIndex = 20
@@ -211,7 +212,6 @@ Partial Class frmLogin
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(595, 397)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox2)
         Me.ForeColor = System.Drawing.SystemColors.Control

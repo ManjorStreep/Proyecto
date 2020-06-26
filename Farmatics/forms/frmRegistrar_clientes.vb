@@ -1,4 +1,4 @@
-﻿Public Class frmRegistrar_Empleados
+﻿Public Class frmRegistrar_clientes
 
 
     Private Sub frmGestion_Cliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load

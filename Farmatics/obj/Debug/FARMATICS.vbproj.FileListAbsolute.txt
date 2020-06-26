@@ -1,48 +1,19 @@
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe.config
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.pdb
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\bin\Debug\FARMATICS.xml
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmCaja.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmFichas.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmHacer_Venta.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmLogin.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.Resources.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.exe
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.xml
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.pdb
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\bin\Debug\FARMATICS.exe.config
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\FARMATICS.exe
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\FARMATICS.xml
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\FARMATICS.pdb
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\bin\Debug\FARMATICS.exe
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\bin\Debug\FARMATICS.pdb
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\bin\Debug\FARMATICS.xml
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmCaja.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmFichas.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmHacer_Venta.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmLogin.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.Resources.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\Farmatics\FARMATICS\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe.config
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.exe
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.xml
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.pdb
-<<<<<<< HEAD
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\bin\Debug\FARMATICS.exe
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\bin\Debug\FARMATICS.pdb
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\bin\Debug\FARMATICS.xml
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmCaja.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmFichas.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmGestion_Cliente.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmHacer_Venta.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmLogin.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmMenu.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmRegistroproductos.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.Resources.resources
-C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
-=======
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmRegistrar_Empleados.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmMenu.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmRegistroproductos.resources
->>>>>>> e1d727629efac0976a90f69005a020eff1d26938
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\bin\Debug\FARMATICS.exe.config
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\bin\Debug\FARMATICS.exe
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\bin\Debug\FARMATICS.pdb
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\bin\Debug\FARMATICS.xml
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmVisualizarReportes.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmCaja.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmFichas.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmRegistrar_clientes.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmHacer_Venta.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmLogin.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmMenu.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.frmRegistroproductos.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\WindowsApplicationFARMATICS.Resources.resources
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\RdlCompile.cache
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\RdlCompile.compiled
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.exe
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.xml
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.pdb
