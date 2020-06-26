@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A497BF8A-CF0C-40DD-9967-F1CD83FFF400}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplicationFARMATICS.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplicationFARMATICS</RootNamespace>
+    <AssemblyName>FARMATICS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FARMATICS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FARMATICS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinder_12-lan-connected-512x512_265522.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="forms\frmVisualizarReportes.Designer.vb">
+      <DependentUpon>frmVisualizarReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmVisualizarReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmCaja.Designer.vb">
+      <DependentUpon>frmCaja.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmFichas.Designer.vb">
+      <DependentUpon>frmFichas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmFichas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRegistrar_Empleados.Designer.vb">
+      <DependentUpon>frmRegistrar_Empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRegistrar_Empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmHacer_Venta.Designer.vb">
+      <DependentUpon>frmHacer_Venta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmHacer_Venta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRegistroproductos.Designer.vb">
+      <DependentUpon>frmRegistroproductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRegistroproductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="nodos\Conexiones.vb" />
+    <Compile Include="nodos\DatosSistema.vb" />
+    <Compile Include="nodos\Estructuras.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmVisualizarReportes.resx">
+      <DependentUpon>frmVisualizarReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmCaja.resx">
+      <DependentUpon>frmCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmFichas.resx">
+      <DependentUpon>frmFichas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRegistrar_Empleados.resx">
+      <DependentUpon>frmRegistrar_Empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmHacer_Venta.resx">
+      <DependentUpon>frmHacer_Venta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRegistroproductos.resx">
+      <DependentUpon>frmRegistroproductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\Plantilla.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\frmCaja.datasource" />
+    <None Include="My Project\DataSources\frmFichas.datasource" />
+    <None Include="My Project\DataSources\frmHacer_Venta.datasource" />
+    <None Include="My Project\DataSources\frmLogin.datasource" />
+    <None Include="My Project\DataSources\frmMenu.datasource" />
+    <None Include="My Project\DataSources\frmRegistroproductos.datasource" />
+    <None Include="My Project\DataSources\WindowsApplicationFARMATICS.My.MyApplication.datasource" />
+    <None Include="My Project\DataSources\WindowsApplicationFARMATICS.My.MySettings.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile-2092113_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-farmatic_vec_png.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_medical_research_qg4d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconfinder_12-lan-connected-512x512_265522.ico" />
+    <None Include="Resources\050-ambulance.png" />
+    <None Include="Resources\049-medical insurance.png" />
+    <None Include="Resources\048-medical.png" />
+    <None Include="Resources\047-bandage.png" />
+    <None Include="Resources\046-eye care.png" />
+    <None Include="Resources\045-capsules.png" />
+    <None Include="Resources\044-doctor.png" />
+    <None Include="Resources\043-diabetes.png" />
+    <None Include="Resources\042-medical book.png" />
+    <None Include="Resources\041-electrocardiogram.png" />
+    <None Include="Resources\040-medical file.png" />
+    <None Include="Resources\039-injection.png" />
+    <None Include="Resources\038-wheelchair.png" />
+    <None Include="Resources\037-pharmacy.png" />
+    <None Include="Resources\036-hospital.png" />
+    <None Include="Resources\035-microscope.png" />
+    <None Include="Resources\034-ayurveda.png" />
+    <None Include="Resources\033-medical mask.png" />
+    <None Include="Resources\032-red cross.png" />
+    <None Include="Resources\031-hospital bed.png" />
+    <None Include="Resources\030-helicopter.png" />
+    <None Include="Resources\029-pill.png" />
+    <None Include="Resources\028-doctor.png" />
+    <None Include="Resources\027-fever.png" />
+    <None Include="Resources\026-emergency call.png" />
+    <None Include="Resources\025-calendar.png" />
+    <None Include="Resources\024-test tubes.png" />
+    <None Include="Resources\023-dna structure.png" />
+    <None Include="Resources\022-glucometer.png" />
+    <None Include="Resources\021-hydroalcoholic gel.png" />
+    <None Include="Resources\020-medical prescription.png" />
+    <None Include="Resources\019-healthcare.png" />
+    <None Include="Resources\018-blood pressure meter.png" />
+    <None Include="Resources\017-x ray.png" />
+    <None Include="Resources\016-blood bag.png" />
+    <None Include="Resources\015-medical report.png" />
+    <None Include="Resources\014-blood donation.png" />
+    <None Include="Resources\013-stethoscope.png" />
+    <None Include="Resources\012-medical stretcher.png" />
+    <None Include="Resources\011-thermometer.png" />
+    <None Include="Resources\010-fruit.png" />
+    <None Include="Resources\009-nurse.png" />
+    <None Include="Resources\008-blood test.png" />
+    <None Include="Resources\007-healthcare.png" />
+    <None Include="Resources\006-first aid kit.png" />
+    <None Include="Resources\005-Dental care.png" />
+    <None Include="Resources\004-medical app.png" />
+    <None Include="Resources\003-doctor.png" />
+    <None Include="Resources\002-online appointment.png" />
+    <None Include="Resources\001-syrup.png" />
+    <None Include="Resources\login_variant_icon_1384101.png" />
+    <None Include="Resources\login_variant_icon_138410.png" />
+    <None Include="Resources\cslogin_94432.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
