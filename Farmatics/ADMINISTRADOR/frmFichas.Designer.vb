@@ -152,6 +152,7 @@ Partial Class frmFichas
         Me.Usuarios1DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Usuarios1DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.Usuarios1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Usuarios1DataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Usuarios1DataGridView.Location = New System.Drawing.Point(12, 380)
         Me.Usuarios1DataGridView.MultiSelect = False
         Me.Usuarios1DataGridView.Name = "Usuarios1DataGridView"

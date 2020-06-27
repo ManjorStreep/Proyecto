@@ -41,7 +41,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>7.18396cm</Height>
+        <Height>7.95125cm</Height>
         <Style />
       </Body>
       <Width>21.11468cm</Width>
@@ -272,7 +272,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Globals!ExecutionTime</Value>
+                              <Value>=Date.Now.Hour</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -392,7 +392,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.7612cm</Height>
+          <Height>2.34625cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -471,7 +471,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox24</rd:DefaultName>
-              <Top>0.68792cm</Top>
+              <Top>0.37042cm</Top>
               <Left>0.4778cm</Left>
               <Height>1.65833cm</Height>
               <Width>10.25702cm</Width>
@@ -515,7 +515,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox32</rd:DefaultName>
-              <Top>1.74625cm</Top>
+              <Top>1.42875cm</Top>
               <Left>12.96141cm</Left>
               <Height>0.6cm</Height>
               <Width>7.01146cm</Width>

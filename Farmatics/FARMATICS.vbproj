@@ -76,10 +76,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forms\frmVisualizarReportes.Designer.vb">
+    <Compile Include="ADMINISTRADOR\frmVisualizarReportes.Designer.vb">
       <DependentUpon>frmVisualizarReportes.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmVisualizarReportes.vb">
+    <Compile Include="ADMINISTRADOR\frmVisualizarReportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\frmCaja.vb">
@@ -89,16 +89,16 @@
       <DependentUpon>frmCaja.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmFichas.Designer.vb">
+    <Compile Include="ADMINISTRADOR\frmFichas.Designer.vb">
       <DependentUpon>frmFichas.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmFichas.vb">
+    <Compile Include="ADMINISTRADOR\frmFichas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmRegistrar_clientes.Designer.vb">
+    <Compile Include="ADMINISTRADOR\frmRegistrar_clientes.Designer.vb">
       <DependentUpon>frmRegistrar_clientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmRegistrar_clientes.vb">
+    <Compile Include="ADMINISTRADOR\frmRegistrar_clientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\frmHacer_Venta.Designer.vb">
@@ -113,16 +113,16 @@
     <Compile Include="forms\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmMenu.Designer.vb">
+    <Compile Include="ADMINISTRADOR\frmMenu.Designer.vb">
       <DependentUpon>frmMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmMenu.vb">
+    <Compile Include="ADMINISTRADOR\frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmRegistroproductos.Designer.vb">
+    <Compile Include="ADMINISTRADOR\frmRegistroproductos.Designer.vb">
       <DependentUpon>frmRegistroproductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmRegistroproductos.vb">
+    <Compile Include="ADMINISTRADOR\frmRegistroproductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -145,16 +145,16 @@
     <Compile Include="nodos\Estructuras.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="forms\frmVisualizarReportes.resx">
+    <EmbeddedResource Include="ADMINISTRADOR\frmVisualizarReportes.resx">
       <DependentUpon>frmVisualizarReportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmCaja.resx">
       <DependentUpon>frmCaja.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmFichas.resx">
+    <EmbeddedResource Include="ADMINISTRADOR\frmFichas.resx">
       <DependentUpon>frmFichas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmRegistrar_clientes.resx">
+    <EmbeddedResource Include="ADMINISTRADOR\frmRegistrar_clientes.resx">
       <DependentUpon>frmRegistrar_clientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmHacer_Venta.resx">
@@ -163,10 +163,10 @@
     <EmbeddedResource Include="forms\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmMenu.resx">
+    <EmbeddedResource Include="ADMINISTRADOR\frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmRegistroproductos.resx">
+    <EmbeddedResource Include="ADMINISTRADOR\frmRegistroproductos.resx">
       <DependentUpon>frmRegistroproductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -17,3 +17,4 @@ C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\RdlCompile.compiled
 C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.exe
 C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.xml
 C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.pdb
+C:\Users\Yigs-Family\Desktop\FARMATIC\FARMATICS\obj\Debug\FARMATICS.vbprojResolveAssemblyReference.cache
