@@ -181,7 +181,7 @@ Partial Class frmHacer_Venta
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.logo_farmatic_vec_png
+        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
         Me.PictureBox1.Location = New System.Drawing.Point(0, 7)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(316, 83)

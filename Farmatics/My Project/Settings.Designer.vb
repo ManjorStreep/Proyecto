@@ -73,10 +73,10 @@ Namespace My
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Friend Module MySettingsProperty
         
-        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.WindowsApplicationFARMATICS.My.MySettings
+        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
+        Friend ReadOnly Property Settings() As Global.Sotware_Farmatics.My.MySettings
             Get
-                Return Global.WindowsApplicationFARMATICS.My.MySettings.Default
+                Return Global.Sotware_Farmatics.My.MySettings.Default
             End Get
         End Property
     End Module

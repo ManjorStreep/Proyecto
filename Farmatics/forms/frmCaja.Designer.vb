@@ -287,7 +287,7 @@ Partial Class frmCaja
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.logo_farmatic_vec_png
+        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
         Me.PictureBox1.Location = New System.Drawing.Point(23, -22)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(237, 93)
@@ -315,7 +315,7 @@ Partial Class frmCaja
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pb_profile.BackColor = System.Drawing.Color.Silver
         Me.pb_profile.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pb_profile.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.profile_2092113_960_720
+        Me.pb_profile.Image = Global.Sotware_Farmatics.My.Resources.Resources.profile_2092113_960_720
         Me.pb_profile.Location = New System.Drawing.Point(6, 14)
         Me.pb_profile.Name = "pb_profile"
         Me.pb_profile.Size = New System.Drawing.Size(134, 129)
@@ -423,7 +423,7 @@ Partial Class frmCaja
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._002_online_appointment
+        Me.PictureBox3.Image = Global.Sotware_Farmatics.My.Resources.Resources._002_online_appointment
         Me.PictureBox3.Location = New System.Drawing.Point(220, 9)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(53, 46)
@@ -433,7 +433,7 @@ Partial Class frmCaja
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._003_doctor
+        Me.PictureBox4.Image = Global.Sotware_Farmatics.My.Resources.Resources._003_doctor
         Me.PictureBox4.Location = New System.Drawing.Point(136, 9)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(53, 46)

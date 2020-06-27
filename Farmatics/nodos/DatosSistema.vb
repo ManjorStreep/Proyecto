@@ -1,12 +1,12 @@
 ﻿Module DatosSistema
 
-    Public Function obtenerFecha(Optional ByVal fecha_hora As Boolean = 0)
+    Public Function obtenerFecha(Optional ByVal Opcion As String = "")
         Dim fechaActual As Date = Date.Now
         Dim horaActual As TimeSpan = Date.Now.TimeOfDay
-        Select Case fecha_hora
-            Case 0
+        Select Case Opcion
+            Case "Fecha"
                 Return fechaActual.ToString
-            Case 1
+            Case "Hora"
                 Return horaActual.ToString
         End Select
         Return fechaActual + horaActual

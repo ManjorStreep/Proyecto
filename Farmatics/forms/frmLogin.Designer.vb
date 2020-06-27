@@ -113,7 +113,7 @@ Partial Class frmLogin
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.login_variant_icon_138410
+        Me.PictureBox3.Image = Global.Sotware_Farmatics.My.Resources.Resources.login_variant_icon_138410
         Me.PictureBox3.Location = New System.Drawing.Point(278, 40)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(26, 28)
@@ -150,7 +150,7 @@ Partial Class frmLogin
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.cslogin_94432
+        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.cslogin_94432
         Me.PictureBox1.Location = New System.Drawing.Point(3, 45)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(101, 110)
@@ -183,7 +183,7 @@ Partial Class frmLogin
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.logo_farmatic_vec_png
+        Me.PictureBox2.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
         Me.PictureBox2.Location = New System.Drawing.Point(53, -20)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(463, 172)

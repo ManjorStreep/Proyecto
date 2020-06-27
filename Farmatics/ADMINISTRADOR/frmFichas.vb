@@ -56,6 +56,10 @@ Public Class frmFichas
     End Sub
 
     Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
+        ' esperando codigo
+    End Sub
 
+    Private Sub btsalir_Click(sender As Object, e As EventArgs) Handles btsalir.Click
+        Me.Close()
     End Sub
 End Class

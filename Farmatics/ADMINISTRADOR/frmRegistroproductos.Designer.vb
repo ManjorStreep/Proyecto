@@ -29,6 +29,7 @@ Partial Class frmRegistroproductos
         Me.btSalir = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
@@ -44,29 +45,28 @@ Partial Class frmRegistroproductos
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btn_Editar = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btn_Editar = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
@@ -133,9 +133,22 @@ Partial Class frmRegistroproductos
         Me.GroupBox3.TabIndex = 67
         Me.GroupBox3.TabStop = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Gray
+        Me.Label2.Font = New System.Drawing.Font("Arial MT Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.Location = New System.Drawing.Point(21, 20)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(99, 31)
+        Me.Label2.TabIndex = 72
+        Me.Label2.Text = "Datos"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'PictureBox3
         '
-        Me.PictureBox3.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.logo_farmatic_vec_png
+        Me.PictureBox3.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
         Me.PictureBox3.Location = New System.Drawing.Point(121, 3)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(146, 66)
@@ -264,8 +277,8 @@ Partial Class frmRegistroproductos
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.btn_Editar)
         Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.btn_Editar)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.btSalir)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Control
@@ -275,6 +288,16 @@ Partial Class frmRegistroproductos
         Me.GroupBox1.TabIndex = 68
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Opciones"
+        '
+        'btn_Editar
+        '
+        Me.btn_Editar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_Editar.Location = New System.Drawing.Point(149, 15)
+        Me.btn_Editar.Name = "btn_Editar"
+        Me.btn_Editar.Size = New System.Drawing.Size(65, 29)
+        Me.btn_Editar.TabIndex = 48
+        Me.btn_Editar.Text = "Editar"
+        Me.btn_Editar.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -300,20 +323,10 @@ Partial Class frmRegistroproductos
         Me.Panel1.Size = New System.Drawing.Size(296, 497)
         Me.Panel1.TabIndex = 69
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Gray
-        Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Controls.Add(Me.ProgressBar1)
-        Me.Panel2.Location = New System.Drawing.Point(-12, 388)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(326, 86)
-        Me.Panel2.TabIndex = 71
-        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.DarkGray
-        Me.PictureBox2.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._019_healthcare
+        Me.PictureBox2.Image = Global.Sotware_Farmatics.My.Resources.Resources._019_healthcare
         Me.PictureBox2.Location = New System.Drawing.Point(213, 15)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(46, 42)
@@ -358,6 +371,16 @@ Partial Class frmRegistroproductos
         Me.Label4.TabIndex = 48
         Me.Label4.Text = "ID"
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Gray
+        Me.Panel2.Controls.Add(Me.ProgressBar1)
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Location = New System.Drawing.Point(-12, 388)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(326, 86)
+        Me.Panel2.TabIndex = 71
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.PictureBox1)
@@ -370,7 +393,7 @@ Partial Class frmRegistroproductos
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._041_electrocardiogram
+        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources._041_electrocardiogram
         Me.PictureBox1.Location = New System.Drawing.Point(425, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(54, 49)
@@ -398,29 +421,6 @@ Partial Class frmRegistroproductos
         Me.DataGridView1.Size = New System.Drawing.Size(735, 448)
         Me.DataGridView1.TabIndex = 0
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Gray
-        Me.Label2.Font = New System.Drawing.Font("Arial MT Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(21, 20)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 31)
-        Me.Label2.TabIndex = 72
-        Me.Label2.Text = "Datos"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btn_Editar
-        '
-        Me.btn_Editar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_Editar.Location = New System.Drawing.Point(149, 15)
-        Me.btn_Editar.Name = "btn_Editar"
-        Me.btn_Editar.Size = New System.Drawing.Size(65, 29)
-        Me.btn_Editar.TabIndex = 48
-        Me.btn_Editar.Text = "Editar"
-        Me.btn_Editar.UseVisualStyleBackColor = True
-        '
         'frmRegistroproductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -443,10 +443,10 @@ Partial Class frmRegistroproductos
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.InventarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

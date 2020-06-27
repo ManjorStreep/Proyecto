@@ -24,6 +24,7 @@ Partial Class frmMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenu))
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.InicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ControlDeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerFichasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,9 +40,6 @@ Partial Class frmMenu
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RealizarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HistorialDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,7 +72,13 @@ Partial Class frmMenu
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.pb_profile = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel_Menu = New System.Windows.Forms.Panel()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -86,7 +90,24 @@ Partial Class frmMenu
         Me.GroupBox1.SuspendLayout()
         CType(Me.pb_profile, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.LightGray
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.VentaToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.HerramientasToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1022, 24)
+        Me.MenuStrip1.TabIndex = 1
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'InicioToolStripMenuItem
         '
@@ -108,7 +129,7 @@ Partial Class frmMenu
         '
         Me.VerFichasToolStripMenuItem.Image = CType(resources.GetObject("VerFichasToolStripMenuItem.Image"), System.Drawing.Image)
         Me.VerFichasToolStripMenuItem.Name = "VerFichasToolStripMenuItem"
-        Me.VerFichasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VerFichasToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.VerFichasToolStripMenuItem.Text = "Ver Fichas "
         '
         'ControlDeAlmacenToolStripMenuItem
@@ -121,14 +142,14 @@ Partial Class frmMenu
         '
         'GestionarProductoToolStripMenuItem
         '
-        Me.GestionarProductoToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._037_pharmacy
+        Me.GestionarProductoToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._037_pharmacy
         Me.GestionarProductoToolStripMenuItem.Name = "GestionarProductoToolStripMenuItem"
         Me.GestionarProductoToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.GestionarProductoToolStripMenuItem.Text = "Registrar Productos"
         '
         'ListaDeProductoToolStripMenuItem
         '
-        Me.ListaDeProductoToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._033_medical_mask
+        Me.ListaDeProductoToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._033_medical_mask
         Me.ListaDeProductoToolStripMenuItem.Name = "ListaDeProductoToolStripMenuItem"
         Me.ListaDeProductoToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.ListaDeProductoToolStripMenuItem.Text = "Lista de Producto"
@@ -143,12 +164,14 @@ Partial Class frmMenu
         '
         'RegistrarClienteToolStripMenuItem
         '
+        Me.RegistrarClienteToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._004_medical_app
         Me.RegistrarClienteToolStripMenuItem.Name = "RegistrarClienteToolStripMenuItem"
         Me.RegistrarClienteToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.RegistrarClienteToolStripMenuItem.Text = "Registrar Cliente"
         '
         'ListaDeClientesToolStripMenuItem
         '
+        Me.ListaDeClientesToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._006_first_aid_kit
         Me.ListaDeClientesToolStripMenuItem.Name = "ListaDeClientesToolStripMenuItem"
         Me.ListaDeClientesToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.ListaDeClientesToolStripMenuItem.Text = "Lista de Clientes"
@@ -160,7 +183,7 @@ Partial Class frmMenu
         '
         'CerrarSeToolStripMenuItem
         '
-        Me.CerrarSeToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._020_medical_prescription
+        Me.CerrarSeToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._020_medical_prescription
         Me.CerrarSeToolStripMenuItem.Name = "CerrarSeToolStripMenuItem"
         Me.CerrarSeToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.CerrarSeToolStripMenuItem.Text = "Cerrar Sesión"
@@ -172,6 +195,7 @@ Partial Class frmMenu
         '
         'SalirToolStripMenuItem
         '
+        Me.SalirToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._048_medical
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
@@ -183,83 +207,58 @@ Partial Class frmMenu
         '
         'VentaToolStripMenuItem
         '
-        Me.VentaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RealizarVentaToolStripMenuItem, Me.HistorialDeVentasToolStripMenuItem})
         Me.VentaToolStripMenuItem.Image = CType(resources.GetObject("VentaToolStripMenuItem.Image"), System.Drawing.Image)
         Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
         Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
-        'RealizarVentaToolStripMenuItem
-        '
-        Me.RealizarVentaToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._017_x_ray
-        Me.RealizarVentaToolStripMenuItem.Name = "RealizarVentaToolStripMenuItem"
-        Me.RealizarVentaToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.RealizarVentaToolStripMenuItem.Text = "Realizar Venta"
-        '
-        'HistorialDeVentasToolStripMenuItem
-        '
-        Me.HistorialDeVentasToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._011_thermometer
-        Me.HistorialDeVentasToolStripMenuItem.Name = "HistorialDeVentasToolStripMenuItem"
-        Me.HistorialDeVentasToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.HistorialDeVentasToolStripMenuItem.Text = "Historial de Ventas"
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.LightGray
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.VentaToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.HerramientasToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(821, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.ProductosToolStripMenuItem})
-        Me.ReportesToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._002_online_appointment
+        Me.ReportesToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._002_online_appointment
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(81, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'ClientesToolStripMenuItem
         '
-        Me.ClientesToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._009_nurse
+        Me.ClientesToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._009_nurse
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.ClientesToolStripMenuItem.Text = "clientes"
         '
         'EmpleadosToolStripMenuItem
         '
-        Me.EmpleadosToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._028_doctor
+        Me.EmpleadosToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._028_doctor
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.EmpleadosToolStripMenuItem.Text = "empleados"
         '
         'ProductosToolStripMenuItem
         '
-        Me.ProductosToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._023_dna_structure
+        Me.ProductosToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._023_dna_structure
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.ProductosToolStripMenuItem.Text = "productos"
         '
         'HerramientasToolStripMenuItem
         '
         Me.HerramientasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FichaTecnicaToolStripMenuItem, Me.InformacionDeDesarrolloToolStripMenuItem})
-        Me.HerramientasToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._024_test_tubes
+        Me.HerramientasToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._024_test_tubes
         Me.HerramientasToolStripMenuItem.Name = "HerramientasToolStripMenuItem"
         Me.HerramientasToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
         Me.HerramientasToolStripMenuItem.Text = "Acerca de"
         '
         'FichaTecnicaToolStripMenuItem
         '
-        Me.FichaTecnicaToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._039_injection
+        Me.FichaTecnicaToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._039_injection
         Me.FichaTecnicaToolStripMenuItem.Name = "FichaTecnicaToolStripMenuItem"
         Me.FichaTecnicaToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
         Me.FichaTecnicaToolStripMenuItem.Text = "Ficha Tecnica"
         '
         'InformacionDeDesarrolloToolStripMenuItem
         '
-        Me.InformacionDeDesarrolloToolStripMenuItem.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._040_medical_file
+        Me.InformacionDeDesarrolloToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._040_medical_file
         Me.InformacionDeDesarrolloToolStripMenuItem.Name = "InformacionDeDesarrolloToolStripMenuItem"
         Me.InformacionDeDesarrolloToolStripMenuItem.Size = New System.Drawing.Size(210, 22)
         Me.InformacionDeDesarrolloToolStripMenuItem.Text = "Informacion de desarrollo"
@@ -270,7 +269,7 @@ Partial Class frmMenu
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1, Me.SsTxt_Fecha, Me.SsTxt_UsuarioDni})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 666)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(821, 24)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1022, 24)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "pieMenu1"
         '
@@ -296,23 +295,27 @@ Partial Class frmMenu
         Me.SsTxt_UsuarioDni.Size = New System.Drawing.Size(100, 19)
         Me.SsTxt_UsuarioDni.Text = "SsTxt_UsuarioDni"
         '
+        'tmr_reloj
+        '
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DarkGray
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.GroupBox7)
         Me.Panel1.Controls.Add(Me.GroupBox5)
         Me.Panel1.Controls.Add(Me.gbPerfil)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(11, 23)
+        Me.Panel1.Location = New System.Drawing.Point(11, 38)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(317, 635)
+        Me.Panel1.Size = New System.Drawing.Size(317, 620)
         Me.Panel1.TabIndex = 82
         '
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources._003_doctor
+        Me.PictureBox4.Image = Global.Sotware_Farmatics.My.Resources.Resources._003_doctor
         Me.PictureBox4.Location = New System.Drawing.Point(14, 65)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(59, 56)
@@ -487,7 +490,7 @@ Partial Class frmMenu
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.pb_profile)
-        Me.GroupBox1.Location = New System.Drawing.Point(46, 23)
+        Me.GroupBox1.Location = New System.Drawing.Point(43, 24)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(146, 157)
         Me.GroupBox1.TabIndex = 14
@@ -500,7 +503,7 @@ Partial Class frmMenu
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pb_profile.BackColor = System.Drawing.Color.Silver
         Me.pb_profile.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pb_profile.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.profile_2092113_960_720
+        Me.pb_profile.Image = Global.Sotware_Farmatics.My.Resources.Resources.profile_2092113_960_720
         Me.pb_profile.Location = New System.Drawing.Point(6, 14)
         Me.pb_profile.Name = "pb_profile"
         Me.pb_profile.Size = New System.Drawing.Size(134, 132)
@@ -514,20 +517,97 @@ Partial Class frmMenu
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.WindowsApplicationFARMATICS.My.Resources.Resources.logo_farmatic_vec_png
-        Me.PictureBox1.Location = New System.Drawing.Point(74, 0)
+        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
+        Me.PictureBox1.Location = New System.Drawing.Point(79, 24)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(203, 65)
+        Me.PictureBox1.Size = New System.Drawing.Size(201, 67)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
-        'Panel_Menu
+        'TabControl1
         '
-        Me.Panel_Menu.Location = New System.Drawing.Point(346, 41)
-        Me.Panel_Menu.Name = "Panel_Menu"
-        Me.Panel_Menu.Size = New System.Drawing.Size(459, 617)
-        Me.Panel_Menu.TabIndex = 83
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Location = New System.Drawing.Point(334, 27)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(676, 631)
+        Me.TabControl1.TabIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.LightGray
+        Me.TabPage1.Controls.Add(Me.DataGridView1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(668, 605)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Historial de Ventas"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(662, 599)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(668, 605)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Historial de Empleados"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(662, 599)
+        Me.DataGridView2.TabIndex = 0
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.DataGridView3)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(668, 605)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Historial de Inventario"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.BackgroundColor = System.Drawing.Color.Gainsboro
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView3.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.Size = New System.Drawing.Size(662, 599)
+        Me.DataGridView3.TabIndex = 0
         '
         'frmMenu
         '
@@ -535,8 +615,8 @@ Partial Class frmMenu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ClientSize = New System.Drawing.Size(821, 690)
-        Me.Controls.Add(Me.Panel_Menu)
+        Me.ClientSize = New System.Drawing.Size(1022, 690)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Panel1)
@@ -565,6 +645,13 @@ Partial Class frmMenu
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.pb_profile, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -575,8 +662,6 @@ Partial Class frmMenu
     Friend WithEvents ControlDeEmpleadosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VerFichasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ControlDeAlmacenToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RealizarVentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HistorialDeVentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HerramientasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FichaTecnicaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InformacionDeDesarrolloToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -596,8 +681,6 @@ Partial Class frmMenu
     Friend WithEvents tmr_reloj As System.Windows.Forms.Timer
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents RegistrarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ListaDeClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -629,5 +712,13 @@ Partial Class frmMenu
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents pb_profile As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Panel_Menu As System.Windows.Forms.Panel
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
+    Friend WithEvents RegistrarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ListaDeClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

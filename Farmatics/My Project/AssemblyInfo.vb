@@ -1,4 +1,6 @@
-﻿Imports System
+﻿Imports System.Resources
+
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -8,14 +10,14 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("WindowsApplication1")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("WindowsApplication1")> 
+<Assembly: AssemblyTitle("SOFTWARE Farmatics s.a")> 
+<Assembly: AssemblyDescription("Programa informatico de bajo cosnumo para la manuntencion y mantenimiento de tareas diarias dentro de el establecimiento o sucursal de la empresa.")> 
+<Assembly: AssemblyCompany("Farmatics")> 
+<Assembly: AssemblyProduct("SOFTWARE Farmatics s.a")> 
 <Assembly: AssemblyCopyright("Copyright ©  2020")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTrademark("- o -")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)> 
 
 'El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
 <Assembly: Guid("2384e12b-c408-4f7e-8786-25c0dd784c06")> 
@@ -33,3 +35,5 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.0.0.0")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> 
+
+<Assembly: NeutralResourcesLanguageAttribute("es-VE")> 
