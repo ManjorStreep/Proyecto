@@ -79,6 +79,15 @@ Partial Class frmMenu
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
+        Me.HistorialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HistorialTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.HistorialTableAdapter()
+        Me.INDICEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CLIENTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PRODUCTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CANTIDADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PAGADODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -97,6 +106,8 @@ Partial Class frmMenu
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HistorialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -551,9 +562,15 @@ Partial Class frmMenu
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.INDICEDataGridViewTextBoxColumn, Me.CLIENTEDataGridViewTextBoxColumn, Me.PRODUCTODataGridViewTextBoxColumn, Me.CANTIDADDataGridViewTextBoxColumn, Me.PAGADODataGridViewTextBoxColumn, Me.FECHADataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.HistorialBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
@@ -609,6 +626,62 @@ Partial Class frmMenu
         Me.DataGridView3.Size = New System.Drawing.Size(662, 599)
         Me.DataGridView3.TabIndex = 0
         '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'HistorialBindingSource
+        '
+        Me.HistorialBindingSource.DataMember = "Historial"
+        Me.HistorialBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'HistorialTableAdapter
+        '
+        Me.HistorialTableAdapter.ClearBeforeFill = True
+        '
+        'INDICEDataGridViewTextBoxColumn
+        '
+        Me.INDICEDataGridViewTextBoxColumn.DataPropertyName = "INDICE"
+        Me.INDICEDataGridViewTextBoxColumn.HeaderText = "INDICE"
+        Me.INDICEDataGridViewTextBoxColumn.Name = "INDICEDataGridViewTextBoxColumn"
+        Me.INDICEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CLIENTEDataGridViewTextBoxColumn
+        '
+        Me.CLIENTEDataGridViewTextBoxColumn.DataPropertyName = "CLIENTE"
+        Me.CLIENTEDataGridViewTextBoxColumn.HeaderText = "CLIENTE"
+        Me.CLIENTEDataGridViewTextBoxColumn.Name = "CLIENTEDataGridViewTextBoxColumn"
+        Me.CLIENTEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PRODUCTODataGridViewTextBoxColumn
+        '
+        Me.PRODUCTODataGridViewTextBoxColumn.DataPropertyName = "PRODUCTO"
+        Me.PRODUCTODataGridViewTextBoxColumn.HeaderText = "PRODUCTO"
+        Me.PRODUCTODataGridViewTextBoxColumn.Name = "PRODUCTODataGridViewTextBoxColumn"
+        Me.PRODUCTODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CANTIDADDataGridViewTextBoxColumn
+        '
+        Me.CANTIDADDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD"
+        Me.CANTIDADDataGridViewTextBoxColumn.HeaderText = "CANTIDAD"
+        Me.CANTIDADDataGridViewTextBoxColumn.Name = "CANTIDADDataGridViewTextBoxColumn"
+        Me.CANTIDADDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PAGADODataGridViewTextBoxColumn
+        '
+        Me.PAGADODataGridViewTextBoxColumn.DataPropertyName = "PAGADO"
+        Me.PAGADODataGridViewTextBoxColumn.HeaderText = "PAGADO"
+        Me.PAGADODataGridViewTextBoxColumn.Name = "PAGADODataGridViewTextBoxColumn"
+        Me.PAGADODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FECHADataGridViewTextBoxColumn
+        '
+        Me.FECHADataGridViewTextBoxColumn.DataPropertyName = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn.HeaderText = "FECHA"
+        Me.FECHADataGridViewTextBoxColumn.Name = "FECHADataGridViewTextBoxColumn"
+        Me.FECHADataGridViewTextBoxColumn.ReadOnly = True
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -652,6 +725,8 @@ Partial Class frmMenu
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HistorialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -721,4 +796,13 @@ Partial Class frmMenu
     Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
     Friend WithEvents RegistrarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListaDeClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
+    Friend WithEvents HistorialBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents HistorialTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.HistorialTableAdapter
+    Friend WithEvents INDICEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CLIENTEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PRODUCTODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CANTIDADDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PAGADODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FECHADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

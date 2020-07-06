@@ -45,8 +45,8 @@ Partial Class frmRegistroproductos
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btn_Editar = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.btn_Editar = New System.Windows.Forms.Button()
         Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -59,6 +59,15 @@ Partial Class frmRegistroproductos
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CODIGODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VALORDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CLASIFICACIONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RECIPEDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
+        Me.ProductosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -71,6 +80,8 @@ Partial Class frmRegistroproductos
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -112,21 +123,20 @@ Partial Class frmRegistroproductos
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Controls.Add(Me.PictureBox3)
+        Me.GroupBox3.Controls.Add(Me.TextBox15)
+        Me.GroupBox3.Controls.Add(Me.TextBox17)
+        Me.GroupBox3.Controls.Add(Me.TextBox16)
+        Me.GroupBox3.Controls.Add(Me.ComboBox1)
         Me.GroupBox3.Controls.Add(Me.ComboBox4)
         Me.GroupBox3.Controls.Add(Me.ComboBox3)
-        Me.GroupBox3.Controls.Add(Me.ComboBox1)
+        Me.GroupBox3.Controls.Add(Me.Label2)
+        Me.GroupBox3.Controls.Add(Me.PictureBox3)
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.Label17)
-        Me.GroupBox3.Controls.Add(Me.TextBox15)
-        Me.GroupBox3.Controls.Add(Me.TextBox16)
         Me.GroupBox3.Controls.Add(Me.Label18)
         Me.GroupBox3.Controls.Add(Me.Label19)
-        Me.GroupBox3.Controls.Add(Me.TextBox17)
-        Me.GroupBox3.Enabled = False
         Me.GroupBox3.Location = New System.Drawing.Point(15, 54)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(268, 328)
@@ -137,11 +147,11 @@ Partial Class frmRegistroproductos
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Gray
-        Me.Label2.Font = New System.Drawing.Font("Arial MT Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
         Me.Label2.Location = New System.Drawing.Point(21, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 31)
+        Me.Label2.Size = New System.Drawing.Size(91, 31)
         Me.Label2.TabIndex = 72
         Me.Label2.Text = "Datos"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -265,11 +275,11 @@ Partial Class frmRegistroproductos
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Arial MT Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.Control
         Me.Label9.Location = New System.Drawing.Point(6, 12)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(416, 31)
+        Me.Label9.Size = New System.Drawing.Size(371, 31)
         Me.Label9.TabIndex = 63
         Me.Label9.Text = "Panel de Control Productos"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -289,16 +299,6 @@ Partial Class frmRegistroproductos
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Opciones"
         '
-        'btn_Editar
-        '
-        Me.btn_Editar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btn_Editar.Location = New System.Drawing.Point(149, 15)
-        Me.btn_Editar.Name = "btn_Editar"
-        Me.btn_Editar.Size = New System.Drawing.Size(65, 29)
-        Me.btn_Editar.TabIndex = 48
-        Me.btn_Editar.Text = "Editar"
-        Me.btn_Editar.UseVisualStyleBackColor = True
-        '
         'Button3
         '
         Me.Button3.ForeColor = System.Drawing.SystemColors.ControlText
@@ -308,7 +308,16 @@ Partial Class frmRegistroproductos
         Me.Button3.TabIndex = 47
         Me.Button3.Text = "Agregar"
         Me.Button3.UseVisualStyleBackColor = True
-        Me.Button3.Visible = False
+        '
+        'btn_Editar
+        '
+        Me.btn_Editar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_Editar.Location = New System.Drawing.Point(149, 15)
+        Me.btn_Editar.Name = "btn_Editar"
+        Me.btn_Editar.Size = New System.Drawing.Size(65, 29)
+        Me.btn_Editar.TabIndex = 48
+        Me.btn_Editar.Text = "Editar"
+        Me.btn_Editar.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -414,12 +423,74 @@ Partial Class frmRegistroproductos
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGODataGridViewTextBoxColumn, Me.NOMBREDataGridViewTextBoxColumn, Me.VALORDataGridViewTextBoxColumn, Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn, Me.CLASIFICACIONDataGridViewTextBoxColumn, Me.RECIPEDataGridViewCheckBoxColumn})
+        Me.DataGridView1.DataSource = Me.ProductosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(6, 11)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(735, 448)
         Me.DataGridView1.TabIndex = 0
+        '
+        'CODIGODataGridViewTextBoxColumn
+        '
+        Me.CODIGODataGridViewTextBoxColumn.DataPropertyName = "CODIGO"
+        Me.CODIGODataGridViewTextBoxColumn.HeaderText = "CODIGO"
+        Me.CODIGODataGridViewTextBoxColumn.Name = "CODIGODataGridViewTextBoxColumn"
+        Me.CODIGODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NOMBREDataGridViewTextBoxColumn
+        '
+        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
+        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VALORDataGridViewTextBoxColumn
+        '
+        Me.VALORDataGridViewTextBoxColumn.DataPropertyName = "VALOR"
+        Me.VALORDataGridViewTextBoxColumn.HeaderText = "VALOR"
+        Me.VALORDataGridViewTextBoxColumn.Name = "VALORDataGridViewTextBoxColumn"
+        Me.VALORDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CANTIDADDISPONIBLEDataGridViewTextBoxColumn
+        '
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD_DISPONIBLE"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.HeaderText = "DISPONIBLE"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.Name = "CANTIDADDISPONIBLEDataGridViewTextBoxColumn"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CLASIFICACIONDataGridViewTextBoxColumn
+        '
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.DataPropertyName = "CLASIFICACION"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.HeaderText = "CLASIFICACION"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.Name = "CLASIFICACIONDataGridViewTextBoxColumn"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RECIPEDataGridViewCheckBoxColumn
+        '
+        Me.RECIPEDataGridViewCheckBoxColumn.DataPropertyName = "RECIPE"
+        Me.RECIPEDataGridViewCheckBoxColumn.HeaderText = "RECIPE"
+        Me.RECIPEDataGridViewCheckBoxColumn.Name = "RECIPEDataGridViewCheckBoxColumn"
+        Me.RECIPEDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'ProductosBindingSource
+        '
+        Me.ProductosBindingSource.DataMember = "Productos"
+        Me.ProductosBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductosTableAdapter
+        '
+        Me.ProductosTableAdapter.ClearBeforeFill = True
         '
         'frmRegistroproductos
         '
@@ -452,6 +523,8 @@ Partial Class frmRegistroproductos
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -469,7 +542,6 @@ Partial Class frmRegistroproductos
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
@@ -492,5 +564,15 @@ Partial Class frmRegistroproductos
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btn_Editar As System.Windows.Forms.Button
-  
+    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
+    Friend WithEvents ProductosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ProductosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter
+    Friend WithEvents CODIGODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VALORDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CANTIDADDISPONIBLEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CLASIFICACIONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents RECIPEDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+
 End Class

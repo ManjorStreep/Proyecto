@@ -105,6 +105,14 @@
     <Compile Include="ADMINISTRADOR\frmVisualizarReportes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseDataSet.vb">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmCaja.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +212,17 @@
     <EmbeddedResource Include="REPORTES\Plantilla.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -253,6 +272,9 @@
     <None Include="Resources\undraw_medical_research_qg4d.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="iconfinder_12-lan-connected-512x512_265522.ico" />
     <None Include="Resources\050-ambulance.png" />
     <None Include="Resources\049-medical insurance.png" />

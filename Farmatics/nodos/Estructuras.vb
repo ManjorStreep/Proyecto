@@ -52,7 +52,23 @@ Module Estructuras
         End Function
     End Structure
 
+    Public Structure Productos
+        Public Id As Integer
+        Public Nombre As String
+        Public Valor As Integer
+        Public Cantidad_Disponible As Integer
+        Public Clasificacion As String
+        Public Recipe As Boolean
 
+        Public Sub New(ByVal datos As DataRow)
+            Id = Integer.Parse(CStr(datos(0)))
+            Nombre = CStr(datos(1))
+            Valor = Integer.Parse(CStr(datos(2)))
+            Cantidad_Disponible = Integer.Parse(CStr(datos(3)))
+            Clasificacion = CStr(datos(4))
+            Recipe = Boolean.Parse(CStr(datos(5)))
+        End Sub
+    End Structure
 
 
 End Module

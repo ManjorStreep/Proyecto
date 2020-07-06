@@ -31,6 +31,8 @@ Public Class frmMenu
     End Sub
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Historial' Puede moverla o quitarla según sea necesario.
+        Me.HistorialTableAdapter.Fill(Me.DatabaseDataSet.Historial)
         tmr_reloj.Start()
     End Sub
 
