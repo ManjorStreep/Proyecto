@@ -15,23 +15,7 @@
     End Sub
 
     Private Sub btConsuta_Click(sender As Object, e As EventArgs) Handles btConsuta.Click
-        Dim datos As Empleado
-        Dim consulta As List(Of String) = Conexiones.ObtenerDatos("Empleados", "WHERE CEDULA ='" & txtDNI.Text & "'")
-        If consulta.Count > 0 Then
-            datos = New Empleado(consulta)
-            txtApellido.Text = datos.Apellido
-            txtNombre.Text = datos.Nombre
-            txtDIreccion.Text = datos.Direccion
-            txtTelefono.Text = datos.Telefono
-            If datos.Sexo = RadioButton3.Text Then
-                RadioButton3.Select()
-            Else
-                RadioButton4.Select()
-            End If
-
-        Else
-            MsgBox("No funciona")
-        End If
+       
     End Sub
 
 

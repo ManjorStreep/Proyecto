@@ -4,16 +4,10 @@ Public Class frmFichas
     Dim datos As Empleado
 
     Private Sub frmFichas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Conexiones.ObtenerTabla("Empleados", Usuarios1DataGridView)
     End Sub
 
     Private Sub btbusqueda_Click(sender As Object, e As EventArgs) Handles btbusqueda.Click
-        Dim consulta As List(Of String) = Conexiones.ObtenerDatos("Empleados", "WHERE CEDULA ='" & TextBox1.Text & "'")
-        If consulta.Count > 0 Then
-            ImprimirDatos(consulta)
-        Else
-            MsgBox("No funciona")
-        End If
+        
     End Sub
 
     
@@ -47,17 +41,10 @@ Public Class frmFichas
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
 
-        Try
-            Conexiones.EliminarDatos("Empleados", "WHERE CEDULA ='" & Str(datos.Cedula).Trim() & "'")
-        Catch ex As Exception
-            MsgBox("Error al intentar eliminar")
-        End Try
-
     End Sub
 
-    Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
-        ' esperando codigo
-    End Sub
+
+
 
     Private Sub btsalir_Click(sender As Object, e As EventArgs) Handles btsalir.Click
         Me.Close()

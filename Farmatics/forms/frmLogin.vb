@@ -13,25 +13,17 @@ Public Class frmLogin
     End Sub
 
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
-
-        Dim datos = Conexiones.ObtenerDatos("Empleados", "WHERE CEDULA ='" & txt_user.Text & "'")
-
-        If txt_user.TextLength < 5 Or txt_pass.TextLength < 5 Then
-            MsgBox("ingrese valores en los campos ")
-        Else
-            If datos.Item(10) = txt_pass.Text Then
-                Me.Hide()
-                My.Forms.frmCaja.Show()
+        If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_user.Text & "' AND CLAVE ='" & txt_pass.Text & "'") Then
+            If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_user.Text & "' AND CARGO ='Dueño'") Then
+                frmMenu.Show()
             Else
-                MsgBox("Usuario o Contraseña Invalida ")
+                frmCaja.Show()
             End If
+        Else
+            MsgBox("Usuario no existe")
         End If
 
     End Sub
-
-    Public Function Usuario()
-        Return New Empleado(datos)
-    End Function
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         frmVisualizarReportes.Show()

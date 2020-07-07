@@ -6,7 +6,6 @@
         '
         'Volcado de Informacion del Cajero
         '
-        Usuario = frmLogin.Usuario()
         lb_datocajero0.Text = Usuario.Nombre
         lb_datocajero1.Text = Usuario.Apellido
         lb_datocajero2.Text = Usuario.Cedula
@@ -14,7 +13,6 @@
         '
         'Rellenando la Tabla 
         '
-        Conexiones.ObtenerTabla("Productos", DataGridView1)
 
         '
         'iniciando timer

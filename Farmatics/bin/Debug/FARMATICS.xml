@@ -6,107 +6,7 @@ FARMATICS
 </name>
 </assembly>
 <members>
-<member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.EmpleadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ProductosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.EmpleadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ProductosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.EmpleadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ProductosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.ClientesTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.HistorialTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Sotware_Farmatics.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Sotware_Farmatics.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Sotware_Farmatics.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(Sotware_Farmatics.DatabaseDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="P:Sotware_Farmatics.My.Resources.Resources.ResourceManager">
+<member name="P:Sotware_Farmatics.My.Resources.Resources.ResourceManager">
 	<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
@@ -346,6 +246,106 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 </member><member name="T:Sotware_Farmatics.My.Resources.Resources">
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.EmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ProductosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.EmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ProductosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.EmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ProductosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.ClientesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.HistorialTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Sotware_Farmatics.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Sotware_Farmatics.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Sotware_Farmatics.DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(Sotware_Farmatics.DatabaseDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
 </members>
