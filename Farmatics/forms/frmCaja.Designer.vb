@@ -24,55 +24,70 @@ Partial Class frmCaja
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.gbPerfil = New System.Windows.Forms.GroupBox()
-        Me.btn_salir = New System.Windows.Forms.Button()
         Me.lb_datocajero3 = New System.Windows.Forms.Label()
         Me.lb_datocajero2 = New System.Windows.Forms.Label()
         Me.lb_datocajero1 = New System.Windows.Forms.Label()
         Me.lb_datocajero0 = New System.Windows.Forms.Label()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.pb_profile = New System.Windows.Forms.PictureBox()
+        Me.btn_salir = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.btn_Buscar = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btn_facturar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.btn_Buscar = New System.Windows.Forms.Button()
+        Me.CODIGODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VALORDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CLASIFICACIONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RECIPEDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel_Fecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel_ObtenerFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tim_1 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.pb_profile = New System.Windows.Forms.PictureBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.btn_facturar = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.ProductosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter()
+        Me.EmpleadosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter()
+        Me.TableAdapterManager = New Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.gbPerfil.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.StatusStrip1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.pb_profile, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbPerfil
@@ -95,16 +110,6 @@ Partial Class frmCaja
         Me.gbPerfil.Size = New System.Drawing.Size(234, 353)
         Me.gbPerfil.TabIndex = 0
         Me.gbPerfil.TabStop = False
-        '
-        'btn_salir
-        '
-        Me.btn_salir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_salir.Location = New System.Drawing.Point(7, 14)
-        Me.btn_salir.Name = "btn_salir"
-        Me.btn_salir.Size = New System.Drawing.Size(76, 30)
-        Me.btn_salir.TabIndex = 2
-        Me.btn_salir.Text = "SALIR"
-        Me.btn_salir.UseVisualStyleBackColor = True
         '
         'lb_datocajero3
         '
@@ -140,11 +145,22 @@ Partial Class frmCaja
         '
         Me.lb_datocajero0.AutoSize = True
         Me.lb_datocajero0.BackColor = System.Drawing.Color.Silver
+        Me.lb_datocajero0.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "NOMBRE", True))
         Me.lb_datocajero0.Location = New System.Drawing.Point(110, 208)
         Me.lb_datocajero0.Name = "lb_datocajero0"
         Me.lb_datocajero0.Size = New System.Drawing.Size(47, 13)
         Me.lb_datocajero0.TabIndex = 8
         Me.lb_datocajero0.Text = "lb_name"
+        '
+        'EmpleadosBindingSource
+        '
+        Me.EmpleadosBindingSource.DataMember = "Empleados"
+        Me.EmpleadosBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label4
         '
@@ -186,6 +202,19 @@ Partial Class frmCaja
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Nombres :"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackColor = System.Drawing.Color.Silver
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.Location = New System.Drawing.Point(20, 192)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(196, 130)
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.pb_profile)
@@ -194,6 +223,31 @@ Partial Class frmCaja
         Me.GroupBox1.Size = New System.Drawing.Size(146, 154)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
+        '
+        'pb_profile
+        '
+        Me.pb_profile.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pb_profile.BackColor = System.Drawing.Color.Silver
+        Me.pb_profile.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pb_profile.Image = Global.Sotware_Farmatics.My.Resources.Resources.profile_2092113_960_720
+        Me.pb_profile.Location = New System.Drawing.Point(6, 14)
+        Me.pb_profile.Name = "pb_profile"
+        Me.pb_profile.Size = New System.Drawing.Size(134, 129)
+        Me.pb_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pb_profile.TabIndex = 3
+        Me.pb_profile.TabStop = False
+        '
+        'btn_salir
+        '
+        Me.btn_salir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_salir.Location = New System.Drawing.Point(7, 14)
+        Me.btn_salir.Name = "btn_salir"
+        Me.btn_salir.Size = New System.Drawing.Size(76, 30)
+        Me.btn_salir.TabIndex = 2
+        Me.btn_salir.Text = "SALIR"
+        Me.btn_salir.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -212,6 +266,140 @@ Partial Class frmCaja
         Me.Panel1.Size = New System.Drawing.Size(1004, 537)
         Me.Panel1.TabIndex = 3
         '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.Button1)
+        Me.GroupBox7.Controls.Add(Me.btn_salir)
+        Me.GroupBox7.Location = New System.Drawing.Point(36, 446)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(195, 59)
+        Me.GroupBox7.TabIndex = 17
+        Me.GroupBox7.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(96, 14)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(93, 30)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Cerrar Sesión"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.PictureBox3)
+        Me.GroupBox6.Controls.Add(Me.Label6)
+        Me.GroupBox6.Location = New System.Drawing.Point(295, 21)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(279, 57)
+        Me.GroupBox6.TabIndex = 17
+        Me.GroupBox6.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Sotware_Farmatics.My.Resources.Resources._002_online_appointment
+        Me.PictureBox3.Location = New System.Drawing.Point(220, 9)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(53, 46)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 18
+        Me.PictureBox3.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Verdana", 25.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label6.Location = New System.Drawing.Point(6, 9)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(220, 41)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Inventario"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.PictureBox4)
+        Me.GroupBox5.Controls.Add(Me.Label5)
+        Me.GroupBox5.Location = New System.Drawing.Point(36, 55)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(195, 59)
+        Me.GroupBox5.TabIndex = 12
+        Me.GroupBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Sotware_Farmatics.My.Resources.Resources._003_doctor
+        Me.PictureBox4.Location = New System.Drawing.Point(136, 9)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(53, 46)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 19
+        Me.PictureBox4.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 30.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.Location = New System.Drawing.Point(6, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(133, 48)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "CAJA"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.btn_Buscar)
+        Me.GroupBox4.Controls.Add(Me.TextBox1)
+        Me.GroupBox4.Location = New System.Drawing.Point(742, 24)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(220, 54)
+        Me.GroupBox4.TabIndex = 12
+        Me.GroupBox4.TabStop = False
+        '
+        'btn_Buscar
+        '
+        Me.btn_Buscar.Location = New System.Drawing.Point(6, 11)
+        Me.btn_Buscar.Name = "btn_Buscar"
+        Me.btn_Buscar.Size = New System.Drawing.Size(53, 37)
+        Me.btn_Buscar.TabIndex = 5
+        Me.btn_Buscar.Text = "Buscar"
+        Me.btn_Buscar.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(65, 19)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(146, 20)
+        Me.TextBox1.TabIndex = 9
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.btn_facturar)
+        Me.GroupBox3.Location = New System.Drawing.Point(598, 25)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(110, 54)
+        Me.GroupBox3.TabIndex = 11
+        Me.GroupBox3.TabStop = False
+        '
+        'btn_facturar
+        '
+        Me.btn_facturar.BackColor = System.Drawing.Color.Transparent
+        Me.btn_facturar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_facturar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_facturar.FlatAppearance.BorderSize = 50
+        Me.btn_facturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btn_facturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btn_facturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btn_facturar.Location = New System.Drawing.Point(6, 12)
+        Me.btn_facturar.Name = "btn_facturar"
+        Me.btn_facturar.Size = New System.Drawing.Size(99, 36)
+        Me.btn_facturar.TabIndex = 4
+        Me.btn_facturar.Text = "Realizar Venta"
+        Me.btn_facturar.UseVisualStyleBackColor = False
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
@@ -227,29 +415,77 @@ Partial Class frmCaja
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGODataGridViewTextBoxColumn, Me.NOMBREDataGridViewTextBoxColumn, Me.VALORDataGridViewTextBoxColumn, Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn, Me.CLASIFICACIONDataGridViewTextBoxColumn, Me.RECIPEDataGridViewCheckBoxColumn})
+        Me.DataGridView1.DataSource = Me.ProductosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(15, 20)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(673, 421)
         Me.DataGridView1.TabIndex = 1
         '
-        'TextBox1
+        'CODIGODataGridViewTextBoxColumn
         '
-        Me.TextBox1.Location = New System.Drawing.Point(65, 19)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(146, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.CODIGODataGridViewTextBoxColumn.DataPropertyName = "CODIGO"
+        Me.CODIGODataGridViewTextBoxColumn.HeaderText = "CODIGO"
+        Me.CODIGODataGridViewTextBoxColumn.Name = "CODIGODataGridViewTextBoxColumn"
+        Me.CODIGODataGridViewTextBoxColumn.ReadOnly = True
         '
-        'btn_Buscar
+        'NOMBREDataGridViewTextBoxColumn
         '
-        Me.btn_Buscar.Location = New System.Drawing.Point(6, 11)
-        Me.btn_Buscar.Name = "btn_Buscar"
-        Me.btn_Buscar.Size = New System.Drawing.Size(53, 37)
-        Me.btn_Buscar.TabIndex = 5
-        Me.btn_Buscar.Text = "Buscar"
-        Me.btn_Buscar.UseVisualStyleBackColor = True
+        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
+        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VALORDataGridViewTextBoxColumn
+        '
+        Me.VALORDataGridViewTextBoxColumn.DataPropertyName = "VALOR"
+        Me.VALORDataGridViewTextBoxColumn.HeaderText = "VALOR"
+        Me.VALORDataGridViewTextBoxColumn.Name = "VALORDataGridViewTextBoxColumn"
+        Me.VALORDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CANTIDADDISPONIBLEDataGridViewTextBoxColumn
+        '
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD_DISPONIBLE"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.HeaderText = "CANTIDAD_DISPONIBLE"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.Name = "CANTIDADDISPONIBLEDataGridViewTextBoxColumn"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CLASIFICACIONDataGridViewTextBoxColumn
+        '
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.DataPropertyName = "CLASIFICACION"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.HeaderText = "CLASIFICACION"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.Name = "CLASIFICACIONDataGridViewTextBoxColumn"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RECIPEDataGridViewCheckBoxColumn
+        '
+        Me.RECIPEDataGridViewCheckBoxColumn.DataPropertyName = "RECIPE"
+        Me.RECIPEDataGridViewCheckBoxColumn.HeaderText = "RECIPE"
+        Me.RECIPEDataGridViewCheckBoxColumn.Name = "RECIPEDataGridViewCheckBoxColumn"
+        Me.RECIPEDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'ProductosBindingSource
+        '
+        Me.ProductosBindingSource.DataMember = "Productos"
+        Me.ProductosBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
+        Me.PictureBox1.Location = New System.Drawing.Point(23, -22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(237, 25)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
         '
         'StatusStrip1
         '
@@ -281,165 +517,22 @@ Partial Class frmCaja
         'tim_1
         '
         '
-        'PictureBox1
+        'ProductosTableAdapter
         '
-        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
-        Me.PictureBox1.Location = New System.Drawing.Point(23, -22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(237, 93)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 15
-        Me.PictureBox1.TabStop = False
+        Me.ProductosTableAdapter.ClearBeforeFill = True
         '
-        'PictureBox2
+        'EmpleadosTableAdapter
         '
-        Me.PictureBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.Silver
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox2.Location = New System.Drawing.Point(20, 192)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(196, 130)
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
+        Me.EmpleadosTableAdapter.ClearBeforeFill = True
         '
-        'pb_profile
+        'TableAdapterManager
         '
-        Me.pb_profile.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pb_profile.BackColor = System.Drawing.Color.Silver
-        Me.pb_profile.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pb_profile.Image = Global.Sotware_Farmatics.My.Resources.Resources.profile_2092113_960_720
-        Me.pb_profile.Location = New System.Drawing.Point(6, 14)
-        Me.pb_profile.Name = "pb_profile"
-        Me.pb_profile.Size = New System.Drawing.Size(134, 129)
-        Me.pb_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pb_profile.TabIndex = 3
-        Me.pb_profile.TabStop = False
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.btn_Buscar)
-        Me.GroupBox4.Controls.Add(Me.TextBox1)
-        Me.GroupBox4.Location = New System.Drawing.Point(742, 24)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(220, 54)
-        Me.GroupBox4.TabIndex = 12
-        Me.GroupBox4.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Verdana", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(6, 9)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(133, 48)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "CAJA"
-        '
-        'btn_facturar
-        '
-        Me.btn_facturar.BackColor = System.Drawing.Color.Transparent
-        Me.btn_facturar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_facturar.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btn_facturar.FlatAppearance.BorderSize = 50
-        Me.btn_facturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btn_facturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btn_facturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btn_facturar.Location = New System.Drawing.Point(6, 12)
-        Me.btn_facturar.Name = "btn_facturar"
-        Me.btn_facturar.Size = New System.Drawing.Size(99, 36)
-        Me.btn_facturar.TabIndex = 4
-        Me.btn_facturar.Text = "Realizar Venta"
-        Me.btn_facturar.UseVisualStyleBackColor = False
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.btn_facturar)
-        Me.GroupBox3.Location = New System.Drawing.Point(598, 25)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(110, 54)
-        Me.GroupBox3.TabIndex = 11
-        Me.GroupBox3.TabStop = False
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.Controls.Add(Me.PictureBox4)
-        Me.GroupBox5.Controls.Add(Me.Label5)
-        Me.GroupBox5.Location = New System.Drawing.Point(36, 55)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(195, 59)
-        Me.GroupBox5.TabIndex = 12
-        Me.GroupBox5.TabStop = False
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.Controls.Add(Me.PictureBox3)
-        Me.GroupBox6.Controls.Add(Me.Label6)
-        Me.GroupBox6.Location = New System.Drawing.Point(295, 21)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(279, 57)
-        Me.GroupBox6.TabIndex = 17
-        Me.GroupBox6.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Verdana", 25.0!, System.Drawing.FontStyle.Bold)
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(6, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(220, 41)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Inventario"
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(96, 14)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 30)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Cerrar Sesión"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'GroupBox7
-        '
-        Me.GroupBox7.Controls.Add(Me.Button1)
-        Me.GroupBox7.Controls.Add(Me.btn_salir)
-        Me.GroupBox7.Location = New System.Drawing.Point(36, 446)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(195, 59)
-        Me.GroupBox7.TabIndex = 17
-        Me.GroupBox7.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Sotware_Farmatics.My.Resources.Resources._002_online_appointment
-        Me.PictureBox3.Location = New System.Drawing.Point(220, 9)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(53, 46)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 18
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Sotware_Farmatics.My.Resources.Resources._003_doctor
-        Me.PictureBox4.Location = New System.Drawing.Point(136, 9)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(53, 46)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 19
-        Me.PictureBox4.TabStop = False
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClientesTableAdapter = Nothing
+        Me.TableAdapterManager.EmpleadosTableAdapter = Me.EmpleadosTableAdapter
+        Me.TableAdapterManager.HistorialTableAdapter = Nothing
+        Me.TableAdapterManager.ProductosTableAdapter = Me.ProductosTableAdapter
+        Me.TableAdapterManager.UpdateOrder = Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'frmCaja
         '
@@ -456,25 +549,28 @@ Partial Class frmCaja
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.gbPerfil.ResumeLayout(False)
         Me.gbPerfil.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         CType(Me.pb_profile, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        Me.GroupBox7.ResumeLayout(False)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -513,5 +609,17 @@ Partial Class frmCaja
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents btn_facturar As System.Windows.Forms.Button
+    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
+    Friend WithEvents ProductosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ProductosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter
+    Friend WithEvents CODIGODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VALORDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CANTIDADDISPONIBLEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CLASIFICACIONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents RECIPEDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents EmpleadosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents EmpleadosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter
+    Friend WithEvents TableAdapterManager As Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager
 
 End Class

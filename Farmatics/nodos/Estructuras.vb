@@ -1,11 +1,12 @@
 ﻿Imports System.Text
-
+Imports Sotware_Farmatics.Conexiones
+Imports System.Data.OleDb
 Module Estructuras
     Public Structure Empleado
 
         Public Nombre As String
         Public Apellido As String
-        Public Cedula As Integer
+        Public Cedula As String
         Public Telefono As Long
         Public Correo As String
         Public Direccion As String
@@ -13,43 +14,32 @@ Module Estructuras
         Public Cargo As String
         Public FechaIngreso As DateTime
         Public Clave As String
-        Dim DatosCompletos As List(Of String)
 
 
-        Public Sub New(ByVal datos As List(Of String))
-            Nombre = datos.Item(1)
-            Apellido = datos.Item(2)
-            Cedula = Integer.Parse(datos.Item(3))
-            Telefono = Long.Parse(datos.Item(4))
-            Correo = datos.Item(5)
-            Direccion = datos.Item(6)
-            Sexo = datos.Item(7)
-            Cargo = datos.Item(8)
-            FechaIngreso = Convert.ToDateTime(datos.Item(9))
-            Clave = datos.Item(10)
-            DatosCompletos = datos
+        Public Sub New(ByVal Identificacion As Integer)
+            Try
+                Conexion.Open()
+                Comando = New OleDbCommand("SELECT * FROM Empleados WHERE CEDULA ='" & Identificacion & "'", Conexion)
+                Lector = Comando.ExecuteReader()
+
+                While Lector.Read()
+                    Nombre = Lector.Item(1)
+                    Apellido = Lector.Item(2)
+                    Cedula = Lector.Item(3)
+                    Telefono = Long.Parse(Lector.Item(4))
+                    Correo = Lector.Item(5)
+                    Direccion = Lector.Item(6)
+                    Sexo = Lector.Item(7)
+                    Cargo = Lector.Item(8)
+                    FechaIngreso = Convert.ToDateTime(Lector.Item(9))
+                    Clave = Lector.Item(10)
+                End While
+            Catch ex As Exception
+                MsgBox("Error al cargar empleado - " & ex.Message)
+            Finally
+                Conexion.Close()
+            End Try
         End Sub
-
-        Public Function ObtenerDatos()
-            Dim regresar As String
-            Dim Constructor As New StringBuilder()
-
-            For Each valor As String In DatosCompletos
-                Constructor.Append("'" & valor & "', ")
-            Next
-
-            regresar = "(" & Constructor.ToString().Remove(Constructor.ToString().LastIndexOf(", ")) & ")"
-
-            Return regresar
-        End Function
-
-        Public Function Vacio()
-            If DatosCompletos.Count < 1 Then
-                Return True
-            Else
-                Return False
-            End If
-        End Function
     End Structure
 
     Public Structure Productos

@@ -20,7 +20,12 @@ Public Class frmLogin
                     Me.Hide()
                 End If
             Else
+<<<<<<< HEAD
                 MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
+=======
+                frmCaja.Trabajador(Integer.Parse(txt_user.Text))
+                frmCaja.Show()
+>>>>>>> 220716407f5776178409a187b12226b833373600
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

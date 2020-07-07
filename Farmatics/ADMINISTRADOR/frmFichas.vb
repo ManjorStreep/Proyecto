@@ -12,7 +12,6 @@ Public Class frmFichas
 
     
     Private Sub ImprimirDatos(ByVal consulta As List(Of String))
-        datos = New Empleado(consulta)
         txt_nombre.Text = datos.Nombre
         txt_apellido.Text = datos.Apellido
         txt_direccion.Text = datos.Direccion
