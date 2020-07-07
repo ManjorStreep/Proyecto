@@ -1,20 +1,20 @@
 ﻿Public Class frmCaja
 
-    Dim Usuario As Empleado
+    Dim persona As Empleado
+
+    Public Sub Trabajador(ByVal Cedula As Integer)
+        persona = New Empleado(Cedula)
+    End Sub
 
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        '
-        'Volcado de Informacion del Cajero
-        '
-        lb_datocajero0.Text = Usuario.Nombre
-        lb_datocajero1.Text = Usuario.Apellido
-        lb_datocajero2.Text = Usuario.Cedula
-        lb_datocajero3.Text = Usuario.Cargo
-        '
-        'Rellenando la Tabla 
-        '
+        'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Productos' Puede moverla o quitarla según sea necesario.
+        Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
 
-        '
+        lb_datocajero0.Text = persona.Nombre
+        lb_datocajero1.Text = persona.Apellido
+        lb_datocajero2.Text = persona.Cedula
+        lb_datocajero3.Text = persona.Cargo
+
         'iniciando timer
         '
         tim_1.Start()
@@ -33,9 +33,5 @@
 
     Private Sub btn_facturar_Click(sender As Object, e As EventArgs) Handles btn_facturar.Click
         frmHacer_Venta.Show()
-    End Sub
-
-    Private Sub gbPerfil_Enter(sender As Object, e As EventArgs) Handles gbPerfil.Enter
-
     End Sub
 End Class

@@ -17,6 +17,7 @@ Public Class frmLogin
             If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_user.Text & "' AND CARGO ='Dueño'") Then
                 frmMenu.Show()
             Else
+                frmCaja.Trabajador(Integer.Parse(txt_user.Text))
                 frmCaja.Show()
             End If
         Else
