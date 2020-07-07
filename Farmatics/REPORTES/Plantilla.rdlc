@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DatabaseDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>e52b8e03-acce-49db-a411-cd904a1a9f8c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DatabaseDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="INDICE">
+          <DataField>INDICE</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NOMBRE">
+          <DataField>NOMBRE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="APELLIDO">
+          <DataField>APELLIDO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CEDULA">
+          <DataField>CEDULA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TELEFONO">
+          <DataField>TELEFONO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CORREO">
+          <DataField>CORREO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DIRECCION">
+          <DataField>DIRECCION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SEXO">
+          <DataField>SEXO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CARGO">
+          <DataField>CARGO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHA_INGRESO">
+          <DataField>FECHA_INGRESO</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CLAVE">
+          <DataField>CLAVE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DatabaseDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\DatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Empleados</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>EmpleadosTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -44,7 +115,7 @@
         <Height>7.95125cm</Height>
         <Style />
       </Body>
-      <Width>21.11468cm</Width>
+      <Width>21.28696cm</Width>
       <Page>
         <PageHeader>
           <Height>4.19833cm</Height>
@@ -53,54 +124,6 @@
           <ReportItems>
             <Rectangle Name="Rectangle6">
               <ReportItems>
-                <Textbox Name="Textbox3">
-                  <CanGrow>true</CanGrow>
-                  <KeepTogether>true</KeepTogether>
-                  <Paragraphs>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value>FARMATICS</Value>
-                          <Style>
-                            <FontFamily>Verdana</FontFamily>
-                            <FontSize>25pt</FontSize>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style>
-                        <TextAlign>Center</TextAlign>
-                      </Style>
-                    </Paragraph>
-                    <Paragraph>
-                      <TextRuns>
-                        <TextRun>
-                          <Value />
-                          <Style>
-                            <FontFamily>Verdana</FontFamily>
-                            <FontSize>25pt</FontSize>
-                            <FontWeight>Bold</FontWeight>
-                          </Style>
-                        </TextRun>
-                      </TextRuns>
-                      <Style />
-                    </Paragraph>
-                  </Paragraphs>
-                  <rd:DefaultName>Textbox3</rd:DefaultName>
-                  <Top>0.1124cm</Top>
-                  <Left>7.56136cm</Left>
-                  <Height>1.20854cm</Height>
-                  <Width>5.93958cm</Width>
-                  <Style>
-                    <Border>
-                      <Style>None</Style>
-                    </Border>
-                    <PaddingLeft>2pt</PaddingLeft>
-                    <PaddingRight>2pt</PaddingRight>
-                    <PaddingTop>2pt</PaddingTop>
-                    <PaddingBottom>2pt</PaddingBottom>
-                  </Style>
-                </Textbox>
                 <Textbox Name="Textbox22">
                   <CanGrow>true</CanGrow>
                   <KeepTogether>true</KeepTogether>
@@ -133,11 +156,10 @@
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox22</rd:DefaultName>
-                  <Top>1.66306cm</Top>
-                  <Left>7.56136cm</Left>
-                  <Height>1.96738cm</Height>
-                  <Width>5.93958cm</Width>
-                  <ZIndex>1</ZIndex>
+                  <Top>1.66596cm</Top>
+                  <Left>0.47308cm</Left>
+                  <Height>1.88801cm</Height>
+                  <Width>6.10051cm</Width>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -149,11 +171,11 @@
                   </Style>
                 </Textbox>
                 <Line Name="Line4">
-                  <Top>1.49733cm</Top>
-                  <Left>7.19094cm</Left>
+                  <Top>2.29108cm</Top>
+                  <Left>7.2382cm</Left>
                   <Height>0cm</Height>
                   <Width>6.945cm</Width>
-                  <ZIndex>2</ZIndex>
+                  <ZIndex>1</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -317,8 +339,71 @@
                       <Top>0.62646cm</Top>
                       <Left>3.12208cm</Left>
                       <Height>0.79375cm</Height>
-                      <Width>1.62687cm</Width>
+                      <Width>1.59159cm</Width>
                       <ZIndex>4</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="Textbox19">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Date.Now.Year</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <Top>0.62646cm</Top>
+                      <Left>1.56104cm</Left>
+                      <Height>0.79375cm</Height>
+                      <Width>1.56104cm</Width>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <Textbox Name="Textbox18">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Date.Now.Year</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <Top>0.62646cm</Top>
+                      <Height>0.79375cm</Height>
+                      <Width>1.56104cm</Width>
+                      <ZIndex>6</ZIndex>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -335,7 +420,7 @@
                   <Left>15.66016cm</Left>
                   <Height>2.49026cm</Height>
                   <Width>4.74896cm</Width>
-                  <ZIndex>3</ZIndex>
+                  <ZIndex>2</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
@@ -346,12 +431,11 @@
                 <Image Name="Image2">
                   <Source>Embedded</Source>
                   <Value>logofarmatic_vec_png1</Value>
-                  <Sizing>Fit</Sizing>
-                  <Top>0.47625cm</Top>
-                  <Left>0.47308cm</Left>
-                  <Height>2.6203cm</Height>
-                  <Width>6.10051cm</Width>
-                  <ZIndex>4</ZIndex>
+                  <Sizing>FitProportional</Sizing>
+                  <Left>0.98461cm</Left>
+                  <Height>1.5954cm</Height>
+                  <Width>5.12155cm</Width>
+                  <ZIndex>3</ZIndex>
                   <Style>
                     <Border>
                       <Style>None</Style>
@@ -363,13 +447,43 @@
                   <Left>19.96814cm</Left>
                   <Height>0cm</Height>
                   <Width>-18.67958cm</Width>
-                  <ZIndex>5</ZIndex>
+                  <ZIndex>4</ZIndex>
                   <Style>
                     <Border>
                       <Style>Solid</Style>
                     </Border>
                   </Style>
                 </Line>
+                <Textbox Name="Textbox3">
+                  <CanGrow>true</CanGrow>
+                  <KeepTogether>true</KeepTogether>
+                  <Paragraphs>
+                    <Paragraph>
+                      <TextRuns>
+                        <TextRun>
+                          <Value>Firma de Despacho</Value>
+                          <Style />
+                        </TextRun>
+                      </TextRuns>
+                      <Style />
+                    </Paragraph>
+                  </Paragraphs>
+                  <rd:DefaultName>Textbox3</rd:DefaultName>
+                  <Top>2.49655cm</Top>
+                  <Left>9.41507cm</Left>
+                  <Height>0.6cm</Height>
+                  <Width>3.18792cm</Width>
+                  <ZIndex>5</ZIndex>
+                  <Style>
+                    <Border>
+                      <Style>None</Style>
+                    </Border>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                </Textbox>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Left>0.00472cm</Left>

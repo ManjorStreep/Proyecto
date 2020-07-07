@@ -27,7 +27,7 @@ Partial Class frmVisualizarReportes
         '
         'ReportViewer1
         '
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "WindowsApplicationFARMATICS.Plantilla.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sotware_Farmatics.Plantilla.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 7)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(859, 612)

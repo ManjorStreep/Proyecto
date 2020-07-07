@@ -42,6 +42,8 @@ Partial Class frmRegistrar_clientes
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtDNI = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label11
@@ -68,7 +70,8 @@ Partial Class frmRegistrar_clientes
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(251, 140)
+        Me.RadioButton4.Enabled = False
+        Me.RadioButton4.Location = New System.Drawing.Point(129, 62)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(62, 17)
         Me.RadioButton4.TabIndex = 53
@@ -79,7 +82,8 @@ Partial Class frmRegistrar_clientes
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(194, 140)
+        Me.RadioButton3.Enabled = False
+        Me.RadioButton3.Location = New System.Drawing.Point(72, 62)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(51, 17)
         Me.RadioButton3.TabIndex = 54
@@ -90,7 +94,7 @@ Partial Class frmRegistrar_clientes
         'txtTelefono
         '
         Me.txtTelefono.Enabled = False
-        Me.txtTelefono.Location = New System.Drawing.Point(142, 188)
+        Me.txtTelefono.Location = New System.Drawing.Point(20, 110)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(212, 20)
         Me.txtTelefono.TabIndex = 51
@@ -98,7 +102,7 @@ Partial Class frmRegistrar_clientes
         'txtDIreccion
         '
         Me.txtDIreccion.Enabled = False
-        Me.txtDIreccion.Location = New System.Drawing.Point(142, 162)
+        Me.txtDIreccion.Location = New System.Drawing.Point(20, 84)
         Me.txtDIreccion.Name = "txtDIreccion"
         Me.txtDIreccion.Size = New System.Drawing.Size(212, 20)
         Me.txtDIreccion.TabIndex = 50
@@ -106,7 +110,7 @@ Partial Class frmRegistrar_clientes
         'txtApellido
         '
         Me.txtApellido.Enabled = False
-        Me.txtApellido.Location = New System.Drawing.Point(142, 113)
+        Me.txtApellido.Location = New System.Drawing.Point(20, 35)
         Me.txtApellido.Name = "txtApellido"
         Me.txtApellido.Size = New System.Drawing.Size(212, 20)
         Me.txtApellido.TabIndex = 40
@@ -114,7 +118,7 @@ Partial Class frmRegistrar_clientes
         'txtNombre
         '
         Me.txtNombre.Enabled = False
-        Me.txtNombre.Location = New System.Drawing.Point(142, 88)
+        Me.txtNombre.Location = New System.Drawing.Point(20, 10)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(212, 20)
         Me.txtNombre.TabIndex = 39
@@ -130,7 +134,7 @@ Partial Class frmRegistrar_clientes
         '
         'btSalir
         '
-        Me.btSalir.Location = New System.Drawing.Point(24, 221)
+        Me.btSalir.Location = New System.Drawing.Point(15, 226)
         Me.btSalir.Name = "btSalir"
         Me.btSalir.Size = New System.Drawing.Size(84, 23)
         Me.btSalir.TabIndex = 56
@@ -140,7 +144,7 @@ Partial Class frmRegistrar_clientes
         'Button2
         '
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(285, 221)
+        Me.Button2.Location = New System.Drawing.Point(285, 226)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 23)
         Me.Button2.TabIndex = 52
@@ -150,7 +154,7 @@ Partial Class frmRegistrar_clientes
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(21, 165)
+        Me.Label12.Location = New System.Drawing.Point(43, 165)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(55, 13)
         Me.Label12.TabIndex = 49
@@ -159,7 +163,7 @@ Partial Class frmRegistrar_clientes
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(21, 191)
+        Me.Label13.Location = New System.Drawing.Point(43, 191)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(49, 13)
         Me.Label13.TabIndex = 48
@@ -168,7 +172,7 @@ Partial Class frmRegistrar_clientes
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(195, 221)
+        Me.Button3.Location = New System.Drawing.Point(195, 226)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(84, 23)
         Me.Button3.TabIndex = 47
@@ -177,7 +181,7 @@ Partial Class frmRegistrar_clientes
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(114, 221)
+        Me.Button5.Location = New System.Drawing.Point(105, 226)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(84, 23)
         Me.Button5.TabIndex = 45
@@ -187,7 +191,7 @@ Partial Class frmRegistrar_clientes
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(21, 142)
+        Me.Label16.Location = New System.Drawing.Point(43, 142)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(31, 13)
         Me.Label16.TabIndex = 44
@@ -196,7 +200,7 @@ Partial Class frmRegistrar_clientes
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(21, 116)
+        Me.Label18.Location = New System.Drawing.Point(43, 116)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(44, 13)
         Me.Label18.TabIndex = 43
@@ -205,7 +209,7 @@ Partial Class frmRegistrar_clientes
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(21, 90)
+        Me.Label19.Location = New System.Drawing.Point(43, 90)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(47, 13)
         Me.Label19.TabIndex = 42
@@ -228,20 +232,31 @@ Partial Class frmRegistrar_clientes
         Me.txtDNI.TabIndex = 38
         Me.txtDNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'frmRegistrar_Empleados
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RadioButton4)
+        Me.GroupBox1.Controls.Add(Me.RadioButton3)
+        Me.GroupBox1.Controls.Add(Me.txtTelefono)
+        Me.GroupBox1.Controls.Add(Me.txtDIreccion)
+        Me.GroupBox1.Controls.Add(Me.txtApellido)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
+        Me.GroupBox1.Enabled = False
+        Me.GroupBox1.Location = New System.Drawing.Point(98, 80)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(244, 140)
+        Me.GroupBox1.TabIndex = 57
+        Me.GroupBox1.TabStop = False
+        '
+        'frmRegistrar_clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ClientSize = New System.Drawing.Size(372, 275)
         Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.RadioButton4)
-        Me.Controls.Add(Me.RadioButton3)
-        Me.Controls.Add(Me.txtTelefono)
-        Me.Controls.Add(Me.txtDIreccion)
-        Me.Controls.Add(Me.txtApellido)
-        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btConsuta)
+        Me.Controls.Add(Me.txtDNI)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btSalir)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label12)
@@ -252,13 +267,15 @@ Partial Class frmRegistrar_clientes
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.txtDNI)
         Me.Controls.Add(Me.Label11)
+        Me.Enabled = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frmRegistrar_Empleados"
+        Me.Name = "frmRegistrar_clientes"
         Me.Text = "Gestion Cliente"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -283,4 +300,5 @@ Partial Class frmRegistrar_clientes
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents txtDNI As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 End Class

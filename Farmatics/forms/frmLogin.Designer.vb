@@ -22,6 +22,7 @@ Partial Class frmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.btSalir = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -31,18 +32,19 @@ Partial Class frmLogin
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnIngresar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ErrorIcon = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btSalir
@@ -125,9 +127,8 @@ Partial Class frmLogin
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gray
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.btSalir)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnIngresar)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -136,16 +137,16 @@ Partial Class frmLogin
         Me.Panel1.Size = New System.Drawing.Size(501, 225)
         Me.Panel1.TabIndex = 16
         '
-        'Button1
+        'btnIngresar
         '
-        Me.Button1.Font = New System.Drawing.Font("Antique-Olive-Normal", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(204, 165)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 46)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnIngresar.Font = New System.Drawing.Font("Antique-Olive-Normal", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnIngresar.Location = New System.Drawing.Point(204, 165)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(115, 46)
+        Me.btnIngresar.TabIndex = 19
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -191,24 +192,16 @@ Partial Class frmLogin
         Me.PictureBox2.TabIndex = 14
         Me.PictureBox2.TabStop = False
         '
-        'Button2
+        'ErrorIcon
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Control
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button2.Font = New System.Drawing.Font("Mayberry Pro Semibold", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(10, 17)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(167, 22)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Hasme click we"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ErrorIcon.ContainerControl = Me
         '
         'frmLogin
         '
-        Me.AcceptButton = Me.Button1
+        Me.AcceptButton = Me.btnIngresar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.Disable
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(595, 397)
@@ -230,6 +223,7 @@ Partial Class frmLogin
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -244,8 +238,8 @@ Partial Class frmLogin
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnIngresar As System.Windows.Forms.Button
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents ErrorIcon As System.Windows.Forms.ErrorProvider
 
 End Class
