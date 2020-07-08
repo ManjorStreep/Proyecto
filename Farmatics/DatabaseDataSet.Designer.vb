@@ -4458,7 +4458,7 @@ Namespace DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(3) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT CODIGO, NOMBRE, VALOR, CANTIDAD_DISPONIBLE, CLASIFICACION, RECIPE FROM Pro" & _
@@ -4466,26 +4466,44 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT CODIGO, NOMBRE, VALOR, CANTIDAD_DISPONIBLE, CLASIFICACION, RECIPE FROM Pro" & _
-                "ductos WHERE CODIGO = ?"
+            Me._commandCollection(1).CommandText = "DELETE FROM Productos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE        (CODIGO = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CODIGO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CODIGO", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CODIGO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CODIGO", Global.System.Data.DataRowVersion.Original, False, Nothing))
             Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT CODIGO, NOMBRE, VALOR, CANTIDAD_DISPONIBLE, CLASIFICACION, RECIPE FROM Pro" & _
-                "ductos WHERE NOMBRE = ?"
+                "ductos WHERE CODIGO = ?"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NOMBRE", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "NOMBRE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CODIGO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CODIGO", Global.System.Data.DataRowVersion.Current, False, Nothing))
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "INSERT INTO `Productos` (`NOMBRE`, `VALOR`, `CANTIDAD_DISPONIBLE`, `CLASIFICACION" & _
-                "`, `RECIPE`) VALUES (?, ?, ?, ?, ?)"
+            Me._commandCollection(3).CommandText = "SELECT CODIGO, NOMBRE, VALOR, CANTIDAD_DISPONIBLE, CLASIFICACION, RECIPE FROM Pro" & _
+                "ductos WHERE NOMBRE = ?"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NOMBRE", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "NOMBRE", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VALOR", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19, Byte), CType(0, Byte), "VALOR", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD_DISPONIBLE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CANTIDAD_DISPONIBLE", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLASIFICACION", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CLASIFICACION", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("RECIPE", Global.System.Data.OleDb.OleDbType.[Boolean], 2, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "RECIPE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "INSERT INTO Productos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                         (NOMBRE, VALOR, CANTIDAD_DISPONIB" & _
+                "LE, CLASIFICACION, RECIPE, CODIGO)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "VALUES        (?, ?, ?, ?, ?, ?)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NOMBRE", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "NOMBRE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VALOR", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19, Byte), CType(0, Byte), "VALOR", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD_DISPONIBLE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CANTIDAD_DISPONIBLE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLASIFICACION", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CLASIFICACION", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("RECIPE", Global.System.Data.OleDb.OleDbType.[Boolean], 2, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "RECIPE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CODIGO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CODIGO", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(5) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "UPDATE       Productos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SET                NOMBRE = ?, VALOR = ?, CANTIDAD_DISPON" & _
+                "IBLE = ?, CLASIFICACION = ?, RECIPE = ?, CODIGO = ?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE        (CODIGO = ?)"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("NOMBRE", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "NOMBRE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VALOR", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19, Byte), CType(0, Byte), "VALOR", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CANTIDAD_DISPONIBLE", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CANTIDAD_DISPONIBLE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CLASIFICACION", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CLASIFICACION", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("RECIPE", Global.System.Data.OleDb.OleDbType.[Boolean], 2, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "RECIPE", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CODIGO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CODIGO", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CODIGO", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "CODIGO", Global.System.Data.DataRowVersion.Original, False, Nothing))
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -4517,7 +4535,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, False)> _
         Public Overridable Overloads Function FillBy(ByVal dataTable As DatabaseDataSet.ProductosDataTable, ByVal CODIGO As Integer) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(CODIGO, Integer)
             If (Me.ClearBeforeFill = True) Then
                 dataTable.Clear()
@@ -4531,7 +4549,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], False)> _
         Public Overridable Overloads Function GetDataBy(ByVal CODIGO As Integer) As DatabaseDataSet.ProductosDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(CODIGO, Integer)
             Dim dataTable As DatabaseDataSet.ProductosDataTable = New DatabaseDataSet.ProductosDataTable()
             Me.Adapter.Fill(dataTable)
@@ -4543,7 +4561,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, False)> _
         Public Overridable Overloads Function FillBy1(ByVal dataTable As DatabaseDataSet.ProductosDataTable, ByVal NOMBRE As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (NOMBRE Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -4561,7 +4579,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], False)> _
         Public Overridable Overloads Function GetDataByNombre(ByVal NOMBRE As String) As DatabaseDataSet.ProductosDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             If (NOMBRE Is Nothing) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -4767,9 +4785,32 @@ Namespace DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, False)> _
+        Public Overridable Overloads Function DeleteQuery(ByVal CODIGO As Integer) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(CODIGO, Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open()
+            End If
+            Dim returnValue As Integer
+            Try
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close()
+                End If
+            End Try
+            Return returnValue
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, False)> _
-        Public Overridable Overloads Function InsertQuery(ByVal NOMBRE As String, ByVal VALOR As Global.System.Nullable(Of Decimal), ByVal CANTIDAD_DISPONIBLE As Global.System.Nullable(Of Integer), ByVal CLASIFICACION As String, ByVal RECIPE As Boolean) As Integer
-            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
+        Public Overridable Overloads Function InsertQuery(ByVal NOMBRE As String, ByVal VALOR As Global.System.Nullable(Of Decimal), ByVal CANTIDAD_DISPONIBLE As Global.System.Nullable(Of Integer), ByVal CLASIFICACION As String, ByVal RECIPE As Boolean, ByVal CODIGO As Integer) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(4)
             If (NOMBRE Is Nothing) Then
                 command.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -4791,6 +4832,52 @@ Namespace DatabaseDataSetTableAdapters
                 command.Parameters(3).Value = CType(CLASIFICACION, String)
             End If
             command.Parameters(4).Value = CType(RECIPE, Boolean)
+            command.Parameters(5).Value = CType(CODIGO, Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open()
+            End If
+            Dim returnValue As Integer
+            Try
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close()
+                End If
+            End Try
+            Return returnValue
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, False)> _
+        Public Overridable Overloads Function UpdateQuery(ByVal NOMBRE As String, ByVal VALOR As Global.System.Nullable(Of Decimal), ByVal CANTIDAD_DISPONIBLE As Global.System.Nullable(Of Integer), ByVal CLASIFICACION As String, ByVal RECIPE As Boolean, ByVal CODIGO As Integer, ByVal Original_CODIGO As Integer) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(5)
+            If (NOMBRE Is Nothing) Then
+                command.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(0).Value = CType(NOMBRE, String)
+            End If
+            If (VALOR.HasValue = True) Then
+                command.Parameters(1).Value = CType(VALOR.Value, Decimal)
+            Else
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (CANTIDAD_DISPONIBLE.HasValue = True) Then
+                command.Parameters(2).Value = CType(CANTIDAD_DISPONIBLE.Value, Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (CLASIFICACION Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(CLASIFICACION, String)
+            End If
+            command.Parameters(4).Value = CType(RECIPE, Boolean)
+            command.Parameters(5).Value = CType(CODIGO, Integer)
+            command.Parameters(6).Value = CType(Original_CODIGO, Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
                         <> Global.System.Data.ConnectionState.Open) Then

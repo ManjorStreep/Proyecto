@@ -29,20 +29,21 @@ Partial Class frmRegistroproductos
         Me.btSalir = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -99,7 +100,7 @@ Partial Class frmRegistroproductos
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(66, 29)
         Me.Button2.TabIndex = 45
-        Me.Button2.Text = "Eliminar"
+        Me.Button2.Text = "Modificar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'btSalir
@@ -123,16 +124,17 @@ Partial Class frmRegistroproductos
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.Label3)
+        Me.GroupBox3.Controls.Add(Me.RadioButton2)
+        Me.GroupBox3.Controls.Add(Me.RadioButton1)
         Me.GroupBox3.Controls.Add(Me.TextBox15)
         Me.GroupBox3.Controls.Add(Me.TextBox17)
         Me.GroupBox3.Controls.Add(Me.TextBox16)
-        Me.GroupBox3.Controls.Add(Me.ComboBox1)
         Me.GroupBox3.Controls.Add(Me.ComboBox4)
-        Me.GroupBox3.Controls.Add(Me.ComboBox3)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.PictureBox3)
         Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Controls.Add(Me.Label18)
@@ -142,6 +144,76 @@ Partial Class frmRegistroproductos
         Me.GroupBox3.Size = New System.Drawing.Size(268, 328)
         Me.GroupBox3.TabIndex = 67
         Me.GroupBox3.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(40, 91)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(197, 20)
+        Me.TextBox1.TabIndex = 76
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.DarkGray
+        Me.Label3.Location = New System.Drawing.Point(20, 75)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(40, 13)
+        Me.Label3.TabIndex = 75
+        Me.Label3.Text = "Codigo"
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(134, 249)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(39, 17)
+        Me.RadioButton2.TabIndex = 74
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "No"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(65, 249)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(34, 17)
+        Me.RadioButton1.TabIndex = 73
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Si"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(40, 130)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(197, 20)
+        Me.TextBox15.TabIndex = 52
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Location = New System.Drawing.Point(40, 169)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(197, 20)
+        Me.TextBox17.TabIndex = 40
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Location = New System.Drawing.Point(40, 208)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(197, 20)
+        Me.TextBox16.TabIndex = 43
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Inhalatoria", "Instramuscular", "Instravenesa", "Oftalmológica", "Oral", "Parental", "Rectal", "Sublingual", "Tópica", "Transdérmica"})
+        Me.ComboBox4.Location = New System.Drawing.Point(40, 287)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(197, 21)
+        Me.ComboBox4.Sorted = True
+        Me.ComboBox4.TabIndex = 69
         '
         'Label2
         '
@@ -166,56 +238,20 @@ Partial Class frmRegistroproductos
         Me.PictureBox3.TabIndex = 70
         Me.PictureBox3.TabStop = False
         '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Oral", "Rectal", "Instramuscular", "Instravenesa", "Parental", "Inhalatoria", "Oftalmológica", "Transdérmica", "Tópica", "Sublingual"})
-        Me.ComboBox4.Location = New System.Drawing.Point(40, 243)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(197, 21)
-        Me.ComboBox4.TabIndex = 69
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Aerosoles", "Inhalaciones", "Enemas", "Elixir", "Linimentos", "Lociones", "Colirios", "Jarabes", "Soluciones", "Cremas", "Pomadas", "Óvulos", "Supositorios", "Grageas", "Píldoras", "Tabletas o comprimidos", "Cápsulas", "Polvos"})
-        Me.ComboBox3.Location = New System.Drawing.Point(40, 283)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(197, 21)
-        Me.ComboBox3.TabIndex = 68
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Adulto", "Pediatrica"})
-        Me.ComboBox1.Location = New System.Drawing.Point(40, 203)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(197, 21)
-        Me.ComboBox1.TabIndex = 66
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.DarkGray
-        Me.Label12.Location = New System.Drawing.Point(20, 70)
+        Me.Label12.Location = New System.Drawing.Point(20, 114)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(90, 13)
         Me.Label12.TabIndex = 53
         Me.Label12.Text = "Nombre Producto"
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(20, 267)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(69, 13)
-        Me.Label15.TabIndex = 61
-        Me.Label15.Text = "Presentación"
-        '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(20, 227)
+        Me.Label16.Location = New System.Drawing.Point(20, 271)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(108, 13)
         Me.Label16.TabIndex = 60
@@ -225,31 +261,17 @@ Partial Class frmRegistroproductos
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(20, 187)
+        Me.Label17.Location = New System.Drawing.Point(20, 231)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(103, 13)
+        Me.Label17.Size = New System.Drawing.Size(92, 13)
         Me.Label17.TabIndex = 57
-        Me.Label17.Text = "Prescripción Medica"
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Location = New System.Drawing.Point(40, 86)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(197, 20)
-        Me.TextBox15.TabIndex = 52
-        '
-        'TextBox16
-        '
-        Me.TextBox16.Location = New System.Drawing.Point(40, 164)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(197, 20)
-        Me.TextBox16.TabIndex = 43
+        Me.Label17.Text = "Necesita Recipe?"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.DarkGray
-        Me.Label18.Location = New System.Drawing.Point(20, 148)
+        Me.Label18.Location = New System.Drawing.Point(20, 192)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(115, 13)
         Me.Label18.TabIndex = 42
@@ -258,18 +280,11 @@ Partial Class frmRegistroproductos
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(20, 109)
+        Me.Label19.Location = New System.Drawing.Point(20, 153)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(79, 13)
         Me.Label19.TabIndex = 41
         Me.Label19.Text = " Precio Unitario"
-        '
-        'TextBox17
-        '
-        Me.TextBox17.Location = New System.Drawing.Point(40, 125)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(197, 20)
-        Me.TextBox17.TabIndex = 40
         '
         'Label9
         '
@@ -316,7 +331,7 @@ Partial Class frmRegistroproductos
         Me.btn_Editar.Name = "btn_Editar"
         Me.btn_Editar.Size = New System.Drawing.Size(65, 29)
         Me.btn_Editar.TabIndex = 48
-        Me.btn_Editar.Text = "Editar"
+        Me.btn_Editar.Text = "Borrar"
         Me.btn_Editar.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -536,10 +551,7 @@ Partial Class frmRegistroproductos
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
@@ -574,5 +586,9 @@ Partial Class frmRegistroproductos
     Friend WithEvents CLASIFICACIONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents RECIPEDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
 
 End Class

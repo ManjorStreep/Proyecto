@@ -8,7 +8,7 @@ Module Conexiones
     Public Lector As OleDbDataReader
 
     Public Function Verificacion(ByVal tabla As String, ByVal consulta As String)
-        Dim regresar As Boolean
+        Dim regresar As Boolean = False
         Try
             Conexion.Open()
             Comando = New OleDbCommand("SELECT * FROM " & tabla & " WHERE " & consulta, Conexion)
@@ -27,7 +27,8 @@ Module Conexiones
     Public Function login(ByVal user As String, ByVal pass As String)
 
         If Verificacion("Empleados", "CEDULA ='" & user & "' AND CLAVE ='" & pass & "'") Then
-            If Verificacion("Empleados", "CEDULA ='" & user & "' AND CARGO ='Dueño' or 'Gerente' ") Then
+            If Verificacion("Empleados", "CEDULA ='" & user & "' AND CARGO = 'Dueño' OR " & "CEDULA ='" & user & "' AND CARGO = 'Gerente'") Then
+                frmMenu.Trabajador(Integer.Parse(user))
                 frmMenu.Show()
             Else
                 frmCaja.Trabajador(Integer.Parse(user))

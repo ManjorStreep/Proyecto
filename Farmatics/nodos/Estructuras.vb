@@ -58,6 +58,7 @@ Module Estructuras
             Clasificacion = CStr(datos(4))
             Recipe = Boolean.Parse(CStr(datos(5)))
         End Sub
+
     End Structure
 
 

@@ -1,6 +1,12 @@
 ﻿
 Public Class frmMenu
 
+    Dim persona As Empleado
+
+    Public Sub Trabajador(ByVal Cedula As Integer)
+        persona = New Empleado(Cedula)
+    End Sub
+
     Private Sub VerFichasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerFichasToolStripMenuItem.Click
         frmFichas.Show()
     End Sub
@@ -33,6 +39,12 @@ Public Class frmMenu
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
         'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Historial' Puede moverla o quitarla según sea necesario.
         Me.HistorialTableAdapter.Fill(Me.DatabaseDataSet.Historial)
+
+        lb_datocajero0.Text = persona.Nombre
+        lb_datocajero1.Text = persona.Apellido
+        lb_datocajero2.Text = persona.Cedula
+        lb_datocajero3.Text = persona.Cargo
+
         tmr_reloj.Start()
     End Sub
 
