@@ -14,31 +14,24 @@ Public Class frmLogin
 
     Private Sub BtnIngresar_Click_2(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Try
+
             If Me.ValidateChildren And txt_user.Text <> String.Empty And txt_pass.Text <> String.Empty Then
                 'MessageBox.Show("datos ingresados correctamente", "registro de ususarios", MessageBoxButtons.OK)
+
                 If Conexiones.login(txt_user.Text, txt_pass.Text) Then
                     Me.Hide()
                 End If
             Else
-<<<<<<< HEAD
                 MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
-=======
-                frmCaja.Trabajador(Integer.Parse(txt_user.Text))
-                frmCaja.Show()
->>>>>>> 220716407f5776178409a187b12226b833373600
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
-
-
-    Private Sub txt_user_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_user.KeyPress
-        DatosSistema.SoloNumeros(e)
-    End Sub
     '/-----------------------------------------------------------------------------------------------------------------/'
     '/- validando campos -/'
     '/-----------------------------------------------------------------------------------------------------------------/'
+
     Private Sub txt_user_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txt_user.Validating
         validandoCampo(sender, 9)
     End Sub
@@ -53,6 +46,10 @@ Public Class frmLogin
         Else
             Me.ErrorIcon.SetError(Objeto, "ingrese un dato en esete campo") 'mensage de error
         End If
+    End Sub
+
+    Private Sub txt_user_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_user.KeyPress
+        DatosSistema.SoloNumeros(e)
     End Sub
     '/-----------------------------------------------------------------------------------------------------------------/'
 End Class

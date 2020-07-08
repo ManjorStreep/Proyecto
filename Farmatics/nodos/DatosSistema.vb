@@ -11,11 +11,6 @@
         End Select
         Return fechaActual + horaActual
     End Function
-
-    Function validaciones(ByVal dato As String)
-    
-        Return dato
-    End Function
     'Funcion para que solo permite el ingreso de caracteres tipo letra
     Sub SoloLetras(ByRef e As System.Windows.Forms.KeyPressEventArgs)
         If Char.IsDigit(e.KeyChar) Then
@@ -27,7 +22,6 @@
             e.Handled = False
         End If
     End Sub
-
     'Funcion para que solo permite el ingreso de caracteres tipo numerico
     Sub SoloNumeros(ByRef e As System.Windows.Forms.KeyPressEventArgs)
         If Char.IsDigit(e.KeyChar) Then
@@ -39,4 +33,6 @@
             MsgBox("Solo se puede ingresar valores de tipo número", MsgBoxStyle.Exclamation, "Ingreso de Número")
         End If
     End Sub
+    'Funcion para las validaciones de campo usando el objeto errorProvider
+
 End Module

@@ -22,13 +22,14 @@ Partial Class frmFichas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFichas))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btbusqueda = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbNacionalidad = New System.Windows.Forms.ComboBox()
         Me.Usuarios1DataGridView = New System.Windows.Forms.DataGridView()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
@@ -68,6 +69,7 @@ Partial Class frmFichas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -76,6 +78,7 @@ Partial Class frmFichas
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -120,7 +123,7 @@ Partial Class frmFichas
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.ComboBox1)
+        Me.GroupBox3.Controls.Add(Me.cbNacionalidad)
         Me.GroupBox3.Controls.Add(Me.TextBox1)
         Me.GroupBox3.Controls.Add(Me.btbusqueda)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
@@ -131,15 +134,15 @@ Partial Class frmFichas
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Ingrese un Numero de Documento"
         '
-        'ComboBox1
+        'cbNacionalidad
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"V-", "E-", "J-", "P-"})
-        Me.ComboBox1.Location = New System.Drawing.Point(29, 35)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(41, 21)
-        Me.ComboBox1.TabIndex = 44
-        Me.ComboBox1.Text = "  V-"
+        Me.cbNacionalidad.FormattingEnabled = True
+        Me.cbNacionalidad.Items.AddRange(New Object() {"V-", "E-", "J-", "P-"})
+        Me.cbNacionalidad.Location = New System.Drawing.Point(29, 35)
+        Me.cbNacionalidad.Name = "cbNacionalidad"
+        Me.cbNacionalidad.Size = New System.Drawing.Size(41, 21)
+        Me.cbNacionalidad.TabIndex = 44
+        Me.cbNacionalidad.Text = "  V-"
         '
         'Usuarios1DataGridView
         '
@@ -249,6 +252,7 @@ Partial Class frmFichas
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Enabled = False
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(207, 19)
         Me.GroupBox1.Name = "GroupBox1"
@@ -265,17 +269,17 @@ Partial Class frmFichas
         Me.cb_cargo.Name = "cb_cargo"
         Me.cb_cargo.Size = New System.Drawing.Size(163, 21)
         Me.cb_cargo.TabIndex = 42
-        Me.cb_cargo.Text = "cb_cargo"
+        Me.cb_cargo.Text = "Seleccionar"
         '
         'rb_mujer
         '
         Me.rb_mujer.AutoSize = True
         Me.rb_mujer.Location = New System.Drawing.Point(293, 130)
         Me.rb_mujer.Name = "rb_mujer"
-        Me.rb_mujer.Size = New System.Drawing.Size(65, 17)
+        Me.rb_mujer.Size = New System.Drawing.Size(51, 17)
         Me.rb_mujer.TabIndex = 41
         Me.rb_mujer.TabStop = True
-        Me.rb_mujer.Text = "rb_mujer"
+        Me.rb_mujer.Text = "Mujer"
         Me.rb_mujer.UseVisualStyleBackColor = True
         '
         'rb_hombre
@@ -283,10 +287,10 @@ Partial Class frmFichas
         Me.rb_hombre.AutoSize = True
         Me.rb_hombre.Location = New System.Drawing.Point(197, 130)
         Me.rb_hombre.Name = "rb_hombre"
-        Me.rb_hombre.Size = New System.Drawing.Size(75, 17)
+        Me.rb_hombre.Size = New System.Drawing.Size(62, 17)
         Me.rb_hombre.TabIndex = 40
         Me.rb_hombre.TabStop = True
-        Me.rb_hombre.Text = "rb_hombre"
+        Me.rb_hombre.Text = "Hombre"
         Me.rb_hombre.UseVisualStyleBackColor = True
         '
         'txt_telefono
@@ -295,7 +299,6 @@ Partial Class frmFichas
         Me.txt_telefono.Name = "txt_telefono"
         Me.txt_telefono.Size = New System.Drawing.Size(253, 20)
         Me.txt_telefono.TabIndex = 39
-        Me.txt_telefono.Text = "txt_telefono"
         '
         'txt_direccion
         '
@@ -303,7 +306,6 @@ Partial Class frmFichas
         Me.txt_direccion.Name = "txt_direccion"
         Me.txt_direccion.Size = New System.Drawing.Size(253, 20)
         Me.txt_direccion.TabIndex = 38
-        Me.txt_direccion.Text = "txt_direccion"
         '
         'txt_correo
         '
@@ -311,7 +313,6 @@ Partial Class frmFichas
         Me.txt_correo.Name = "txt_correo"
         Me.txt_correo.Size = New System.Drawing.Size(253, 20)
         Me.txt_correo.TabIndex = 37
-        Me.txt_correo.Text = "txt_correo"
         '
         'txt_clave
         '
@@ -319,7 +320,6 @@ Partial Class frmFichas
         Me.txt_clave.Name = "txt_clave"
         Me.txt_clave.Size = New System.Drawing.Size(253, 20)
         Me.txt_clave.TabIndex = 34
-        Me.txt_clave.Text = "txt_clave"
         '
         'txt_apellido
         '
@@ -327,7 +327,6 @@ Partial Class frmFichas
         Me.txt_apellido.Name = "txt_apellido"
         Me.txt_apellido.Size = New System.Drawing.Size(253, 20)
         Me.txt_apellido.TabIndex = 33
-        Me.txt_apellido.Text = "txt_apellido"
         '
         'txt_nombre
         '
@@ -335,7 +334,6 @@ Partial Class frmFichas
         Me.txt_nombre.Name = "txt_nombre"
         Me.txt_nombre.Size = New System.Drawing.Size(253, 20)
         Me.txt_nombre.TabIndex = 32
-        Me.txt_nombre.Text = "txt_nombre"
         '
         'txt_DNI
         '
@@ -343,7 +341,6 @@ Partial Class frmFichas
         Me.txt_DNI.Name = "txt_DNI"
         Me.txt_DNI.Size = New System.Drawing.Size(253, 20)
         Me.txt_DNI.TabIndex = 31
-        Me.txt_DNI.Text = "txt_DNI"
         '
         'Label19
         '
@@ -535,6 +532,10 @@ Partial Class frmFichas
         Me.Panel1.Size = New System.Drawing.Size(984, 335)
         Me.Panel1.TabIndex = 44
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frmFichas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -562,9 +563,10 @@ Partial Class frmFichas
         Me.GroupBox1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
-End Sub
+    End Sub
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents btbusqueda As System.Windows.Forms.Button
@@ -608,6 +610,7 @@ End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbNacionalidad As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

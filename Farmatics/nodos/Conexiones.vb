@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.Text
 Module Conexiones
-
+    Dim SESSION As Boolean
     ' Declaracion de variables a usar en el modulo.
     Public Conexion As OleDbConnection = New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Database.mdb")
     Public Comando As OleDbCommand
@@ -25,11 +25,12 @@ Module Conexiones
     End Function
 
     Public Function login(ByVal user As String, ByVal pass As String)
-        Dim SESSION As Boolean
+
         If Verificacion("Empleados", "CEDULA ='" & user & "' AND CLAVE ='" & pass & "'") Then
             If Verificacion("Empleados", "CEDULA ='" & user & "' AND CARGO ='Dueño' or 'Gerente' ") Then
                 frmMenu.Show()
             Else
+                frmCaja.Trabajador(Integer.Parse(user))
                 frmCaja.Show()
             End If
             SESSION = True
