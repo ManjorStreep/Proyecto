@@ -48,6 +48,7 @@ Public Class frmFichas
     '/-----------------------------------------------------------------------------------------------------------------/'
     '/- Validaciones del formulario -/'
     '/-----------------------------------------------------------------------------------------------------------------/'
+
     Sub validandoCampo(ByRef Objeto As Object, ByVal largo As Integer)
         If DirectCast(Objeto, TextBox).Text.Length > 0 And DirectCast(Objeto, TextBox).Text.Length < largo Then
             Me.ErrorProvider1.SetError(Objeto, "")
@@ -55,9 +56,6 @@ Public Class frmFichas
             Me.ErrorProvider1.SetError(Objeto, "ingrese un dato en esete campo") 'mensage de error
         End If
     End Sub
-
-
-
     '/-----------------------------------------------------------------------------------------------------------------/'
 
     Private Sub txt_nombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_nombre.KeyPress
