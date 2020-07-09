@@ -28,10 +28,10 @@ Module Conexiones
 
         If Verificacion("Empleados", "CEDULA ='" & user & "' AND CLAVE ='" & pass & "'") Then
             If Verificacion("Empleados", "CEDULA ='" & user & "' AND CARGO = 'Dueño' OR " & "CEDULA ='" & user & "' AND CARGO = 'Gerente'") Then
-                frmMenu.Trabajador(Integer.Parse(user))
+                frmMenu.Trabajador(user)
                 frmMenu.Show()
             Else
-                frmCaja.Trabajador(Integer.Parse(user))
+                frmCaja.Trabajador(user)
                 frmCaja.Show()
             End If
             SESSION = True

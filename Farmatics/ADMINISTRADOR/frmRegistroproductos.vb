@@ -30,6 +30,7 @@ Public Class frmRegistroproductos
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+<<<<<<< HEAD
         Try
             If txtBusqueda.CausesValidation And txtBusqueda.Text <> String.Empty Then
                 'if /la base de datos no encuentra el prducto/
@@ -47,6 +48,9 @@ Public Class frmRegistroproductos
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+=======
+        Datos(Me.ProductosTableAdapter.GetDataBy1(Integer.Parse(TextBox4.Text)))
+>>>>>>> 2a61a8fbe1f629ea2c3f1a7b1eff93d422bd8a81
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
@@ -81,8 +85,12 @@ Public Class frmRegistroproductos
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+<<<<<<< HEAD
         activarCampos(True)
         Datos(Me.ProductosTableAdapter.GetDataBy(DataGridView1.CurrentRow.Cells(0).Value))
+=======
+        Datos(Me.ProductosTableAdapter.GetDataBy1(DataGridView1.CurrentRow.Cells(0).Value))
+>>>>>>> 2a61a8fbe1f629ea2c3f1a7b1eff93d422bd8a81
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnModificar.Click

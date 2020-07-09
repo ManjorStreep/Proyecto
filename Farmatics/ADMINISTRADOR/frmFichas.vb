@@ -1,17 +1,31 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data.Sql
 Public Class frmFichas
-    Dim datos As Empleado
+
+    Dim empleado As Empleado
 
     Private Sub frmFichas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Empleados' Puede moverla o quitarla según sea necesario.
+        Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
     End Sub
 
     Private Sub btbusqueda_Click(sender As Object, e As EventArgs) Handles btbusqueda.Click
-        
+        If Conexiones.Verificacion("Empleados", "CEDULA ='" & TextBox1.Text & "'") Then
+            ImprimirDatos(New Empleado(TextBox1.Text))
+        Else
+            ' QUiero que aqui pongas una ventana que te pregunte si o no :v
+            ' Si apreta que SI, le habilitas el GroupBox3.Enable = True
+            ' Limpia primero todos los TextBox y esas cosas para que pueda escribir sin problemas.
+            MsgBox("Usuario no registrardo, desea registrar?")
+            GroupBox1.Enabled = True
+            txt_DNI.Text = TextBox1.Text
+            txt_DNI.Focus()
+        End If
     End Sub
 
-    
-    Private Sub ImprimirDatos(ByVal consulta As List(Of String))
+
+    Private Sub ImprimirDatos(ByVal datos As Empleado)
+        empleado = datos
         txt_nombre.Text = datos.Nombre
         txt_apellido.Text = datos.Apellido
         txt_direccion.Text = datos.Direccion
@@ -28,18 +42,18 @@ Public Class frmFichas
 
     End Sub
 
-    Private Sub Usuarios1DataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Usuarios1DataGridView.CellDoubleClick
-        Dim datos As New List(Of String)
-        For numero As Integer = 0 To Usuarios1DataGridView.ColumnCount - 1
-            datos.Add(Convert.ToString(Usuarios1DataGridView.CurrentRow.Cells(numero).Value))
-        Next
-
-        ImprimirDatos(datos)
-
+    Private Sub Usuarios1DataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Usuarios1DataGridView.CellClick
+        ImprimirDatos(New Empleado(Integer.Parse(Usuarios1DataGridView.CurrentRow.Cells(2).Value)))
     End Sub
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
-        'esperando codigo
+        If Conexiones.Verificacion("Empleados", "CEDULA ='" & TextBox1.Text & "'") Then
+            Me.EmpleadosTableAdapter.EliminarEmpleado(TextBox1.Text)
+        ElseIf Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_DNI.Text & "'") Then
+            Me.EmpleadosTableAdapter.EliminarEmpleado(txt_DNI.Text)
+        End If
+        Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
+
     End Sub
 
     Private Sub btsalir_Click(sender As Object, e As EventArgs) Handles btsalir.Click
@@ -108,5 +122,56 @@ Public Class frmFichas
         Else
             Me.ErrorProvider1.SetError(sender, "ingrese un dato en esete campo") 'mensage de error
         End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+    ' ---------------------------------------------------------------------------------------
+
+    'Este boton es para habilitar los el GroupBox1
+    Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
+        GroupBox1.Enabled = True
+    End Sub
+
+    ' Aqui vas a validar que ningun campoo este vacio y impedir que se registren!
+    ' Este boton sera el que actualize la base de datos.
+    Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
+        If String.IsNullOrEmpty(txt_DNI.Text) Then
+            MsgBox("No has ingresado datos para registrar")
+            Return
+        End If
+
+        Dim sexo As String
+        If rb_hombre.Checked Then
+            sexo = rb_hombre.Text
+        Else
+            sexo = rb_mujer.Text
+        End If
+        MsgBox(System.DateTime.Now)
+        If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_DNI.Text & "'") Then
+            If empleado.vacio() Then
+                Try
+                    ' Aqui da error porque falta poner un valor por defecto al combobox
+                    Me.EmpleadosTableAdapter.ActualizarEmpleado(txt_nombre.Text, txt_apellido.Text, txt_DNI.Text, txt_telefono.Text, txt_correo.Text, txt_direccion.Text, sexo, cb_cargo.SelectedItem, empleado.FechaIngreso, txt_clave.Text, empleado.Cedula)
+                    ' Aqui da otro error porque no puede recibir un campo vacio desde la base de datos, y el campo vacio se genera porque el combobox no tiene un valor por defecto.
+                    ImprimirDatos(New Empleado(txt_DNI.Text))
+                    Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
+                Catch ex As Exception
+                    MsgBox("Error al tratar de registrar empleado en la base de datos")
+                    MsgBox(ex.Message)
+                End Try
+            End If
+        Else
+            Try
+                Me.EmpleadosTableAdapter.AgregarEmpleado(txt_nombre.Text, txt_apellido.Text, txt_DNI.Text, txt_telefono.Text, txt_correo.Text, txt_direccion.Text, sexo, cb_cargo.SelectedItem, System.DateTime.Now, txt_clave.Text)
+                Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
+                MsgBox("Usuario registrado con exito")
+            Catch ex As Exception
+                MsgBox("Error al registrar usuario")
+            End Try
+        End If
+        ' Esto es muy importante
+        empleado = Nothing
     End Sub
 End Class

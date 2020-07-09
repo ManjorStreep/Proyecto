@@ -31,6 +31,18 @@ Partial Class frmFichas
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cbNacionalidad = New System.Windows.Forms.ComboBox()
         Me.Usuarios1DataGridView = New System.Windows.Forms.DataGridView()
+        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.APELLIDODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CEDULADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TELEFONODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CORREODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DIRECCIONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SEXODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CARGODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHAINGRESODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CLAVEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.btn_eliminar = New System.Windows.Forms.Button()
@@ -70,10 +82,13 @@ Partial Class frmFichas
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.EmpleadosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.Usuarios1DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -118,7 +133,6 @@ Partial Class frmFichas
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(76, 20)
         Me.TextBox1.TabIndex = 32
-        Me.TextBox1.Text = "Cedula"
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GroupBox3
@@ -150,11 +164,14 @@ Partial Class frmFichas
         Me.Usuarios1DataGridView.AllowUserToDeleteRows = False
         Me.Usuarios1DataGridView.AllowUserToResizeColumns = False
         Me.Usuarios1DataGridView.AllowUserToResizeRows = False
+        Me.Usuarios1DataGridView.AutoGenerateColumns = False
         Me.Usuarios1DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.Usuarios1DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Usuarios1DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Usuarios1DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.Usuarios1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Usuarios1DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NOMBREDataGridViewTextBoxColumn, Me.APELLIDODataGridViewTextBoxColumn, Me.CEDULADataGridViewTextBoxColumn, Me.TELEFONODataGridViewTextBoxColumn, Me.CORREODataGridViewTextBoxColumn, Me.DIRECCIONDataGridViewTextBoxColumn, Me.SEXODataGridViewTextBoxColumn, Me.CARGODataGridViewTextBoxColumn, Me.FECHAINGRESODataGridViewTextBoxColumn, Me.CLAVEDataGridViewTextBoxColumn})
+        Me.Usuarios1DataGridView.DataSource = Me.EmpleadosBindingSource
         Me.Usuarios1DataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Usuarios1DataGridView.Location = New System.Drawing.Point(12, 380)
         Me.Usuarios1DataGridView.MultiSelect = False
@@ -163,6 +180,86 @@ Partial Class frmFichas
         Me.Usuarios1DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Usuarios1DataGridView.Size = New System.Drawing.Size(985, 269)
         Me.Usuarios1DataGridView.TabIndex = 38
+        '
+        'NOMBREDataGridViewTextBoxColumn
+        '
+        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
+        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'APELLIDODataGridViewTextBoxColumn
+        '
+        Me.APELLIDODataGridViewTextBoxColumn.DataPropertyName = "APELLIDO"
+        Me.APELLIDODataGridViewTextBoxColumn.HeaderText = "APELLIDO"
+        Me.APELLIDODataGridViewTextBoxColumn.Name = "APELLIDODataGridViewTextBoxColumn"
+        Me.APELLIDODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CEDULADataGridViewTextBoxColumn
+        '
+        Me.CEDULADataGridViewTextBoxColumn.DataPropertyName = "CEDULA"
+        Me.CEDULADataGridViewTextBoxColumn.HeaderText = "CEDULA"
+        Me.CEDULADataGridViewTextBoxColumn.Name = "CEDULADataGridViewTextBoxColumn"
+        Me.CEDULADataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TELEFONODataGridViewTextBoxColumn
+        '
+        Me.TELEFONODataGridViewTextBoxColumn.DataPropertyName = "TELEFONO"
+        Me.TELEFONODataGridViewTextBoxColumn.HeaderText = "TELEFONO"
+        Me.TELEFONODataGridViewTextBoxColumn.Name = "TELEFONODataGridViewTextBoxColumn"
+        Me.TELEFONODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CORREODataGridViewTextBoxColumn
+        '
+        Me.CORREODataGridViewTextBoxColumn.DataPropertyName = "CORREO"
+        Me.CORREODataGridViewTextBoxColumn.HeaderText = "CORREO"
+        Me.CORREODataGridViewTextBoxColumn.Name = "CORREODataGridViewTextBoxColumn"
+        Me.CORREODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DIRECCIONDataGridViewTextBoxColumn
+        '
+        Me.DIRECCIONDataGridViewTextBoxColumn.DataPropertyName = "DIRECCION"
+        Me.DIRECCIONDataGridViewTextBoxColumn.HeaderText = "DIRECCION"
+        Me.DIRECCIONDataGridViewTextBoxColumn.Name = "DIRECCIONDataGridViewTextBoxColumn"
+        Me.DIRECCIONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SEXODataGridViewTextBoxColumn
+        '
+        Me.SEXODataGridViewTextBoxColumn.DataPropertyName = "SEXO"
+        Me.SEXODataGridViewTextBoxColumn.HeaderText = "SEXO"
+        Me.SEXODataGridViewTextBoxColumn.Name = "SEXODataGridViewTextBoxColumn"
+        Me.SEXODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CARGODataGridViewTextBoxColumn
+        '
+        Me.CARGODataGridViewTextBoxColumn.DataPropertyName = "CARGO"
+        Me.CARGODataGridViewTextBoxColumn.HeaderText = "CARGO"
+        Me.CARGODataGridViewTextBoxColumn.Name = "CARGODataGridViewTextBoxColumn"
+        Me.CARGODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'FECHAINGRESODataGridViewTextBoxColumn
+        '
+        Me.FECHAINGRESODataGridViewTextBoxColumn.DataPropertyName = "FECHA_INGRESO"
+        Me.FECHAINGRESODataGridViewTextBoxColumn.HeaderText = "INGRESO"
+        Me.FECHAINGRESODataGridViewTextBoxColumn.Name = "FECHAINGRESODataGridViewTextBoxColumn"
+        Me.FECHAINGRESODataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CLAVEDataGridViewTextBoxColumn
+        '
+        Me.CLAVEDataGridViewTextBoxColumn.DataPropertyName = "CLAVE"
+        Me.CLAVEDataGridViewTextBoxColumn.HeaderText = "CLAVE"
+        Me.CLAVEDataGridViewTextBoxColumn.Name = "CLAVEDataGridViewTextBoxColumn"
+        Me.CLAVEDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EmpleadosBindingSource
+        '
+        Me.EmpleadosBindingSource.DataMember = "Empleados"
+        Me.EmpleadosBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ProgressBar1
         '
@@ -536,6 +633,10 @@ Partial Class frmFichas
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'EmpleadosTableAdapter
+        '
+        Me.EmpleadosTableAdapter.ClearBeforeFill = True
+        '
         'frmFichas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -558,6 +659,8 @@ Partial Class frmFichas
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.Usuarios1DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -613,4 +716,17 @@ Partial Class frmFichas
     Friend WithEvents cbNacionalidad As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
+    Friend WithEvents EmpleadosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents EmpleadosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter
+    Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents APELLIDODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CEDULADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TELEFONODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CORREODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DIRECCIONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SEXODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CARGODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FECHAINGRESODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CLAVEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
