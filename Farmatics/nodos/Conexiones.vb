@@ -16,7 +16,7 @@ Module Conexiones
             regresar = Lector.HasRows()
             Lector.Close()
         Catch ex As Exception
-            MsgBox("Error al verificar usuario")
+            MsgBox("Error al verificar en la base de datos - " & ex.Message)
         Finally
             Conexion.Close()
         End Try

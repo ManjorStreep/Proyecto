@@ -272,31 +272,31 @@ Partial Class frmFichas
         'btn_eliminar
         '
         Me.btn_eliminar.ForeColor = System.Drawing.Color.Black
-        Me.btn_eliminar.Location = New System.Drawing.Point(648, 273)
+        Me.btn_eliminar.Location = New System.Drawing.Point(844, 270)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(87, 35)
         Me.btn_eliminar.TabIndex = 40
-        Me.btn_eliminar.Text = "btn_eliminar"
+        Me.btn_eliminar.Text = "Eliminar"
         Me.btn_eliminar.UseVisualStyleBackColor = True
         '
         'btn_editar
         '
         Me.btn_editar.ForeColor = System.Drawing.Color.Black
-        Me.btn_editar.Location = New System.Drawing.Point(757, 273)
+        Me.btn_editar.Location = New System.Drawing.Point(759, 270)
         Me.btn_editar.Name = "btn_editar"
         Me.btn_editar.Size = New System.Drawing.Size(79, 35)
         Me.btn_editar.TabIndex = 41
-        Me.btn_editar.Text = "btn_editar"
+        Me.btn_editar.Text = "Modificar"
         Me.btn_editar.UseVisualStyleBackColor = True
         '
         'btn_registrar
         '
         Me.btn_registrar.ForeColor = System.Drawing.Color.Black
-        Me.btn_registrar.Location = New System.Drawing.Point(858, 273)
+        Me.btn_registrar.Location = New System.Drawing.Point(672, 270)
         Me.btn_registrar.Name = "btn_registrar"
         Me.btn_registrar.Size = New System.Drawing.Size(81, 35)
         Me.btn_registrar.TabIndex = 42
-        Me.btn_registrar.Text = "btn_registrar"
+        Me.btn_registrar.Text = "Agregar"
         Me.btn_registrar.UseVisualStyleBackColor = True
         '
         'PictureBox1

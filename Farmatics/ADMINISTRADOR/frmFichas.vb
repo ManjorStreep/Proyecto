@@ -25,6 +25,7 @@ Public Class frmFichas
 
 
     Private Sub ImprimirDatos(ByVal datos As Empleado)
+        GroupBox1.Enabled = True
         empleado = datos
         txt_nombre.Text = datos.Nombre
         txt_apellido.Text = datos.Apellido

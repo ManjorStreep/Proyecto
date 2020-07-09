@@ -2,10 +2,11 @@
 Public Class frmRegistroproductos
 
     Dim recipe As Boolean
+    Dim producto As Productos
 
     ' Esta funcion es la que se encargara de modificar y seleccionar productos y mostrarlo en pantalla.
     Private Sub Datos(ByVal tabla As DataTable)
-        Dim producto As New Productos(tabla.Rows(0))
+        producto = New Productos(tabla.Rows(0))
         txtCodigoProducto.Text = producto.Id
         txtNombreProducto.Text = producto.Nombre
         txtCantidadProductos.Text = producto.Cantidad_Disponible
@@ -30,27 +31,23 @@ Public Class frmRegistroproductos
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-<<<<<<< HEAD
+
         Try
             If txtBusqueda.CausesValidation And txtBusqueda.Text <> String.Empty Then
-                'if /la base de datos no encuentra el prducto/
-                Dim x As Integer = MsgBox("este ususario no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
-                If x = vbYes Then
-                    MsgBox("ingrese los datos del producto ene le formulario")
-                    activarCampos(True)
+                If Conexiones.Verificacion("Productos", "CODIGO = " & txtBusqueda.Text) Then
+                    Datos(Me.ProductosTableAdapter.GetDataBy1(Integer.Parse(txtBusqueda.Text)))
+                Else
+                    Dim x As Integer = MsgBox("este ususario no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
+                    If x = vbYes Then
+                        activarCampos(True)
+                    End If
                 End If
-                'else
-                'Datos(Me.ProductosTableAdapter.GetDataBy(Integer.Parse(txtBusqueda.Text)))
-                'end if
             Else
                 MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-=======
-        Datos(Me.ProductosTableAdapter.GetDataBy1(Integer.Parse(TextBox4.Text)))
->>>>>>> 2a61a8fbe1f629ea2c3f1a7b1eff93d422bd8a81
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
@@ -73,6 +70,9 @@ Public Class frmRegistroproductos
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            producto = Nothing
+            'Aqui necesito que se limpie los campos!
         End Try
     End Sub
 
@@ -85,12 +85,9 @@ Public Class frmRegistroproductos
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-<<<<<<< HEAD
         activarCampos(True)
-        Datos(Me.ProductosTableAdapter.GetDataBy(DataGridView1.CurrentRow.Cells(0).Value))
-=======
         Datos(Me.ProductosTableAdapter.GetDataBy1(DataGridView1.CurrentRow.Cells(0).Value))
->>>>>>> 2a61a8fbe1f629ea2c3f1a7b1eff93d422bd8a81
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
@@ -98,7 +95,7 @@ Public Class frmRegistroproductos
         Try
             If Me.ValidateChildren And cbViaDeAdministracion.SelectedIndex >= 0 And txtCantidadProductos.Text <> String.Empty And txtCodigoProducto.Text <> String.Empty And txtNombreProducto.Text <> String.Empty And txtPrecioProducto.Text <> String.Empty Then
                 Try
-                    Me.ProductosTableAdapter.UpdateQuery(txtNombreProducto.Text, Convert.ToDecimal(txtPrecioProducto.Text), Integer.Parse(txtCantidadProductos.Text), cbViaDeAdministracion.SelectedItem, recipe, Integer.Parse(txtCodigoProducto.Text), txtPrecioProducto.Text)
+                    Me.ProductosTableAdapter.UpdateQuery(txtNombreProducto.Text, Convert.ToDecimal(txtPrecioProducto.Text), Integer.Parse(txtCantidadProductos.Text), cbViaDeAdministracion.SelectedItem, recipe, Integer.Parse(txtCodigoProducto.Text), Integer.Parse(producto.Id))
                     Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
                 Catch ex As Exception
                     MsgBox("Fallo al actualizar el producto - " & ex.Message)
@@ -108,13 +105,17 @@ Public Class frmRegistroproductos
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            producto = Nothing
+            'Aqui necesito que se limpie los campos!
         End Try
     End Sub
 
     Private Sub btn_Editar_Click(sender As Object, e As EventArgs) Handles btn_Eliminar.Click
-        'Aqui debes validar que los Textbox no esten vacios para poder modificar un producto!
         Try
             If Me.ValidateChildren And cbViaDeAdministracion.SelectedIndex >= 0 And txtCantidadProductos.Text <> String.Empty And txtCodigoProducto.Text <> String.Empty And txtNombreProducto.Text <> String.Empty And txtPrecioProducto.Text <> String.Empty Then
+                Me.ProductosTableAdapter.DeleteQuery(txtCodigoProducto.Text)
+                ' Aqui cuando borres el producto, necesito que se limpie los campos!
                 Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
             Else
                 MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
@@ -176,6 +177,12 @@ Public Class frmRegistroproductos
     '/-----------------------------------------------------------------------------------------------------------------/'
     Private Sub activarCampos(ByVal x As Boolean)
         If x = True Then
+            ' Te faltaba poner esto, mejoralo.
+            txtCodigoProducto.Text = ""
+            txtNombreProducto.Text = ""
+            txtCantidadProductos.Text = ""
+            txtPrecioProducto.Text = ""
+            ' ----------------------------
             btnIngresar.Enabled = True
             btn_Eliminar.Enabled = True
             btnModificar.Enabled = True
