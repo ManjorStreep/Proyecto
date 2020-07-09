@@ -16,7 +16,7 @@ Module Estructuras
         Public Clave As String
 
 
-        Public Sub New(ByVal Identificacion As Integer)
+        Public Sub New(ByVal Identificacion As String)
             Try
                 Conexion.Open()
                 Comando = New OleDbCommand("SELECT * FROM Empleados WHERE CEDULA ='" & Identificacion & "'", Conexion)
@@ -40,6 +40,13 @@ Module Estructuras
                 Conexion.Close()
             End Try
         End Sub
+        Public Function vacio()
+            If String.IsNullOrEmpty(Nombre) Or String.IsNullOrEmpty(Apellido) Then
+                Return False
+            Else
+                Return True
+            End If
+        End Function
     End Structure
 
     Public Structure Productos

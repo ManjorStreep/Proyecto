@@ -3,7 +3,7 @@ Public Class frmMenu
 
     Dim persona As Empleado
 
-    Public Sub Trabajador(ByVal Cedula As Integer)
+    Public Sub Trabajador(ByVal Cedula As String)
         persona = New Empleado(Cedula)
     End Sub
 
