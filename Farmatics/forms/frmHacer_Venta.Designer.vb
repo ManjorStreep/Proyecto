@@ -22,6 +22,9 @@ Partial Class frmHacer_Venta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -39,7 +42,6 @@ Partial Class frmHacer_Venta
         Me.lb_codigoEmpleado = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -54,12 +56,29 @@ Partial Class frmHacer_Venta
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
+        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter()
+        Me.CODIGODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VALORDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CLASIFICACIONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RECIPEDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -94,7 +113,7 @@ Partial Class frmHacer_Venta
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(38, 412)
+        Me.Label5.Location = New System.Drawing.Point(49, 277)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 16)
@@ -104,7 +123,7 @@ Partial Class frmHacer_Venta
         'Button4
         '
         Me.Button4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button4.Location = New System.Drawing.Point(765, 525)
+        Me.Button4.Location = New System.Drawing.Point(37, 341)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(84, 33)
@@ -115,7 +134,7 @@ Partial Class frmHacer_Venta
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(128, 410)
+        Me.RadioButton1.Location = New System.Drawing.Point(139, 275)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(253, 20)
         Me.RadioButton1.TabIndex = 36
@@ -173,18 +192,18 @@ Partial Class frmHacer_Venta
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox3.Controls.Add(Me.PictureBox1)
-        Me.GroupBox3.Location = New System.Drawing.Point(19, -1)
+        Me.GroupBox3.Location = New System.Drawing.Point(25, -1)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(322, 81)
+        Me.GroupBox3.Size = New System.Drawing.Size(197, 81)
         Me.GroupBox3.TabIndex = 79
         Me.GroupBox3.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 7)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 9)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(316, 83)
+        Me.PictureBox1.Size = New System.Drawing.Size(198, 68)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -197,7 +216,7 @@ Partial Class frmHacer_Venta
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.Label12)
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
-        Me.GroupBox4.Location = New System.Drawing.Point(619, 6)
+        Me.GroupBox4.Location = New System.Drawing.Point(950, 12)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(368, 83)
         Me.GroupBox4.TabIndex = 80
@@ -244,20 +263,10 @@ Partial Class frmHacer_Venta
         Me.Label12.TabIndex = 12
         Me.Label12.Text = "EMPLEADO : "
         '
-        'GroupBox5
-        '
-        Me.GroupBox5.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.GroupBox5.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.GroupBox5.Location = New System.Drawing.Point(19, 260)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(705, 298)
-        Me.GroupBox5.TabIndex = 81
-        Me.GroupBox5.TabStop = False
-        '
         'Button6
         '
         Me.Button6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button6.Location = New System.Drawing.Point(875, 525)
+        Me.Button6.Location = New System.Drawing.Point(204, 341)
         Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(98, 33)
@@ -404,24 +413,137 @@ Partial Class frmHacer_Venta
         Me.Button3.Text = "ELIMINAR"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.DataGridView1)
+        Me.GroupBox6.Controls.Add(Me.Button6)
+        Me.GroupBox6.Controls.Add(Me.Button4)
+        Me.GroupBox6.ForeColor = System.Drawing.Color.White
+        Me.GroupBox6.Location = New System.Drawing.Point(52, 316)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(935, 399)
+        Me.GroupBox6.TabIndex = 14
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Lista de Productos"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.Silver
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.ColumnHeadersHeight = 30
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGODataGridViewTextBoxColumn, Me.NOMBREDataGridViewTextBoxColumn, Me.VALORDataGridViewTextBoxColumn, Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn, Me.CLASIFICACIONDataGridViewTextBoxColumn, Me.RECIPEDataGridViewCheckBoxColumn})
+        Me.DataGridView1.DataSource = Me.ProductosBindingSource
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 22)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(680, 247)
+        Me.DataGridView1.TabIndex = 83
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DatabaseDataSetBindingSource
+        '
+        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
+        Me.DatabaseDataSetBindingSource.Position = 0
+        '
+        'ProductosBindingSource
+        '
+        Me.ProductosBindingSource.DataMember = "Productos"
+        Me.ProductosBindingSource.DataSource = Me.DatabaseDataSetBindingSource
+        '
+        'ProductosTableAdapter
+        '
+        Me.ProductosTableAdapter.ClearBeforeFill = True
+        '
+        'CODIGODataGridViewTextBoxColumn
+        '
+        Me.CODIGODataGridViewTextBoxColumn.DataPropertyName = "CODIGO"
+        Me.CODIGODataGridViewTextBoxColumn.HeaderText = "CODIGO"
+        Me.CODIGODataGridViewTextBoxColumn.Name = "CODIGODataGridViewTextBoxColumn"
+        Me.CODIGODataGridViewTextBoxColumn.ReadOnly = True
+        Me.CODIGODataGridViewTextBoxColumn.Width = 90
+        '
+        'NOMBREDataGridViewTextBoxColumn
+        '
+        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
+        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
+        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NOMBREDataGridViewTextBoxColumn.Width = 93
+        '
+        'VALORDataGridViewTextBoxColumn
+        '
+        Me.VALORDataGridViewTextBoxColumn.DataPropertyName = "VALOR"
+        Me.VALORDataGridViewTextBoxColumn.HeaderText = "VALOR"
+        Me.VALORDataGridViewTextBoxColumn.Name = "VALORDataGridViewTextBoxColumn"
+        Me.VALORDataGridViewTextBoxColumn.ReadOnly = True
+        Me.VALORDataGridViewTextBoxColumn.Width = 80
+        '
+        'CANTIDADDISPONIBLEDataGridViewTextBoxColumn
+        '
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD_DISPONIBLE"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.HeaderText = "CANTIDAD_DISPONIBLE"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.Name = "CANTIDADDISPONIBLEDataGridViewTextBoxColumn"
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.Width = 203
+        '
+        'CLASIFICACIONDataGridViewTextBoxColumn
+        '
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.DataPropertyName = "CLASIFICACION"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.HeaderText = "CLASIFICACION"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.Name = "CLASIFICACIONDataGridViewTextBoxColumn"
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CLASIFICACIONDataGridViewTextBoxColumn.Width = 147
+        '
+        'RECIPEDataGridViewCheckBoxColumn
+        '
+        Me.RECIPEDataGridViewCheckBoxColumn.DataPropertyName = "RECIPE"
+        Me.RECIPEDataGridViewCheckBoxColumn.HeaderText = "RECIPE"
+        Me.RECIPEDataGridViewCheckBoxColumn.Name = "RECIPEDataGridViewCheckBoxColumn"
+        Me.RECIPEDataGridViewCheckBoxColumn.ReadOnly = True
+        Me.RECIPEDataGridViewCheckBoxColumn.Width = 65
+        '
         'frmHacer_Venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(996, 581)
-        Me.Controls.Add(Me.Button6)
+        Me.ClientSize = New System.Drawing.Size(1360, 768)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.GroupBox6)
         Me.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.Control
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -439,6 +561,11 @@ Partial Class frmHacer_Venta
         Me.GroupBox4.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -460,7 +587,6 @@ Partial Class frmHacer_Venta
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label6 As System.Windows.Forms.Label
@@ -475,4 +601,16 @@ Partial Class frmHacer_Venta
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DatabaseDataSetBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
+    Friend WithEvents ProductosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ProductosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter
+    Friend WithEvents CODIGODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VALORDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CANTIDADDISPONIBLEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents CLASIFICACIONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents RECIPEDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
 End Class
