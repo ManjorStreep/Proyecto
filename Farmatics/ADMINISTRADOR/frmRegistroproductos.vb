@@ -5,17 +5,20 @@ Public Class frmRegistroproductos
     Dim producto As Productos
 
     ' Esta funcion es la que se encargara de modificar y seleccionar productos y mostrarlo en pantalla.
-    Private Sub Datos(ByVal tabla As DataTable)
-        producto = New Productos(tabla.Rows(0))
+    Private Sub Datos(ByVal codigo As String)
+
+        producto = New Productos(codigo)
         txtCodigoProducto.Text = producto.Id
         txtNombreProducto.Text = producto.Nombre
         txtCantidadProductos.Text = producto.Cantidad_Disponible
         txtPrecioProducto.Text = producto.Valor
+
         If producto.Recipe Then
             RadioButton1.Select()
         Else
             RadioButton2.Select()
         End If
+
         cbViaDeAdministracion.SelectedText = producto.Clasificacion
 
     End Sub
@@ -35,7 +38,7 @@ Public Class frmRegistroproductos
         Try
             If txtBusqueda.CausesValidation And txtBusqueda.Text <> String.Empty Then
                 If Conexiones.Verificacion("Productos", "CODIGO = " & txtBusqueda.Text) Then
-                    Datos(Me.ProductosTableAdapter.GetDataBy1(Integer.Parse(txtBusqueda.Text)))
+                    Datos(txtBusqueda.Text)
                 Else
                     Dim x As Integer = MsgBox("este ususario no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
                     If x = vbYes Then
@@ -86,7 +89,7 @@ Public Class frmRegistroproductos
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         activarCampos(True)
-        Datos(Me.ProductosTableAdapter.GetDataBy1(DataGridView1.CurrentRow.Cells(0).Value))
+        Datos(DataGridView1.CurrentRow.Cells(0).Value)
 
     End Sub
 

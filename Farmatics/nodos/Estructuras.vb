@@ -1,6 +1,7 @@
 ﻿Imports System.Text
 Imports Sotware_Farmatics.Conexiones
 Imports System.Data.OleDb
+Imports Sotware_Farmatics.DatabaseDataSet
 Module Estructuras
     Public Structure Empleado
 
@@ -57,16 +58,52 @@ Module Estructuras
         Public Clasificacion As String
         Public Recipe As Boolean
 
-        Public Sub New(ByVal datos As DataRow)
-            Id = Integer.Parse(CStr(datos(0)))
-            Nombre = CStr(datos(1))
-            Valor = Integer.Parse(CStr(datos(2)))
-            Cantidad_Disponible = Integer.Parse(CStr(datos(3)))
-            Clasificacion = CStr(datos(4))
-            Recipe = Boolean.Parse(CStr(datos(5)))
+        ' Funcion privada cuya finalidad es llenar los datos del producto
+        Private Sub RellenarDatos(ByRef lector As OleDbDataReader)
+            While lector.Read
+                Id = lector.Item(0)
+                Nombre = lector.Item(1)
+                Valor = lector.Item(2)
+                Cantidad_Disponible = lector.Item(3)
+                Clasificacion = lector.Item(4)
+                Recipe = lector.Item(5)
+            End While
+            lector.Close()
         End Sub
 
-    End Structure
+        Public Sub New(ByVal datos As String)
+            ' Constructor del producto a travez de SQL
+            Try
+                Conexion.Open()
+                Comando = New OleDbCommand("SELECT * FROM Productos WHERE CODIGO=" & datos, Conexion)
+                Lector = Comando.ExecuteReader()
+                RellenarDatos(Lector)
+            Catch ex As Exception
+                MsgBox("ERROR Productos: Producto no se encuentra en la base de datos! - " & ex.Message)
+            Finally
+                Conexion.Close()
+            End Try
+        End Sub
 
+        ' Esta funcion sera la encargada de actualizar los productos dentro de la base de datos
+        Public Sub ActualizarCantidad(ByVal cantidad As String)
+            Try
+                Conexion.Open()
+
+                ' Actualizamos la columna CANTIDAD_DISPONIBLE en la base de datos con el parametro cantidad
+                Comando = New OleDbCommand("UPDATE Productos SET CANTIDAD_DISPONIBLE = " & cantidad & " WHERE CODIGO = " & Id, Conexion)
+                Comando.ExecuteNonQuery()
+
+                ' Obtenemos Los datos nuevamente para mantener la informacion del producto actualizada
+                Comando = New OleDbCommand("SELECT * FROM Productos WHERE CODIGO=" & Id, Conexion)
+                Lector = Comando.ExecuteReader()
+                RellenarDatos(Lector)
+            Catch ex As Exception
+                MsgBox("ERROR Productos: No se puede actualizar este producto CODIGO = " & Id & " - " & ex.Message)
+            Finally
+                Conexion.Close()
+            End Try
+        End Sub
+    End Structure
 
 End Module

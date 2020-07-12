@@ -1,12 +1,20 @@
-﻿Public Class frmVisualizarReportes
+﻿Imports Microsoft.Reporting.WinForms
+
+Public Class frmVisualizarReportes
+
+    Public Sub Parametros(ByVal parametros As ReportParameter(), ByVal dataset As DataSet)
+        ReportViewer1.LocalReport.SetParameters(parametros)
+        ProductoBindingSource.DataSource = dataset
+        ProductoBindingSource.DataMember = "Table1"
+        ReportViewer1.RefreshReport()
+
+    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Me.ReportViewer1.RefreshReport()
-        Me.ReportViewer1.RefreshReport()
+
+
+        ReportViewer1.RefreshReport()
     End Sub
 
-    Private Sub ReportViewer1_Load(sender As Object, e As EventArgs)
-
-    End Sub
 End Class
