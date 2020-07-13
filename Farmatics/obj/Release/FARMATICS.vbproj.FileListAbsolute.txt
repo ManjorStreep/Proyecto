@@ -42,3 +42,4 @@ C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.R
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\FARMATICS.vbproj.GenerateResource.Cache
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\RdlCompile.cache
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\RdlCompile.compiled
+C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.frmInventario.resources
