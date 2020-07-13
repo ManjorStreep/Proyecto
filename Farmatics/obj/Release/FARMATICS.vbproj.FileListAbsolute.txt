@@ -42,4 +42,8 @@ C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.R
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\FARMATICS.vbproj.GenerateResource.Cache
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\RdlCompile.cache
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\RdlCompile.compiled
+<<<<<<< HEAD
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.frmInventario.resources
+=======
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.frmInventario.resources
+>>>>>>> master

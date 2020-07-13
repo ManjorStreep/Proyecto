@@ -113,6 +113,10 @@ Public Class frmHacer_Venta
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btn_AgregarProducto.Click
+        If String.IsNullOrEmpty(producto.Nombre) Then
+            MsgBox("ERROR Agregar: No has seleccionado producto para agregar a la compra")
+            Return
+        End If
         DataGridView1.Rows.Add(New String() {producto.Id, producto.Nombre, producto.Valor, NumericUpDown1.Value, TextBox9.Text})
         ActualizarPrecio() : txt_BuscarCodigoID.Text = ""
     End Sub
@@ -172,8 +176,14 @@ Public Class frmHacer_Venta
         parametros(7) = New ReportParameter("Factura", "123")
 
         ' Esto sirve para registrar cliente y la factura en la base de datos
+<<<<<<< HEAD
         'TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
         TablaHistorial.RegistrarCompra(txt_NombreCliente.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula)
+=======
+        ' Debes colocar el numero de factora al final!
+        TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
+        TablaHistorial.RegistrarCompra(txt_NombreCliente.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula, "Factura:0000")
+>>>>>>> master
 
         Dim Factura As New frmVisualizarReportes()
         Factura.Parametros(parametros, dataset)

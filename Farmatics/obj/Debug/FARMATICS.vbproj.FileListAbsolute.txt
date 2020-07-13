@@ -63,3 +63,4 @@ C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.Res
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\RdlCompile.cache
 C:\Users\Yigs-Family\Desktop\Farmatics\FARMATICS\obj\Debug\RdlCompile.compiled
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.frmInventario.resources
