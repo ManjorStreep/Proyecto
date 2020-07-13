@@ -23,6 +23,8 @@ Partial Class frmFichas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFichas))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -169,7 +171,14 @@ Partial Class frmFichas
         Me.Usuarios1DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Usuarios1DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Usuarios1DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.Usuarios1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Usuarios1DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Usuarios1DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NOMBREDataGridViewTextBoxColumn, Me.APELLIDODataGridViewTextBoxColumn, Me.CEDULADataGridViewTextBoxColumn, Me.TELEFONODataGridViewTextBoxColumn, Me.CORREODataGridViewTextBoxColumn, Me.DIRECCIONDataGridViewTextBoxColumn, Me.SEXODataGridViewTextBoxColumn, Me.CARGODataGridViewTextBoxColumn, Me.FECHAINGRESODataGridViewTextBoxColumn, Me.CLAVEDataGridViewTextBoxColumn})
         Me.Usuarios1DataGridView.DataSource = Me.EmpleadosBindingSource
         Me.Usuarios1DataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -177,6 +186,11 @@ Partial Class frmFichas
         Me.Usuarios1DataGridView.MultiSelect = False
         Me.Usuarios1DataGridView.Name = "Usuarios1DataGridView"
         Me.Usuarios1DataGridView.ReadOnly = True
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.Usuarios1DataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.Usuarios1DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Usuarios1DataGridView.Size = New System.Drawing.Size(985, 269)
         Me.Usuarios1DataGridView.TabIndex = 38
@@ -271,6 +285,7 @@ Partial Class frmFichas
         '
         'btn_eliminar
         '
+        Me.btn_eliminar.Enabled = False
         Me.btn_eliminar.ForeColor = System.Drawing.Color.Black
         Me.btn_eliminar.Location = New System.Drawing.Point(844, 270)
         Me.btn_eliminar.Name = "btn_eliminar"
@@ -281,6 +296,7 @@ Partial Class frmFichas
         '
         'btn_editar
         '
+        Me.btn_editar.Enabled = False
         Me.btn_editar.ForeColor = System.Drawing.Color.Black
         Me.btn_editar.Location = New System.Drawing.Point(759, 270)
         Me.btn_editar.Name = "btn_editar"
@@ -291,6 +307,7 @@ Partial Class frmFichas
         '
         'btn_registrar
         '
+        Me.btn_registrar.Enabled = False
         Me.btn_registrar.ForeColor = System.Drawing.Color.Black
         Me.btn_registrar.Location = New System.Drawing.Point(672, 270)
         Me.btn_registrar.Name = "btn_registrar"

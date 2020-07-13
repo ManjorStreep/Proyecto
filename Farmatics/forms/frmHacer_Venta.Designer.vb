@@ -23,43 +23,41 @@ Partial Class frmHacer_Venta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.btn_Pagar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txt_DniCliente = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.lb_nombreEmpleado = New System.Windows.Forms.Label()
         Me.lb_codigoEmpleado = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txt_TelefonoCLiente = New System.Windows.Forms.TextBox()
+        Me.txt_DireccionCliente = New System.Windows.Forms.TextBox()
+        Me.txt_NombreCliente = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -71,18 +69,19 @@ Partial Class frmHacer_Venta
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btn_MostrarInventario = New System.Windows.Forms.Button()
+        Me.btn_Salir = New System.Windows.Forms.Button()
+        Me.btn_EliminarProducto = New System.Windows.Forms.Button()
+        Me.btn_AgregarProducto = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
         Me.ProductosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -93,12 +92,13 @@ Partial Class frmHacer_Venta
         Me.GroupBox6.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -142,40 +142,28 @@ Partial Class frmHacer_Venta
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Facturación"
         '
-        'Button4
+        'btn_Pagar
         '
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button4.Location = New System.Drawing.Point(16, 195)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(84, 33)
-        Me.Button4.TabIndex = 14
-        Me.Button4.Text = "Pagar"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(403, 148)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(253, 20)
-        Me.RadioButton1.TabIndex = 36
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Habilitar Busqueda con Lectora"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.btn_Pagar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_Pagar.Location = New System.Drawing.Point(16, 195)
+        Me.btn_Pagar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_Pagar.Name = "btn_Pagar"
+        Me.btn_Pagar.Size = New System.Drawing.Size(84, 33)
+        Me.btn_Pagar.TabIndex = 14
+        Me.btn_Pagar.Text = "Pagar"
+        Me.btn_Pagar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Me.TextBox10)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.TextBox9)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox7)
         Me.GroupBox1.Controls.Add(Me.TextBox8)
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
@@ -185,9 +173,17 @@ Partial Class frmHacer_Venta
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de Venta"
         '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(164, 134)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(39, 23)
+        Me.NumericUpDown1.TabIndex = 84
+        '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(31, 133)
+        Me.TextBox10.Enabled = False
+        Me.TextBox10.Location = New System.Drawing.Point(54, 133)
         Me.TextBox10.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(90, 23)
@@ -197,7 +193,7 @@ Partial Class frmHacer_Venta
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(46, 113)
+        Me.Label2.Location = New System.Drawing.Point(69, 113)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 16)
@@ -206,7 +202,8 @@ Partial Class frmHacer_Venta
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(147, 86)
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(142, 86)
         Me.TextBox9.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(90, 23)
@@ -216,7 +213,7 @@ Partial Class frmHacer_Venta
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(161, 66)
+        Me.Label1.Location = New System.Drawing.Point(156, 66)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 16)
@@ -225,7 +222,8 @@ Partial Class frmHacer_Venta
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(8, 39)
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(39, 39)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(178, 23)
@@ -233,43 +231,23 @@ Partial Class frmHacer_Venta
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(29, 86)
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.Location = New System.Drawing.Point(24, 86)
         Me.TextBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(90, 23)
         Me.TextBox8.TabIndex = 89
         '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.NumericUpDown1.Location = New System.Drawing.Point(201, 43)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(42, 19)
-        Me.NumericUpDown1.TabIndex = 13
-        Me.NumericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Transparent
-        Me.Label17.Location = New System.Drawing.Point(55, 66)
+        Me.Label17.Location = New System.Drawing.Point(50, 66)
         Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(42, 16)
         Me.Label17.TabIndex = 12
         Me.Label17.Text = "TIPO"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Location = New System.Drawing.Point(175, 19)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 16)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "CANTIDAD"
         '
         'GroupBox3
         '
@@ -277,20 +255,21 @@ Partial Class frmHacer_Venta
         Me.GroupBox3.Controls.Add(Me.ComboBox1)
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.Button1)
-        Me.GroupBox3.Controls.Add(Me.TextBox3)
+        Me.GroupBox3.Controls.Add(Me.txt_DniCliente)
         Me.GroupBox3.Location = New System.Drawing.Point(81, 12)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(228, 71)
+        Me.GroupBox3.Size = New System.Drawing.Size(241, 71)
         Me.GroupBox3.TabIndex = 79
         Me.GroupBox3.TabStop = False
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"V-", "E-", "J-", "G-"})
-        Me.ComboBox1.Location = New System.Drawing.Point(11, 37)
+        Me.ComboBox1.Items.AddRange(New Object() {"E-", "G-", "J-", "V-"})
+        Me.ComboBox1.Location = New System.Drawing.Point(6, 35)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(36, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(46, 24)
+        Me.ComboBox1.Sorted = True
         Me.ComboBox1.TabIndex = 36
         '
         'Label15
@@ -298,7 +277,7 @@ Partial Class frmHacer_Venta
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.ForeColor = System.Drawing.Color.Transparent
-        Me.Label15.Location = New System.Drawing.Point(15, 17)
+        Me.Label15.Location = New System.Drawing.Point(20, 15)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(205, 16)
@@ -308,25 +287,25 @@ Partial Class frmHacer_Venta
         'Button1
         '
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(148, 37)
+        Me.Button1.Location = New System.Drawing.Point(153, 35)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(72, 22)
         Me.Button1.TabIndex = 35
         Me.Button1.Text = "BUSCAR"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txt_DniCliente
         '
-        Me.TextBox3.Location = New System.Drawing.Point(54, 37)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(87, 23)
-        Me.TextBox3.TabIndex = 14
+        Me.txt_DniCliente.Location = New System.Drawing.Point(59, 35)
+        Me.txt_DniCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_DniCliente.Name = "txt_DniCliente"
+        Me.txt_DniCliente.Size = New System.Drawing.Size(87, 23)
+        Me.txt_DniCliente.TabIndex = 14
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources.logo_farmatic_vec_png
-        Me.PictureBox1.Location = New System.Drawing.Point(765, 21)
+        Me.PictureBox1.Location = New System.Drawing.Point(363, 5)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(198, 68)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -341,7 +320,7 @@ Partial Class frmHacer_Venta
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.Label12)
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
-        Me.GroupBox4.Location = New System.Drawing.Point(403, 12)
+        Me.GroupBox4.Location = New System.Drawing.Point(597, 12)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(368, 83)
         Me.GroupBox4.TabIndex = 80
@@ -388,16 +367,16 @@ Partial Class frmHacer_Venta
         Me.Label12.TabIndex = 12
         Me.Label12.Text = "EMPLEADO : "
         '
-        'Button6
+        'btn_Cancelar
         '
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button6.Location = New System.Drawing.Point(122, 195)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(98, 33)
-        Me.Button6.TabIndex = 82
-        Me.Button6.Text = "Cancelar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btn_Cancelar.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_Cancelar.Location = New System.Drawing.Point(122, 195)
+        Me.btn_Cancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_Cancelar.Name = "btn_Cancelar"
+        Me.btn_Cancelar.Size = New System.Drawing.Size(98, 33)
+        Me.btn_Cancelar.TabIndex = 82
+        Me.btn_Cancelar.Text = "Cancelar"
+        Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
         'Total
         '
@@ -420,9 +399,9 @@ Partial Class frmHacer_Venta
         Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.GroupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.GroupBox2.Controls.Add(Me.PictureBox2)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.txt_TelefonoCLiente)
+        Me.GroupBox2.Controls.Add(Me.txt_DireccionCliente)
+        Me.GroupBox2.Controls.Add(Me.txt_NombreCliente)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label16)
@@ -445,29 +424,32 @@ Partial Class frmHacer_Venta
         Me.PictureBox2.TabIndex = 39
         Me.PictureBox2.TabStop = False
         '
-        'TextBox5
+        'txt_TelefonoCLiente
         '
-        Me.TextBox5.Location = New System.Drawing.Point(100, 74)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(193, 23)
-        Me.TextBox5.TabIndex = 38
-        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txt_TelefonoCLiente.Enabled = False
+        Me.txt_TelefonoCLiente.Location = New System.Drawing.Point(100, 74)
+        Me.txt_TelefonoCLiente.Name = "txt_TelefonoCLiente"
+        Me.txt_TelefonoCLiente.Size = New System.Drawing.Size(193, 23)
+        Me.txt_TelefonoCLiente.TabIndex = 38
+        Me.txt_TelefonoCLiente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox4
+        'txt_DireccionCliente
         '
-        Me.TextBox4.Location = New System.Drawing.Point(100, 45)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(193, 23)
-        Me.TextBox4.TabIndex = 37
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txt_DireccionCliente.Enabled = False
+        Me.txt_DireccionCliente.Location = New System.Drawing.Point(100, 45)
+        Me.txt_DireccionCliente.Name = "txt_DireccionCliente"
+        Me.txt_DireccionCliente.Size = New System.Drawing.Size(193, 23)
+        Me.txt_DireccionCliente.TabIndex = 37
+        Me.txt_DireccionCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox2
+        'txt_NombreCliente
         '
-        Me.TextBox2.Location = New System.Drawing.Point(100, 16)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(193, 23)
-        Me.TextBox2.TabIndex = 36
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txt_NombreCliente.Enabled = False
+        Me.txt_NombreCliente.Location = New System.Drawing.Point(100, 16)
+        Me.txt_NombreCliente.Name = "txt_NombreCliente"
+        Me.txt_NombreCliente.Size = New System.Drawing.Size(193, 23)
+        Me.txt_NombreCliente.TabIndex = 36
+        Me.txt_NombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label13
         '
@@ -520,14 +502,14 @@ Partial Class frmHacer_Venta
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Silver
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.ColumnHeadersHeight = 30
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column5, Me.Column2, Me.Column3, Me.Column1, Me.Column4})
@@ -538,9 +520,11 @@ Partial Class frmHacer_Venta
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(537, 352)
@@ -581,6 +565,16 @@ Partial Class frmHacer_Venta
         '
         Me.ProductosBindingSource.DataMember = "Productos"
         Me.ProductosBindingSource.DataSource = Me.DatabaseDataSetBindingSource
+        '
+        'DatabaseDataSetBindingSource
+        '
+        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
+        Me.DatabaseDataSetBindingSource.Position = 0
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panel1
         '
@@ -626,64 +620,64 @@ Partial Class frmHacer_Venta
         '
         Me.Panel2.BackColor = System.Drawing.Color.DimGray
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Button8)
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.btn_MostrarInventario)
+        Me.Panel2.Controls.Add(Me.btn_Salir)
+        Me.Panel2.Controls.Add(Me.btn_EliminarProducto)
         Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Controls.Add(Me.Button5)
-        Me.Panel2.Controls.Add(Me.Button6)
-        Me.Panel2.Controls.Add(Me.Button4)
+        Me.Panel2.Controls.Add(Me.btn_AgregarProducto)
+        Me.Panel2.Controls.Add(Me.btn_Cancelar)
+        Me.Panel2.Controls.Add(Me.btn_Pagar)
         Me.Panel2.Location = New System.Drawing.Point(6, 125)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(346, 243)
         Me.Panel2.TabIndex = 38
         '
-        'Button8
+        'btn_MostrarInventario
         '
-        Me.Button8.BackColor = System.Drawing.Color.White
-        Me.Button8.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button8.Location = New System.Drawing.Point(265, 88)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 24)
-        Me.Button8.TabIndex = 94
-        Me.Button8.Text = "Inventario"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.btn_MostrarInventario.BackColor = System.Drawing.Color.White
+        Me.btn_MostrarInventario.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_MostrarInventario.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_MostrarInventario.Location = New System.Drawing.Point(265, 88)
+        Me.btn_MostrarInventario.Name = "btn_MostrarInventario"
+        Me.btn_MostrarInventario.Size = New System.Drawing.Size(75, 24)
+        Me.btn_MostrarInventario.TabIndex = 94
+        Me.btn_MostrarInventario.Text = "Inventario"
+        Me.btn_MostrarInventario.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn_Salir
         '
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(242, 195)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(98, 33)
-        Me.Button2.TabIndex = 83
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_Salir.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_Salir.Location = New System.Drawing.Point(242, 195)
+        Me.btn_Salir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_Salir.Name = "btn_Salir"
+        Me.btn_Salir.Size = New System.Drawing.Size(98, 33)
+        Me.btn_Salir.TabIndex = 83
+        Me.btn_Salir.Text = "Salir"
+        Me.btn_Salir.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btn_EliminarProducto
         '
-        Me.Button3.BackColor = System.Drawing.Color.White
-        Me.Button3.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button3.Location = New System.Drawing.Point(265, 134)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(74, 24)
-        Me.Button3.TabIndex = 85
-        Me.Button3.Text = "ELIMINAR"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn_EliminarProducto.BackColor = System.Drawing.Color.White
+        Me.btn_EliminarProducto.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_EliminarProducto.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_EliminarProducto.Location = New System.Drawing.Point(265, 134)
+        Me.btn_EliminarProducto.Name = "btn_EliminarProducto"
+        Me.btn_EliminarProducto.Size = New System.Drawing.Size(74, 24)
+        Me.btn_EliminarProducto.TabIndex = 85
+        Me.btn_EliminarProducto.Text = "ELIMINAR"
+        Me.btn_EliminarProducto.UseVisualStyleBackColor = False
         '
-        'Button5
+        'btn_AgregarProducto
         '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button5.Location = New System.Drawing.Point(265, 46)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 24)
-        Me.Button5.TabIndex = 86
-        Me.Button5.Text = "AGREGAR"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btn_AgregarProducto.BackColor = System.Drawing.Color.White
+        Me.btn_AgregarProducto.Font = New System.Drawing.Font("Verdana", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_AgregarProducto.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btn_AgregarProducto.Location = New System.Drawing.Point(265, 46)
+        Me.btn_AgregarProducto.Name = "btn_AgregarProducto"
+        Me.btn_AgregarProducto.Size = New System.Drawing.Size(75, 24)
+        Me.btn_AgregarProducto.TabIndex = 86
+        Me.btn_AgregarProducto.Text = "AGREGAR"
+        Me.btn_AgregarProducto.UseVisualStyleBackColor = False
         '
         'PictureBox3
         '
@@ -694,19 +688,13 @@ Partial Class frmHacer_Venta
         Me.PictureBox3.TabIndex = 89
         Me.PictureBox3.TabStop = False
         '
-        'DatabaseDataSetBindingSource
-        '
-        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
-        Me.DatabaseDataSetBindingSource.Position = 0
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ProductosTableAdapter
         '
         Me.ProductosTableAdapter.ClearBeforeFill = True
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'frmHacer_Venta
         '
@@ -716,7 +704,6 @@ Partial Class frmHacer_Venta
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(977, 669)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -743,29 +730,28 @@ Partial Class frmHacer_Venta
         Me.GroupBox6.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents btn_Pagar As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
@@ -773,15 +759,13 @@ Partial Class frmHacer_Venta
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Total As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents btn_Cancelar As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lb_nombreEmpleado As System.Windows.Forms.Label
     Friend WithEvents lb_codigoEmpleado As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_DniCliente As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents DatabaseDataSetBindingSource As System.Windows.Forms.BindingSource
@@ -790,16 +774,16 @@ Partial Class frmHacer_Venta
     Friend WithEvents ProductosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents txt_TelefonoCLiente As System.Windows.Forms.TextBox
+    Friend WithEvents txt_DireccionCliente As System.Windows.Forms.TextBox
+    Friend WithEvents txt_NombreCliente As System.Windows.Forms.TextBox
+    Friend WithEvents btn_AgregarProducto As System.Windows.Forms.Button
+    Friend WithEvents btn_EliminarProducto As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btn_Salir As System.Windows.Forms.Button
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Private WithEvents TextBox9 As System.Windows.Forms.TextBox
@@ -807,10 +791,12 @@ Partial Class frmHacer_Venta
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents btn_MostrarInventario As System.Windows.Forms.Button
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

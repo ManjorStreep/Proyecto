@@ -34,7 +34,7 @@ Public Class frmHacer_Venta
         For Each fila As DataGridViewRow In DataGridView1.Rows
             precio = precio + Convert.ToDecimal(fila.Cells(4).Value)
         Next
-        TextBox6.Text = precio
+
     End Sub
 
     Private Sub frmHacer_Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -44,12 +44,12 @@ Public Class frmHacer_Venta
         lb_nombreEmpleado.Text = empleado.Nombre
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
         Me.Close()
     End Sub
 
     ' En este evento, cuando el valor del NumericUpDown1 sea cambiado, se multipicara el precio base del producto por el numero seleccionado
-    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
+    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs)
         TextBox9.Text = producto.Valor * NumericUpDown1.Value
     End Sub
 
@@ -62,7 +62,7 @@ Public Class frmHacer_Venta
         End If
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btn_AgregarProducto.Click
         DataGridView1.Rows.Add(New String() {producto.Id, producto.Nombre, producto.Valor, NumericUpDown1.Value, TextBox9.Text})
         ActualizarPrecio()
     End Sub
@@ -72,7 +72,7 @@ Public Class frmHacer_Venta
         ActualizarPrecio()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btn_Pagar.Click
         'TODOS LOS TEXTBOX DEBEN ESTAR RELLENOS PARA QUE NO OCURRAN ERRORES, PENDIENTE DE ESO.
 
         ' Para hacer la factura usaremos el dataset especificamente creado para eso
@@ -108,10 +108,10 @@ Public Class frmHacer_Venta
 
         ' Aqui le damos valor a los parametros que usara el reportviewer
         Dim parametros As ReportParameter() = New ReportParameter(7) {}
-        parametros(0) = New ReportParameter("NombreCliente", TextBox2.Text)
-        parametros(1) = New ReportParameter("TelefonoCliente", TextBox5.Text)
-        parametros(2) = New ReportParameter("DireccionCliente", TextBox4.Text)
-        parametros(3) = New ReportParameter("CedulaCliente", TextBox3.Text)
+        parametros(0) = New ReportParameter("NombreCliente", txt_NombreCliente.Text)
+        parametros(1) = New ReportParameter("TelefonoCliente", txt_TelefonoCLiente.Text)
+        parametros(2) = New ReportParameter("DireccionCliente", txt_DireccionCliente.Text)
+        parametros(3) = New ReportParameter("CedulaCliente", txt_DniCliente.Text)
         parametros(4) = New ReportParameter("TotalPagar", TextBox6.Text)
         parametros(5) = New ReportParameter("CajeroNombre", empleado.Nombre & " " & empleado.Apellido)
         parametros(6) = New ReportParameter("CajeroCargo", empleado.Cargo)
@@ -120,8 +120,8 @@ Public Class frmHacer_Venta
         parametros(7) = New ReportParameter("Factura", "123")
 
         ' Esto sirve para registrar cliente y la factura en la base de datos
-        TablaCliente.RegistrarCliente(TextBox2.Text, TextBox3.Text, TextBox5.Text, TextBox4.Text)
-        TablaHistorial.RegistrarCompra(TextBox2.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula)
+        TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
+        TablaHistorial.RegistrarCompra(txt_NombreCliente.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula)
 
         Dim Factura As New frmVisualizarReportes()
         Factura.Parametros(parametros, dataset)
@@ -130,16 +130,76 @@ Public Class frmHacer_Venta
     End Sub
     ' AQUI es el boton de buscar, verifica que el campo de la cedula no este vacio 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Conexiones.Verificacion("Clientes", "CEDULA = '" & TextBox3.Text & "'") Then
-            Dim datos As DataTableReader = TablaCliente.ObtenerCliente(TextBox3.Text).CreateDataReader()
-            While datos.Read()
-                TextBox2.Text = datos.Item(1)
-                TextBox3.Text = datos.Item(2)
-                TextBox5.Text = datos.Item(3)
-                TextBox4.Text = datos.Item(4)
-            End While
+        If Me.Validate And txt_DniCliente.Text = String.Empty Then
+            MsgBox("Ingrese datos en este campo")
         Else
-            MsgBox("ERROR USUARIO NO REGISTRADO")
+            If txt_DniCliente.Text <> "" And txt_DireccionCliente.Text <> "" And txt_NombreCliente.Text <> "" And txt_TelefonoCLiente.Text <> "" Then
+                If txt_DireccionCliente.TextLength > 4 And txt_DniCliente.TextLength > 4 And txt_NombreCliente.TextLength > 4 And txt_TelefonoCLiente.TextLength > 4 Then
+                    'aca se registran los datos en la DB
+                    If Conexiones.Verificacion("Clientes", "CEDULA = '" & txt_DniCliente.Text & "'") Then
+                        Dim datos As DataTableReader = TablaCliente.ObtenerCliente(txt_DniCliente.Text).CreateDataReader()
+                        While datos.Read()
+                            txt_NombreCliente.Text = datos.Item(1)
+                            txt_DniCliente.Text = datos.Item(2)
+                            txt_TelefonoCLiente.Text = datos.Item(3)
+                            txt_DireccionCliente.Text = datos.Item(4)
+                        End While
+                        'Msgbox("usuario Registrado con exito")
+                        activarDatosClientes(False)
+                    Else
+                        MsgBox("ERROR USUARIO NO REGISTRADO", vbNewLine + "Rellene los siguientes campos para registrarlo")
+                        'falta activar los campos
+                        activarDatosClientes(True)
+                    End If
+                    MsgBox("Porfavor Rellene todos los Campos")
+                End If
+                MsgBox("Porfavor Rellene todos los Campos")
+            End If
+            
         End If
+    End Sub
+
+    Private Sub btn_Salir_Click(sender As Object, e As EventArgs) Handles btn_Salir.Click
+        Me.Close()
+    End Sub
+
+    '/-----------------------------------------------------------------------------------------------------------------/'
+    '/- Validaciones del formulario -/'
+    '/-----------------------------------------------------------------------------------------------------------------/'
+    Sub validandoCampo(ByRef Objeto As Object, ByVal largo As Integer)
+        If DirectCast(Objeto, TextBox).Text.Length > 0 And DirectCast(Objeto, TextBox).Text.Length < largo Then
+            ' Me.ErrorProvider1.SetError(Objeto, "")
+        Else
+            Me.ErrorProvider1.SetError(Objeto, "ingrese un dato en esete campo") 'mensage de error
+        End If
+    End Sub
+
+    Private Sub txt_DniCliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_DniCliente.KeyPress
+        DatosSistema.SoloNumeros(e)
+    End Sub
+    '/-----------------------------------------------------------------------------------------------------------------/'
+    Private Sub txt_DniCliente_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txt_DniCliente.Validating
+        validandoCampo(sender, 8)
+    End Sub
+    Private Sub txt_TelefonoCLiente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_TelefonoCLiente.KeyPress
+        DatosSistema.SoloNumeros(e)
+    End Sub
+
+    Private Sub activarDatosClientes(ByVal x As Boolean)
+        If x = True Then
+            txt_NombreCliente.Enabled = True : txt_NombreCliente.Text = ""
+            txt_NombreCliente.Focus()
+            txt_TelefonoCLiente.Enabled = True : txt_TelefonoCLiente.Text = ""
+            txt_DireccionCliente.Enabled = True : txt_DireccionCliente.Text = ""
+        Else
+            txt_NombreCliente.Enabled = False
+            txt_TelefonoCLiente.Enabled = False
+            txt_DireccionCliente.Enabled = False
+
+        End If
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btn_MostrarInventario.Click
+        frmInventario.Show()
     End Sub
 End Class

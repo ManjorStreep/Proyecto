@@ -78,7 +78,6 @@ Partial Class frmMenu
         Me.INDICEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CLIENTEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PRODUCTODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CANTIDADDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PAGADODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FECHADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HistorialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -569,7 +568,7 @@ Partial Class frmMenu
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.INDICEDataGridViewTextBoxColumn, Me.CLIENTEDataGridViewTextBoxColumn, Me.PRODUCTODataGridViewTextBoxColumn, Me.CANTIDADDataGridViewTextBoxColumn, Me.PAGADODataGridViewTextBoxColumn, Me.FECHADataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.INDICEDataGridViewTextBoxColumn, Me.CLIENTEDataGridViewTextBoxColumn, Me.PRODUCTODataGridViewTextBoxColumn, Me.PAGADODataGridViewTextBoxColumn, Me.FECHADataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.HistorialBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
@@ -598,13 +597,6 @@ Partial Class frmMenu
         Me.PRODUCTODataGridViewTextBoxColumn.HeaderText = "PRODUCTO"
         Me.PRODUCTODataGridViewTextBoxColumn.Name = "PRODUCTODataGridViewTextBoxColumn"
         Me.PRODUCTODataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CANTIDADDataGridViewTextBoxColumn
-        '
-        Me.CANTIDADDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD"
-        Me.CANTIDADDataGridViewTextBoxColumn.HeaderText = "CANTIDAD"
-        Me.CANTIDADDataGridViewTextBoxColumn.Name = "CANTIDADDataGridViewTextBoxColumn"
-        Me.CANTIDADDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PAGADODataGridViewTextBoxColumn
         '

@@ -40,9 +40,10 @@ Public Class frmRegistroproductos
                 If Conexiones.Verificacion("Productos", "CODIGO = " & txtBusqueda.Text) Then
                     Datos(txtBusqueda.Text)
                 Else
-                    Dim x As Integer = MsgBox("este ususario no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
+                    Dim x As Integer = MsgBox("este producto no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
                     If x = vbYes Then
                         activarCampos(True)
+
                     End If
                 End If
             Else
@@ -59,15 +60,16 @@ Public Class frmRegistroproductos
             If Me.ValidateChildren And cbViaDeAdministracion.SelectedIndex >= 0 And txtCantidadProductos.Text <> String.Empty And txtCodigoProducto.Text <> String.Empty And txtNombreProducto.Text <> String.Empty And txtPrecioProducto.Text <> String.Empty Then
                 If Me.ProductosTableAdapter.GetDataByNombre(txtNombreProducto.Text).Rows.Count > 0 Then
                     MsgBox("Este producto existe")
+                Else
+                    Try
+                        'Asi se registra un producto a la base de datos.
+                        Me.ProductosTableAdapter.InsertQuery(txtNombreProducto.Text, Convert.ToDecimal(txtPrecioProducto.Text), Integer.Parse(txtCantidadProductos.Text), cbViaDeAdministracion.SelectedItem, recipe, Integer.Parse(txtCodigoProducto.Text))
+                        Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
+                        DataGridView1.Refresh()
+                    Catch ex As Exception
+                        MsgBox("Fallo al registrar el producto - " & ex.Message)
+                    End Try
                 End If
-                Try
-                    'Asi se registra un producto a la base de datos.
-                    Me.ProductosTableAdapter.InsertQuery(txtNombreProducto.Text, Convert.ToDecimal(txtPrecioProducto.Text), Integer.Parse(txtCantidadProductos.Text), cbViaDeAdministracion.SelectedItem, recipe, Integer.Parse(txtCodigoProducto.Text))
-                    Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
-                    DataGridView1.Refresh()
-                Catch ex As Exception
-                    MsgBox("Fallo al registrar el producto - " & ex.Message)
-                End Try
             Else
                 MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
             End If

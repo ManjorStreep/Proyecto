@@ -54,6 +54,18 @@ Public Class frmMenu
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         frmLogin.Show()
-        Me.Close()
+        Me.OnClosing(e)
+    End Sub
+
+    Private Sub VentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentaToolStripMenuItem.Click
+        frmHacer_Venta.Show()
+    End Sub
+
+    Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+        End
+    End Sub
+
+    Private Sub ListaDeProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDeProductoToolStripMenuItem.Click
+        frmInventario.ShowDialog()
     End Sub
 End Class
