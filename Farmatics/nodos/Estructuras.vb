@@ -43,9 +43,9 @@ Module Estructuras
         End Sub
         Public Function vacio()
             If String.IsNullOrEmpty(Nombre) Or String.IsNullOrEmpty(Apellido) Then
-                Return False
-            Else
                 Return True
+            Else
+                Return False
             End If
         End Function
     End Structure

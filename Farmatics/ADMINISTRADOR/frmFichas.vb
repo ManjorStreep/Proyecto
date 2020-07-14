@@ -6,16 +6,21 @@ Public Class frmFichas
 
     Private Sub frmFichas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Empleados' Puede moverla o quitarla según sea necesario.
+        ' Estas funciones son las encargadas de llenar el DataGridView con los datos de los Empleados
         Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
     End Sub
 
     Private Sub btbusqueda_Click(sender As Object, e As EventArgs) Handles btbusqueda.Click
+        ' Se verifica que el Empleado exista en la base de datos
         If Conexiones.Verificacion("Empleados", "CEDULA ='" & TextBox1.Text & "'") Then
+            ' Sea el caso que exista el empleado, se imprimiran sus datos en los campos correspondientes
             ImprimirDatos(New Empleado(TextBox1.Text))
         Else
-            ' QUiero que aqui pongas una ventana que te pregunte si o no :v
-            ' Si apreta que SI, le habilitas el GroupBox3.Enable = True
-            ' Limpia primero todos los TextBox y esas cosas para que pueda escribir sin problemas.
+            ' ERROR: QUiero que aqui pongas una ventana que te pregunte si o no :v
+            ' ERROR: Si apreta que SI, le habilitas el GroupBox3.Enable = True
+            ' ERROR: Limpia primero todos los TextBox y esas cosas para que pueda escribir sin problemas.
+
+            ' Seal el caso donde el usuario no exista, se debe activar los campos correspondites para su registros
             Dim x As Integer = MsgBox("este ususario no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
             If x = vbYes Then
                 txt_apellido.Text = ""
@@ -42,12 +47,16 @@ Public Class frmFichas
                 sexo = rb_mujer.Text
             End If
             If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_DNI.Text & "'") Then
-                If empleado.vacio() Then
+                If Not empleado.vacio() Then
+                    ' Sea el caso en que este vacia, se registrara el empleado con la informacion de los campos correspondientes
                     Try
-                        ' Aqui da error porque falta poner un valor por defecto al combobox
+                        ' Esta funcion se encarga de actualizar los registros de la tabla Empleados en la base de datos
                         Me.EmpleadosTableAdapter.ActualizarEmpleado(txt_nombre.Text, txt_apellido.Text, txt_DNI.Text, txt_telefono.Text, txt_correo.Text, txt_direccion.Text, sexo, cb_cargo.SelectedItem, empleado.FechaIngreso, txt_clave.Text, empleado.Cedula)
                         ' Aqui da otro error porque no puede recibir un campo vacio desde la base de datos, y el campo vacio se genera porque el combobox no tiene un valor por defecto.
+
+                        ' Una vez sea insertada la nueva informacion se debe seleccionar el empleado recien registrado
                         ImprimirDatos(New Empleado(txt_DNI.Text))
+                        ' Esta funcion se encaraga de actualizar el DataGridView 
                         Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
                     Catch ex As Exception
                         MsgBox("Error al tratar de registrar empleado en la base de datos :" + ex.Message)
@@ -69,7 +78,9 @@ Public Class frmFichas
     End Sub
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
+        ' Se verifica que el empleado a eliminar exista en la base de datos
         If Conexiones.Verificacion("Empleados", "CEDULA ='" & TextBox1.Text & "'") Then
+            ' Si existe, se elimina con esta funcion
             Me.EmpleadosTableAdapter.EliminarEmpleado(TextBox1.Text)
         ElseIf Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_DNI.Text & "'") Then
             Me.EmpleadosTableAdapter.EliminarEmpleado(txt_DNI.Text)
@@ -78,10 +89,11 @@ Public Class frmFichas
     End Sub
 
     Private Sub Usuarios1DataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Usuarios1DataGridView.CellClick
+        ' Cuando se seleccione un Empleado en el DatGridView se habilitaran los botones de registro, eliminar y editar
         btn_registrar.Enabled = True
         btn_eliminar.Enabled = True
         btn_editar.Enabled = True
-
+        ' Se debe seleccionar el empleados con los datos de la fila seleccionada y rellenar los campos necesarios
         ImprimirDatos(New Empleado(Integer.Parse(Usuarios1DataGridView.CurrentRow.Cells(2).Value)))
     End Sub
 
@@ -157,7 +169,9 @@ Public Class frmFichas
     ' ---------------------------------------------------------------------------------------
     '/- Funciones propias del formulario -/'
     ' ---------------------------------------------------------------------------------------
+    ' Esta funcion se encaraga de poner la informacion del empleado en sus respectivos campos
     Private Sub ImprimirDatos(ByVal datos As Empleado)
+        ' Cada vez que se llame esta funcion, la variable empleado tendra un nuevo valor
         empleado = datos
         txt_nombre.Text = datos.Nombre
         txt_apellido.Text = datos.Apellido

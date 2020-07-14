@@ -1,8 +1,10 @@
 ﻿
 Public Class frmMenu
 
+    ' Esta variable sera la encargada de almacenar los datos del usuario logeado
     Dim persona As Empleado
 
+    ' Este es un metodo setter, para otorgarle datos a la variable persona
     Public Sub Trabajador(ByVal Cedula As String)
         persona = New Empleado(Cedula)
     End Sub
@@ -36,10 +38,13 @@ Public Class frmMenu
         AboutBox1.Show()
     End Sub
 
+
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
         'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Historial' Puede moverla o quitarla según sea necesario.
+        ' Estos metodos son los encargado de rellenar el DataGridView con el historial de ventas
         Me.HistorialTableAdapter.Fill(Me.DatabaseDataSet.Historial)
 
+        ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
         lb_datocajero0.Text = persona.Nombre
         lb_datocajero1.Text = persona.Apellido
         lb_datocajero2.Text = persona.Cedula

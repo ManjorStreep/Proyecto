@@ -2,9 +2,11 @@
 Imports System.Text
 Public Class frmHacer_Venta
 
+    ' Estas variables son las que se encargaran de gestionar la informacion de la base de datos!
     Dim producto As Productos
     Dim empleado As Empleado
 
+    ' Estos TableAdapter seran lo que se encarguen de registrar clientes y el historial de compras
     Dim TablaHistorial As New DatabaseDataSetTableAdapters.HistorialTableAdapter
     Dim TablaCliente As New DatabaseDataSetTableAdapters.ClientesTableAdapter
 
@@ -39,7 +41,10 @@ Public Class frmHacer_Venta
 
     Private Sub frmHacer_Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Productos' Puede moverla o quitarla según sea necesario.
+        ' Estos metodos se encargan de llenar el DataGridView con la informacion de todos los productos
         Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
+
+        ' Antes de mostrar este formulario se debe enviar la informacion del trabajador con la funcion DatosEmpleado()
         lb_codigoEmpleado.Text = empleado.Cedula
         lb_nombreEmpleado.Text = empleado.Nombre
     End Sub
@@ -63,15 +68,20 @@ Public Class frmHacer_Venta
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btn_AgregarProducto.Click
+        ' Si de casualidad se apreta el boton de Agregar, se verifica primero que la variable producto no este vacia
+        ' Si la variable llega a estar vacia ocurriran muchos problemas, por eso se verifica si la propiedad producto.nombre no este vacia
         If String.IsNullOrEmpty(producto.Nombre) Then
             MsgBox("ERROR Agregar: No has seleccionado producto para agregar a la compra")
+            ' Si la variable producto no tiene informacion, el flujo de ejecucion de esta funcion se rompera
             Return
         End If
+        ' Cada vez que se aprete el boton agregar, se enlistara un producto al DataGridView y se actualiza el precio del carrito
         DataGridView1.Rows.Add(New String() {producto.Id, producto.Nombre, producto.Valor, NumericUpDown1.Value, TextBox9.Text})
         ActualizarPrecio()
     End Sub
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        ' Por cada producto del DataGridView sea dobleclickeado se borrara y se actualizara el precio del carrio nuevamente
         DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
         ActualizarPrecio()
     End Sub
@@ -204,6 +214,7 @@ Public Class frmHacer_Venta
         End If
     End Sub
 
+    ' Cuando se aprete el boton inventario, se mostrara el frmInventario
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btn_MostrarInventario.Click
         frmInventario.Show()
     End Sub

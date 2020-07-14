@@ -255,11 +255,11 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialDataTable">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesDataTable">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -271,11 +271,11 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRow">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRow">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -287,11 +287,11 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRowChangeEvent">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSet.ClientesRowChangeEvent">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSet.HistorialRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -307,11 +307,11 @@ Represents the connection and commands used to retrieve and save data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.HistorialTableAdapter">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.ClientesTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.ClientesTableAdapter">
+</member><member name="T:Sotware_Farmatics.DatabaseDataSetTableAdapters.HistorialTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

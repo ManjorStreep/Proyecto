@@ -8,6 +8,7 @@ Public Class frmLogin
     End Sub
 
     Private Sub btSalir_Click(sender As Object, e As EventArgs) Handles btSalir.Click
+        ' ERROR: Esta pregunta no tiene fundamento, preguntar no tiene sentido si de igual manera se saldra
         MsgBox("¿Seguro que desea salir de la plataforma?", MsgBoxStyle.OkOnly)
         Me.Close()
     End Sub
@@ -17,7 +18,8 @@ Public Class frmLogin
 
             If Me.ValidateChildren And txt_user.Text <> String.Empty And txt_pass.Text <> String.Empty Then
                 'MessageBox.Show("datos ingresados correctamente", "registro de ususarios", MessageBoxButtons.OK)
-
+                ' Verificamos si el usuario existe en la base de datos
+                ' Si el usuario existe se mostrara el siguiente form correspondiente a su cargo!
                 If Conexiones.login(txt_user.Text, txt_pass.Text) Then
                     Me.Hide()
                 End If

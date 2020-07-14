@@ -7,6 +7,7 @@ Public Class frmRegistroproductos
     ' Esta funcion es la que se encargara de modificar y seleccionar productos y mostrarlo en pantalla.
     Private Sub Datos(ByVal codigo As String)
 
+        ' Cada vez que se llame esta funcion, la variable producto tendra un nuevo valor
         producto = New Productos(codigo)
         txtCodigoProducto.Text = producto.Id
         txtNombreProducto.Text = producto.Nombre
@@ -29,6 +30,7 @@ Public Class frmRegistroproductos
 
     Private Sub frmRegistroproductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Productos' Puede moverla o quitarla según sea necesario.
+        ' Estas funciones son las encargadas de rellenar el DataGridView con la informacion de todos los productos
         Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
         txtNombreProducto.Enabled = True
     End Sub
@@ -37,9 +39,12 @@ Public Class frmRegistroproductos
 
         Try
             If txtBusqueda.CausesValidation And txtBusqueda.Text <> String.Empty Then
+                ' Se verifica si el producto con el Codigo ingresado existe en la base de datos
                 If Conexiones.Verificacion("Productos", "CODIGO = " & txtBusqueda.Text) Then
+                    ' Sea el caso que existe, ese producto se mostrara en pantalla y se actualizara la informacion de la variable producto
                     Datos(txtBusqueda.Text)
                 Else
+                    ' Sea el caso de que no existe el producto, se habilitara la opcion para poder registrarlo en la base de datos
                     Dim x As Integer = MsgBox("este producto no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
                     If x = vbYes Then
                         activarCampos(True)
@@ -58,12 +63,17 @@ Public Class frmRegistroproductos
         ' Aqui debes validar, osea si los Textbox estan vacios, no dejes que se registren en la base de datos, porque saldran errores.
         Try
             If Me.ValidateChildren And cbViaDeAdministracion.SelectedIndex >= 0 And txtCantidadProductos.Text <> String.Empty And txtCodigoProducto.Text <> String.Empty And txtNombreProducto.Text <> String.Empty And txtPrecioProducto.Text <> String.Empty Then
+                ' Aqui se intenta registrar el producto en la base de datos
                 If Me.ProductosTableAdapter.GetDataByNombre(txtNombreProducto.Text).Rows.Count > 0 Then
+                    ' Sea el caso de que el producto ya exista en la base de datos mostrara un mensaje
                     MsgBox("Este producto existe")
                 Else
+                    ' Sea el caso de que el producto no existe en la base de datos, se procedera a registrarlo
                     Try
                         'Asi se registra un producto a la base de datos.
+                        ' A travez de esta funcion se insertan nuevos registros a la tabla Productos de la base de datos
                         Me.ProductosTableAdapter.InsertQuery(txtNombreProducto.Text, Convert.ToDecimal(txtPrecioProducto.Text), Integer.Parse(txtCantidadProductos.Text), cbViaDeAdministracion.SelectedItem, recipe, Integer.Parse(txtCodigoProducto.Text))
+                        ' Una vez registrado el producto, la informacion de DataGridView debe ser actualizada para que se muestre los cambios
                         Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
                         DataGridView1.Refresh()
                     Catch ex As Exception
@@ -77,7 +87,7 @@ Public Class frmRegistroproductos
             MsgBox(ex.Message)
         Finally
             producto = Nothing
-            'Aqui necesito que se limpie los campos!
+            'ERROR: Aqui necesito que se limpie los campos!
         End Try
     End Sub
 
@@ -90,9 +100,9 @@ Public Class frmRegistroproductos
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        ' Cuando se hace click sobre algun producto del DataGridView se rellenara los campos necesarios para editarlos
         activarCampos(True)
         Datos(DataGridView1.CurrentRow.Cells(0).Value)
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
@@ -100,7 +110,9 @@ Public Class frmRegistroproductos
         Try
             If Me.ValidateChildren And cbViaDeAdministracion.SelectedIndex >= 0 And txtCantidadProductos.Text <> String.Empty And txtCodigoProducto.Text <> String.Empty And txtNombreProducto.Text <> String.Empty And txtPrecioProducto.Text <> String.Empty Then
                 Try
+                    ' La Funcion UpdateQuery es la encargada de actualizar registros dentro de la tabla Productos en la base de datos
                     Me.ProductosTableAdapter.UpdateQuery(txtNombreProducto.Text, Convert.ToDecimal(txtPrecioProducto.Text), Integer.Parse(txtCantidadProductos.Text), cbViaDeAdministracion.SelectedItem, recipe, Integer.Parse(txtCodigoProducto.Text), Integer.Parse(producto.Id))
+                    ' Una vez actualizado los registros, con esta funcion se debe actualizar la informacion de DataGridView
                     Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
                 Catch ex As Exception
                     MsgBox("Fallo al actualizar el producto - " & ex.Message)
@@ -112,16 +124,19 @@ Public Class frmRegistroproductos
             MsgBox(ex.Message)
         Finally
             producto = Nothing
-            'Aqui necesito que se limpie los campos!
+            'ERROR: Aqui necesito que se limpie los campos!
         End Try
     End Sub
 
     Private Sub btn_Editar_Click(sender As Object, e As EventArgs) Handles btn_Eliminar.Click
         Try
             If Me.ValidateChildren And cbViaDeAdministracion.SelectedIndex >= 0 And txtCantidadProductos.Text <> String.Empty And txtCodigoProducto.Text <> String.Empty And txtNombreProducto.Text <> String.Empty And txtPrecioProducto.Text <> String.Empty Then
+                ' Esta funcion es la encargada de eliminar registros de la taba Productos en la base de datos!
                 Me.ProductosTableAdapter.DeleteQuery(txtCodigoProducto.Text)
-                ' Aqui cuando borres el producto, necesito que se limpie los campos!
+                ' Una vez actualizado los registros, con esta funcion se debe actualizar la informacion de DataGridView
                 Me.ProductosTableAdapter.Fill(Me.DatabaseDataSet.Productos)
+                ' ERROR: Aqui cuando borres el producto, necesito que se limpie los campos!
+
             Else
                 MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
             End If
