@@ -3,8 +3,8 @@ Imports Sotware_Farmatics.Conexiones
 Imports System.Data.OleDb
 Imports Sotware_Farmatics.DatabaseDataSet
 Module Estructuras
-    Public Structure Empleado
 
+    Public Structure Empleado
         Public Nombre As String
         Public Apellido As String
         Public Cedula As String
@@ -15,7 +15,6 @@ Module Estructuras
         Public Cargo As String
         Public FechaIngreso As DateTime
         Public Clave As String
-
 
         Public Sub New(ByVal Identificacion As String)
             Try

@@ -64,7 +64,7 @@ Public Class frmHacer_Venta
                 MsgBox("El CODIGO del producto es incorrecto o no existe")
             End If
         End If
-       
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_BuscarCliente.Click
@@ -176,14 +176,11 @@ Public Class frmHacer_Venta
         parametros(7) = New ReportParameter("Factura", "123")
 
         ' Esto sirve para registrar cliente y la factura en la base de datos
-<<<<<<< HEAD
-        'TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
-        TablaHistorial.RegistrarCompra(txt_NombreCliente.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula)
-=======
+
         ' Debes colocar el numero de factora al final!
-        TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
+        'TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
         TablaHistorial.RegistrarCompra(txt_NombreCliente.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula, "Factura:0000")
->>>>>>> master
+
 
         Dim Factura As New frmVisualizarReportes()
         Factura.Parametros(parametros, dataset)

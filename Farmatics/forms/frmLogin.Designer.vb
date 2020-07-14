@@ -30,16 +30,16 @@ Partial Class frmLogin
         Me.txt_user = New System.Windows.Forms.TextBox()
         Me.txt_pass = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ErrorIcon = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -105,28 +105,17 @@ Partial Class frmLogin
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txt_user)
-        Me.GroupBox1.Controls.Add(Me.PictureBox3)
         Me.GroupBox1.Location = New System.Drawing.Point(110, 52)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(304, 103)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.Sotware_Farmatics.My.Resources.Resources.login_variant_icon_138410
-        Me.PictureBox3.Location = New System.Drawing.Point(278, 40)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(26, 28)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 18
-        Me.PictureBox3.TabStop = False
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gray
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.ProgressBar1)
         Me.Panel1.Controls.Add(Me.btSalir)
         Me.Panel1.Controls.Add(Me.btnIngresar)
         Me.Panel1.Controls.Add(Me.PictureBox1)
@@ -137,13 +126,20 @@ Partial Class frmLogin
         Me.Panel1.Size = New System.Drawing.Size(501, 225)
         Me.Panel1.TabIndex = 16
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(110, 195)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(320, 15)
+        Me.ProgressBar1.TabIndex = 20
+        '
         'btnIngresar
         '
         Me.btnIngresar.Font = New System.Drawing.Font("Antique-Olive-Normal", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngresar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnIngresar.Location = New System.Drawing.Point(204, 165)
+        Me.btnIngresar.Location = New System.Drawing.Point(210, 160)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(115, 46)
+        Me.btnIngresar.Size = New System.Drawing.Size(115, 29)
         Me.btnIngresar.TabIndex = 19
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = True
@@ -196,6 +192,10 @@ Partial Class frmLogin
         '
         Me.ErrorIcon.ContainerControl = Me
         '
+        'BackgroundWorker1
+        '
+        Me.BackgroundWorker1.WorkerReportsProgress = True
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnIngresar
@@ -217,7 +217,6 @@ Partial Class frmLogin
         Me.Text = " Iniciar Sesión "
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -239,7 +238,8 @@ Partial Class frmLogin
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnIngresar As System.Windows.Forms.Button
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents ErrorIcon As System.Windows.Forms.ErrorProvider
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
 
 End Class
