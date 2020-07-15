@@ -57,4 +57,13 @@
         Next
     End Sub
 
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        For Each filas As DataGridViewRow In DataGridView1.Rows
+            ' Compara lo introducido en TextBox1 con todos los codigos de los productos, y el que sea igual, debe ser seleccionado!
+            ' Use integer, porque no se como comparar 2 Strings, si tu sabes, arreglalo!
+            If Integer.Parse(filas.Cells(0).Value) = Integer.Parse(TextBox1.Text) Then
+                DataGridView1.Rows(filas.Index).Selected = True
+            End If
+        Next
+    End Sub
 End Class

@@ -24,18 +24,17 @@ Module Conexiones
         Return regresar
     End Function
 
-    Public Function login(ByVal user As String, ByVal pass As String)
-
+    Function login(ByVal user As String, ByVal pass As String)
         If Verificacion("Empleados", "CEDULA ='" & user & "' AND CLAVE ='" & pass & "'") Then
             If Verificacion("Empleados", "CEDULA ='" & user & "' AND CARGO = 'Dueño' OR " & "CEDULA ='" & user & "' AND CARGO = 'Gerente'") Then
                 frmMenu.Trabajador(user)
                 frmMenu.Show()
+                SESSION = True
             Else
                 frmCaja.Trabajador(user)
                 frmCaja.Show()
+                SESSION = True
             End If
-            SESSION = True
-        Else
             MsgBox("Usuario no existe")
             SESSION = False
         End If

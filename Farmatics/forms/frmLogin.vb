@@ -1,10 +1,15 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Threading
 Public Class frmLogin
 
     Dim datos As List(Of String)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_user.Focus()
+        ' Indicamos (por ejemplo en el evento Load) que queremos que el backgroundworker informe le Progreso
+
+        ' Indicamos (por ejemplo en el evento Load) que queremos que el backgroundworker tenga cancelación
+        Me.BackgroundWorker1.WorkerSupportsCancellation = True
     End Sub
 
     Private Sub btSalir_Click(sender As Object, e As EventArgs) Handles btSalir.Click
@@ -13,18 +18,19 @@ Public Class frmLogin
         Me.Close()
     End Sub
 
-    Private Sub BtnIngresar_Click_2(sender As Object, e As EventArgs) Handles btnIngresar.Click
+    Private Sub BtnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+        btnIngresar.Enabled = False
         Try
-
             If Me.ValidateChildren And txt_user.Text <> String.Empty And txt_pass.Text <> String.Empty Then
                 'MessageBox.Show("datos ingresados correctamente", "registro de ususarios", MessageBoxButtons.OK)
                 ' Verificamos si el usuario existe en la base de datos
                 ' Si el usuario existe se mostrara el siguiente form correspondiente a su cargo!
                 If Conexiones.login(txt_user.Text, txt_pass.Text) Then
                     Me.Hide()
+                btnIngresar.Enabled = True : btSalir.Enabled = True
                 End If
             Else
-                MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
+            MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -54,4 +60,7 @@ Public Class frmLogin
         DatosSistema.SoloNumeros(e)
     End Sub
     '/-----------------------------------------------------------------------------------------------------------------/'
+
+   
+
 End Class
