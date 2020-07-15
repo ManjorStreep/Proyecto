@@ -137,12 +137,6 @@
     <Compile Include="ADMINISTRADOR\frmFichas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ADMINISTRADOR\frmRegistrar_clientes.Designer.vb">
-      <DependentUpon>frmRegistrar_clientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ADMINISTRADOR\frmRegistrar_clientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="forms\frmHacer_Venta.Designer.vb">
       <DependentUpon>frmHacer_Venta.vb</DependentUpon>
     </Compile>
@@ -202,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADMINISTRADOR\frmFichas.resx">
       <DependentUpon>frmFichas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ADMINISTRADOR\frmRegistrar_clientes.resx">
-      <DependentUpon>frmRegistrar_clientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmHacer_Venta.resx">
       <DependentUpon>frmHacer_Venta.vb</DependentUpon>

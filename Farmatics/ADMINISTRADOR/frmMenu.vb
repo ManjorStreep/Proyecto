@@ -31,7 +31,7 @@ Public Class frmMenu
     End Sub
 
     Private Sub RegistrarClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarClienteToolStripMenuItem.Click
-        frmRegistrar_clientes.Show()
+
     End Sub
 
     Private Sub FichaTecnicaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FichaTecnicaToolStripMenuItem.Click

@@ -665,6 +665,7 @@ Partial Class frmFichas
         Me.Controls.Add(Me.Usuarios1DataGridView)
         Me.ForeColor = System.Drawing.SystemColors.Control
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmFichas"
