@@ -179,6 +179,18 @@
     <Compile Include="nodos\Conexiones.vb" />
     <Compile Include="nodos\DatosSistema.vb" />
     <Compile Include="nodos\Estructuras.vb" />
+    <Compile Include="REPORTES\frmReportesClientes.Designer.vb">
+      <DependentUpon>frmReportesClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\frmReportesClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTES\frmReporteEmpleados.Designer.vb">
+      <DependentUpon>frmReporteEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\frmReporteEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
@@ -214,6 +226,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\Form1.resx">
+      <DependentUpon>frmReporteEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\frmReportesClientes.resx">
+      <DependentUpon>frmReportesClientes.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -348,9 +366,7 @@
     <None Include="Resources\login_variant_icon_138410.png" />
     <None Include="Resources\cslogin_94432.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="REPORTES\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

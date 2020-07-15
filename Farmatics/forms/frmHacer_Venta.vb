@@ -180,17 +180,16 @@ Public Class frmHacer_Venta
         parametros(5) = New ReportParameter("CajeroNombre", empleado.Nombre & " " & empleado.Apellido)
         parametros(6) = New ReportParameter("CajeroCargo", empleado.Cargo)
         '7
-        parametros(8) = New ReportParameter("NacionalidadCliente", cb_NacionalidadCliente.SelectedItem.ToString)
+        'parametros(8) = New ReportParameter("NacionalidadCliente", cb_NacionalidadCliente.SelectedItem)
         ' AQui debes agregar el numero de factura, si deseas claro. 
         ' Crea la funcion, y si no lo deseas borras este parametro 7 y le pones a la longitud del array 6 en la declaracion!
         parametros(7) = New ReportParameter("Factura", "123")
 
         ' Esto sirve para registrar cliente y la factura en la base de datos
 
-        ' Debes colocar el numero de factora al final!
-        'TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
-        TablaHistorial.RegistrarCompra(txt_NombreCliente.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula, "Factura:0000")
-
+        'en la linea siguiente da error y se cierra solo
+        TablaHistorial.RegistrarCompra(txt_NombreCliente.Text, productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text, DateTime.Now, empleado.Cedula, "0000000")
+        '
 
         Dim Factura As New frmVisualizarReportes()
         Factura.Parametros(parametros, dataset)
@@ -225,7 +224,7 @@ Public Class frmHacer_Venta
         DatosSistema.SoloNumeros(e)
     End Sub
 
-    Private Sub btn_BuscarCodigoID_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles btn_BuscarCodigoID.Validating
+    Private Sub txt_BuscarCodigoID_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txt_BuscarCodigoID.Validating
         validandoCampo(sender, 5)
     End Sub
 

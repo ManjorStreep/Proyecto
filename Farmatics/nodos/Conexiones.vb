@@ -29,12 +29,16 @@ Module Conexiones
             If Verificacion("Empleados", "CEDULA ='" & user & "' AND CARGO = 'Dueño' OR " & "CEDULA ='" & user & "' AND CARGO = 'Gerente'") Then
                 frmMenu.Trabajador(user)
                 frmMenu.Show()
+                frmLogin.Close()
                 SESSION = True
+
             Else
                 frmCaja.Trabajador(user)
                 frmCaja.Show()
+                frmLogin.Close()
                 SESSION = True
             End If
+        Else
             MsgBox("Usuario no existe")
             SESSION = False
         End If

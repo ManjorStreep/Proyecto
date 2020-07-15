@@ -40,12 +40,6 @@ Public Class frmMenu
 
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Historial' Puede moverla o quitarla según sea necesario.
-
-        ' Estos metodos son los encargado de rellenar el DataGridView con el historial de ventas
-        Me.HistorialTableAdapter.Fill(Me.DatabaseDataSet.Historial)
-
-
         ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
         lb_datocajero0.Text = persona.Nombre
         lb_datocajero1.Text = persona.Apellido
@@ -53,6 +47,14 @@ Public Class frmMenu
         lb_datocajero3.Text = persona.Cargo
 
         tmr_reloj.Start()
+        'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Historial' Puede moverla o quitarla según sea necesario.
+        ' Me.HistorialTableAdapter.Fill(Me.DatabaseDataSet.Historial)
+        ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
+
+
+
+
+
     End Sub
 
     Private Sub tmr_reloj_Tick(sender As Object, e As EventArgs) Handles tmr_reloj.Tick

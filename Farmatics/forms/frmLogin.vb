@@ -6,9 +6,7 @@ Public Class frmLogin
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_user.Focus()
-        ' Indicamos (por ejemplo en el evento Load) que queremos que el backgroundworker informe le Progreso
-
-        ' Indicamos (por ejemplo en el evento Load) que queremos que el backgroundworker tenga cancelación
+        txt_user.Text = "" : txt_pass.Text = ""
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
     End Sub
 
@@ -26,8 +24,7 @@ Public Class frmLogin
                 ' Verificamos si el usuario existe en la base de datos
                 ' Si el usuario existe se mostrara el siguiente form correspondiente a su cargo!
                 If Conexiones.login(txt_user.Text, txt_pass.Text) Then
-                    Me.Hide()
-                btnIngresar.Enabled = True : btSalir.Enabled = True
+                    MsgBox("usuario correcto")
                 End If
             Else
             MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)

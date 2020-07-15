@@ -11,30 +11,27 @@ Public Class frmFichas
     End Sub
 
     Private Sub btbusqueda_Click(sender As Object, e As EventArgs) Handles btbusqueda.Click
-        ' Se verifica que el Empleado exista en la base de datos
-        If Conexiones.Verificacion("Empleados", "CEDULA ='" & TextBox1.Text & "'") Then
-            ' Sea el caso que exista el empleado, se imprimiran sus datos en los campos correspondientes
-            ImprimirDatos(New Empleado(TextBox1.Text))
-        Else
-            ' ERROR: QUiero que aqui pongas una ventana que te pregunte si o no :v
-            ' ERROR: Si apreta que SI, le habilitas el GroupBox3.Enable = True
-            ' ERROR: Limpia primero todos los TextBox y esas cosas para que pueda escribir sin problemas.
-
-            ' Seal el caso donde el usuario no exista, se debe activar los campos correspondites para su registros
-            Dim x As Integer = MsgBox("este ususario no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
-            If x = vbYes Then
-                txt_apellido.Text = ""
-                txt_clave.Text = ""
-                txt_correo.Text = ""
-                txt_direccion.Text = ""
-                txt_DNI.Text = ""
-                txt_nombre.Text = ""
-                txt_telefono.Text = ""
-
-                txt_DNI.Text = TextBox1.Text
-                txt_DNI.Focus()
+        If txt_Busqueda.Text <> String.Empty Then
+            ' Se verifica que el Empleado exista en la base de datos
+            If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_Busqueda.Text & "'") Then
+                ' Sea el caso que exista el empleado, se imprimiran sus datos en los campos correspondientes
+                ImprimirDatos(New Empleado(txt_Busqueda.Text))
+            Else
+                ' ERROR: QUiero que aqui pongas una ventana que te pregunte si o no :v
+                ' Seal el caso donde el usuario no exista, se debe activar los campos correspondites para su registros
+                Dim x As Integer = MsgBox("este ususario no existe... ¿desea registrarlo en la base de datos?", vbQuestion + vbYesNo + vbDefaultButton1, "Prodcuto no encontrado")
+                ' ERROR: Limpia primero todos los TextBox y esas cosas para que pueda escribir sin problemas.
+                If x = vbYes Then
+                    ' ERROR: Si apreta que SI, le habilitas el GroupBox3.Enable = True
+                    activarCampos(True)
+                    txt_DNI.Text = txt_Busqueda.Text
+                    txt_DNI.Focus()
+                End If
             End If
+        Else
+            MsgBox("Ingrese un dato en el campo")
         End If
+       
     End Sub
 
     Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
@@ -79,13 +76,14 @@ Public Class frmFichas
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         ' Se verifica que el empleado a eliminar exista en la base de datos
-        If Conexiones.Verificacion("Empleados", "CEDULA ='" & TextBox1.Text & "'") Then
+        If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_Busqueda.Text & "'") Then
             ' Si existe, se elimina con esta funcion
-            Me.EmpleadosTableAdapter.EliminarEmpleado(TextBox1.Text)
+            Me.EmpleadosTableAdapter.EliminarEmpleado(txt_Busqueda.Text)
         ElseIf Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_DNI.Text & "'") Then
             Me.EmpleadosTableAdapter.EliminarEmpleado(txt_DNI.Text)
         End If
         Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
+        activarCampos(False)
     End Sub
 
     Private Sub Usuarios1DataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Usuarios1DataGridView.CellClick
@@ -157,10 +155,6 @@ Public Class frmFichas
         End If
     End Sub
 
-    Private Sub TextBox1_Click(sender As Object, e As EventArgs) Handles TextBox1.Click
-        activarCampos(True)
-    End Sub
-
     Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
         GroupBox1.Enabled = True 'Este boton es para habilitar los el GroupBox1
     End Sub
@@ -211,6 +205,4 @@ Public Class frmFichas
             GroupBox4.Enabled = False
         End If
     End Sub
-    ' ---------------------------------------------------------------------------------------
-  
 End Class
