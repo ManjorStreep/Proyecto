@@ -3,6 +3,7 @@ Public Class frmMenu
 
     ' Esta variable sera la encargada de almacenar los datos del usuario logeado
     Public empleado As Empleado
+    Private tabla As New Conexion()
 
 
     Private Sub VerFichasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerFichasToolStripMenuItem.Click
@@ -48,7 +49,7 @@ Public Class frmMenu
         ' Me.HistorialTableAdapter.Fill(Me.DatabaseDataSet.Historial)
         ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
 
-
+        tabla.Llenar(DataGridView1, "Historial")
 
 
 

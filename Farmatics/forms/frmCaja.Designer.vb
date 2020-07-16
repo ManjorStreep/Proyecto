@@ -28,8 +28,6 @@ Partial Class frmCaja
         Me.lb_datocajero2 = New System.Windows.Forms.Label()
         Me.lb_datocajero1 = New System.Windows.Forms.Label()
         Me.lb_datocajero0 = New System.Windows.Forms.Label()
-        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -54,24 +52,18 @@ Partial Class frmCaja
         Me.btn_facturar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CODIGODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VALORDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CLASIFICACIONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RECIPEDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Prescripcion = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Administracion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel_Fecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel_ObtenerFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tim_1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ProductosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter()
-        Me.EmpleadosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter()
-        Me.TableAdapterManager = New Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.gbPerfil.SuspendLayout()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.pb_profile, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +77,6 @@ Partial Class frmCaja
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -145,22 +136,11 @@ Partial Class frmCaja
         '
         Me.lb_datocajero0.AutoSize = True
         Me.lb_datocajero0.BackColor = System.Drawing.Color.Silver
-        Me.lb_datocajero0.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "NOMBRE", True))
         Me.lb_datocajero0.Location = New System.Drawing.Point(110, 208)
         Me.lb_datocajero0.Name = "lb_datocajero0"
         Me.lb_datocajero0.Size = New System.Drawing.Size(47, 13)
         Me.lb_datocajero0.TabIndex = 8
         Me.lb_datocajero0.Text = "lb_name"
-        '
-        'EmpleadosBindingSource
-        '
-        Me.EmpleadosBindingSource.DataMember = "Empleados"
-        Me.EmpleadosBindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label4
         '
@@ -415,11 +395,9 @@ Partial Class frmCaja
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CODIGODataGridViewTextBoxColumn, Me.NOMBREDataGridViewTextBoxColumn, Me.VALORDataGridViewTextBoxColumn, Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn, Me.CLASIFICACIONDataGridViewTextBoxColumn, Me.RECIPEDataGridViewCheckBoxColumn})
-        Me.DataGridView1.DataSource = Me.ProductosBindingSource
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Cantidad, Me.Precio, Me.Prescripcion, Me.Administracion})
         Me.DataGridView1.Location = New System.Drawing.Point(15, 20)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -427,52 +405,43 @@ Partial Class frmCaja
         Me.DataGridView1.Size = New System.Drawing.Size(673, 421)
         Me.DataGridView1.TabIndex = 1
         '
-        'CODIGODataGridViewTextBoxColumn
+        'Codigo
         '
-        Me.CODIGODataGridViewTextBoxColumn.DataPropertyName = "CODIGO"
-        Me.CODIGODataGridViewTextBoxColumn.HeaderText = "CODIGO"
-        Me.CODIGODataGridViewTextBoxColumn.Name = "CODIGODataGridViewTextBoxColumn"
-        Me.CODIGODataGridViewTextBoxColumn.ReadOnly = True
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
         '
-        'NOMBREDataGridViewTextBoxColumn
+        'Nombre
         '
-        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
-        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
         '
-        'VALORDataGridViewTextBoxColumn
+        'Cantidad
         '
-        Me.VALORDataGridViewTextBoxColumn.DataPropertyName = "VALOR"
-        Me.VALORDataGridViewTextBoxColumn.HeaderText = "VALOR"
-        Me.VALORDataGridViewTextBoxColumn.Name = "VALORDataGridViewTextBoxColumn"
-        Me.VALORDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.ReadOnly = True
         '
-        'CANTIDADDISPONIBLEDataGridViewTextBoxColumn
+        'Precio
         '
-        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.DataPropertyName = "CANTIDAD_DISPONIBLE"
-        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.HeaderText = "CANTIDAD_DISPONIBLE"
-        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.Name = "CANTIDADDISPONIBLEDataGridViewTextBoxColumn"
-        Me.CANTIDADDISPONIBLEDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
         '
-        'CLASIFICACIONDataGridViewTextBoxColumn
+        'Prescripcion
         '
-        Me.CLASIFICACIONDataGridViewTextBoxColumn.DataPropertyName = "CLASIFICACION"
-        Me.CLASIFICACIONDataGridViewTextBoxColumn.HeaderText = "CLASIFICACION"
-        Me.CLASIFICACIONDataGridViewTextBoxColumn.Name = "CLASIFICACIONDataGridViewTextBoxColumn"
-        Me.CLASIFICACIONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Prescripcion.HeaderText = "Prescripcion"
+        Me.Prescripcion.Name = "Prescripcion"
+        Me.Prescripcion.ReadOnly = True
         '
-        'RECIPEDataGridViewCheckBoxColumn
+        'Administracion
         '
-        Me.RECIPEDataGridViewCheckBoxColumn.DataPropertyName = "RECIPE"
-        Me.RECIPEDataGridViewCheckBoxColumn.HeaderText = "RECIPE"
-        Me.RECIPEDataGridViewCheckBoxColumn.Name = "RECIPEDataGridViewCheckBoxColumn"
-        Me.RECIPEDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'ProductosBindingSource
-        '
-        Me.ProductosBindingSource.DataMember = "Productos"
-        Me.ProductosBindingSource.DataSource = Me.DatabaseDataSet
+        Me.Administracion.HeaderText = "Administracion"
+        Me.Administracion.Name = "Administracion"
+        Me.Administracion.ReadOnly = True
+        Me.Administracion.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Administracion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'PictureBox1
         '
@@ -518,23 +487,6 @@ Partial Class frmCaja
         'tim_1
         '
         '
-        'ProductosTableAdapter
-        '
-        Me.ProductosTableAdapter.ClearBeforeFill = True
-        '
-        'EmpleadosTableAdapter
-        '
-        Me.EmpleadosTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ClientesTableAdapter = Nothing
-        Me.TableAdapterManager.EmpleadosTableAdapter = Me.EmpleadosTableAdapter
-        Me.TableAdapterManager.HistorialTableAdapter = Nothing
-        Me.TableAdapterManager.ProductosTableAdapter = Me.ProductosTableAdapter
-        Me.TableAdapterManager.UpdateOrder = Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'frmCaja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -550,8 +502,6 @@ Partial Class frmCaja
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.gbPerfil.ResumeLayout(False)
         Me.gbPerfil.PerformLayout()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.pb_profile, System.ComponentModel.ISupportInitialize).EndInit()
@@ -568,7 +518,6 @@ Partial Class frmCaja
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
@@ -610,17 +559,17 @@ Partial Class frmCaja
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents btn_facturar As System.Windows.Forms.Button
-    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
-    Friend WithEvents ProductosBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ProductosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter
     Friend WithEvents CODIGODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents VALORDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CANTIDADDISPONIBLEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CLASIFICACIONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents RECIPEDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents EmpleadosBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents EmpleadosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter
-    Friend WithEvents TableAdapterManager As Sotware_Farmatics.DatabaseDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Codigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Prescripcion As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents Administracion As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class

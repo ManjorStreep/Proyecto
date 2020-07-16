@@ -21,3 +21,4 @@ C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\RdlCompil
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.exe
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.xml
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.pdb
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.vbprojResolveAssemblyReference.cache

@@ -79,6 +79,12 @@ Partial Class frmMenu
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.Factura = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nacionalidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Productos = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -557,6 +563,7 @@ Partial Class frmMenu
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Factura, Me.Cliente, Me.Nacionalidad, Me.Productos, Me.Total, Me.Fecha})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
@@ -614,6 +621,42 @@ Partial Class frmMenu
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(662, 599)
         Me.DataGridView3.TabIndex = 0
+        '
+        'Factura
+        '
+        Me.Factura.HeaderText = "Factura"
+        Me.Factura.Name = "Factura"
+        Me.Factura.ReadOnly = True
+        '
+        'Cliente
+        '
+        Me.Cliente.HeaderText = "Cliente"
+        Me.Cliente.Name = "Cliente"
+        Me.Cliente.ReadOnly = True
+        '
+        'Nacionalidad
+        '
+        Me.Nacionalidad.HeaderText = "Nacionalidad"
+        Me.Nacionalidad.Name = "Nacionalidad"
+        Me.Nacionalidad.ReadOnly = True
+        '
+        'Productos
+        '
+        Me.Productos.HeaderText = "Productos"
+        Me.Productos.Name = "Productos"
+        Me.Productos.ReadOnly = True
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
+        '
+        'Fecha
+        '
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.ReadOnly = True
         '
         'frmMenu
         '
@@ -728,4 +771,10 @@ Partial Class frmMenu
     Friend WithEvents RegistrarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ListaDeClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CANTIDADDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Factura As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cliente As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nacionalidad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Productos As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Total As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Fecha As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

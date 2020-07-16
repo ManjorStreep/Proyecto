@@ -105,14 +105,6 @@
     <Compile Include="ADMINISTRADOR\frmVisualizarReportes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatabaseDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseDataSet.vb">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FacturaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -179,6 +171,7 @@
     <Compile Include="nodos\Conexion.vb" />
     <Compile Include="nodos\DatosSistema.vb" />
     <Compile Include="nodos\Empleado.vb" />
+    <Compile Include="nodos\Producto.vb" />
     <Compile Include="REPORTES\frmReportesClientes.Designer.vb">
       <DependentUpon>frmReportesClientes.vb</DependentUpon>
     </Compile>
@@ -235,17 +228,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DatabaseDataSet.xsc">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DatabaseDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseDataSet.xss">
-      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="FacturaDataSet.xsc">
       <DependentUpon>FacturaDataSet.xsd</DependentUpon>
     </None>

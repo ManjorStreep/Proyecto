@@ -72,7 +72,6 @@ Partial Class frmHacer_Venta
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatabaseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.gb_DatosVenta = New System.Windows.Forms.GroupBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -82,7 +81,6 @@ Partial Class frmHacer_Venta
         Me.btn_EliminarProducto = New System.Windows.Forms.Button()
         Me.btn_AgregarProducto = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.ProductosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,7 +93,6 @@ Partial Class frmHacer_Venta
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.gb_DatosVenta.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -576,21 +573,6 @@ Partial Class frmHacer_Venta
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         '
-        'ProductosBindingSource
-        '
-        Me.ProductosBindingSource.DataMember = "Productos"
-        Me.ProductosBindingSource.DataSource = Me.DatabaseDataSetBindingSource
-        '
-        'DatabaseDataSetBindingSource
-        '
-        Me.DatabaseDataSetBindingSource.DataSource = Me.DatabaseDataSet
-        Me.DatabaseDataSetBindingSource.Position = 0
-        '
-        'DatabaseDataSet
-        '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gray
@@ -704,10 +686,6 @@ Partial Class frmHacer_Venta
         Me.PictureBox3.TabIndex = 89
         Me.PictureBox3.TabStop = False
         '
-        'ProductosTableAdapter
-        '
-        Me.ProductosTableAdapter.ClearBeforeFill = True
-        '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
@@ -751,7 +729,6 @@ Partial Class frmHacer_Venta
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatabaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.gb_DatosVenta.ResumeLayout(False)
@@ -789,9 +766,7 @@ Partial Class frmHacer_Venta
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents DatabaseDataSetBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
     Friend WithEvents ProductosBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ProductosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.ProductosTableAdapter
     Friend WithEvents cb_NacionalidadCliente As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents txt_TelefonoCLiente As System.Windows.Forms.TextBox
