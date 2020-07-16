@@ -176,9 +176,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="nodos\Conexiones.vb" />
+    <Compile Include="nodos\Conexion.vb" />
     <Compile Include="nodos\DatosSistema.vb" />
-    <Compile Include="nodos\Estructuras.vb" />
+    <Compile Include="nodos\Empleado.vb" />
     <Compile Include="REPORTES\frmReportesClientes.Designer.vb">
       <DependentUpon>frmReportesClientes.vb</DependentUpon>
     </Compile>

@@ -23,8 +23,8 @@ Partial Class frmFichas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFichas))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -33,18 +33,18 @@ Partial Class frmFichas
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cbNacionalidad = New System.Windows.Forms.ComboBox()
         Me.Usuarios1DataGridView = New System.Windows.Forms.DataGridView()
-        Me.NOMBREDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.APELLIDODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CEDULADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TELEFONODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CORREODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DIRECCIONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SEXODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CARGODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FECHAINGRESODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CLAVEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpleadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatabaseDataSet = New Sotware_Farmatics.DatabaseDataSet()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nacionalidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cedula = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ingreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clave = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sexo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Correo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.btn_eliminar = New System.Windows.Forms.Button()
@@ -84,13 +84,10 @@ Partial Class frmFichas
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.EmpleadosTableAdapter = New Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.Usuarios1DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -166,114 +163,108 @@ Partial Class frmFichas
         Me.Usuarios1DataGridView.AllowUserToDeleteRows = False
         Me.Usuarios1DataGridView.AllowUserToResizeColumns = False
         Me.Usuarios1DataGridView.AllowUserToResizeRows = False
-        Me.Usuarios1DataGridView.AutoGenerateColumns = False
         Me.Usuarios1DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.Usuarios1DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.Usuarios1DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Usuarios1DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Usuarios1DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.Usuarios1DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NOMBREDataGridViewTextBoxColumn, Me.APELLIDODataGridViewTextBoxColumn, Me.CEDULADataGridViewTextBoxColumn, Me.TELEFONODataGridViewTextBoxColumn, Me.CORREODataGridViewTextBoxColumn, Me.DIRECCIONDataGridViewTextBoxColumn, Me.SEXODataGridViewTextBoxColumn, Me.CARGODataGridViewTextBoxColumn, Me.FECHAINGRESODataGridViewTextBoxColumn, Me.CLAVEDataGridViewTextBoxColumn})
-        Me.Usuarios1DataGridView.DataSource = Me.EmpleadosBindingSource
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Usuarios1DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.Usuarios1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.Usuarios1DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Apellido, Me.Nacionalidad, Me.Cedula, Me.Nacimiento, Me.Ingreso, Me.Cargo, Me.Clave, Me.Direccion, Me.Telefono, Me.Sexo, Me.Correo})
         Me.Usuarios1DataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Usuarios1DataGridView.Location = New System.Drawing.Point(12, 380)
         Me.Usuarios1DataGridView.MultiSelect = False
         Me.Usuarios1DataGridView.Name = "Usuarios1DataGridView"
         Me.Usuarios1DataGridView.ReadOnly = True
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
-        Me.Usuarios1DataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.Usuarios1DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.Usuarios1DataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        Me.Usuarios1DataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.Usuarios1DataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.Usuarios1DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Usuarios1DataGridView.Size = New System.Drawing.Size(985, 269)
         Me.Usuarios1DataGridView.TabIndex = 38
         '
-        'NOMBREDataGridViewTextBoxColumn
+        'Nombre
         '
-        Me.NOMBREDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.HeaderText = "NOMBRE"
-        Me.NOMBREDataGridViewTextBoxColumn.Name = "NOMBREDataGridViewTextBoxColumn"
-        Me.NOMBREDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
         '
-        'APELLIDODataGridViewTextBoxColumn
+        'Apellido
         '
-        Me.APELLIDODataGridViewTextBoxColumn.DataPropertyName = "APELLIDO"
-        Me.APELLIDODataGridViewTextBoxColumn.HeaderText = "APELLIDO"
-        Me.APELLIDODataGridViewTextBoxColumn.Name = "APELLIDODataGridViewTextBoxColumn"
-        Me.APELLIDODataGridViewTextBoxColumn.ReadOnly = True
+        Me.Apellido.HeaderText = "Apellido"
+        Me.Apellido.Name = "Apellido"
+        Me.Apellido.ReadOnly = True
         '
-        'CEDULADataGridViewTextBoxColumn
+        'Nacionalidad
         '
-        Me.CEDULADataGridViewTextBoxColumn.DataPropertyName = "CEDULA"
-        Me.CEDULADataGridViewTextBoxColumn.HeaderText = "CEDULA"
-        Me.CEDULADataGridViewTextBoxColumn.Name = "CEDULADataGridViewTextBoxColumn"
-        Me.CEDULADataGridViewTextBoxColumn.ReadOnly = True
+        Me.Nacionalidad.HeaderText = "Nacionalidad"
+        Me.Nacionalidad.Name = "Nacionalidad"
+        Me.Nacionalidad.ReadOnly = True
         '
-        'TELEFONODataGridViewTextBoxColumn
+        'Cedula
         '
-        Me.TELEFONODataGridViewTextBoxColumn.DataPropertyName = "TELEFONO"
-        Me.TELEFONODataGridViewTextBoxColumn.HeaderText = "TELEFONO"
-        Me.TELEFONODataGridViewTextBoxColumn.Name = "TELEFONODataGridViewTextBoxColumn"
-        Me.TELEFONODataGridViewTextBoxColumn.ReadOnly = True
+        Me.Cedula.HeaderText = "Cedula"
+        Me.Cedula.Name = "Cedula"
+        Me.Cedula.ReadOnly = True
         '
-        'CORREODataGridViewTextBoxColumn
+        'Nacimiento
         '
-        Me.CORREODataGridViewTextBoxColumn.DataPropertyName = "CORREO"
-        Me.CORREODataGridViewTextBoxColumn.HeaderText = "CORREO"
-        Me.CORREODataGridViewTextBoxColumn.Name = "CORREODataGridViewTextBoxColumn"
-        Me.CORREODataGridViewTextBoxColumn.ReadOnly = True
+        Me.Nacimiento.HeaderText = "Nacimiento"
+        Me.Nacimiento.Name = "Nacimiento"
+        Me.Nacimiento.ReadOnly = True
         '
-        'DIRECCIONDataGridViewTextBoxColumn
+        'Ingreso
         '
-        Me.DIRECCIONDataGridViewTextBoxColumn.DataPropertyName = "DIRECCION"
-        Me.DIRECCIONDataGridViewTextBoxColumn.HeaderText = "DIRECCION"
-        Me.DIRECCIONDataGridViewTextBoxColumn.Name = "DIRECCIONDataGridViewTextBoxColumn"
-        Me.DIRECCIONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Ingreso.HeaderText = "Ingreso"
+        Me.Ingreso.Name = "Ingreso"
+        Me.Ingreso.ReadOnly = True
         '
-        'SEXODataGridViewTextBoxColumn
+        'Cargo
         '
-        Me.SEXODataGridViewTextBoxColumn.DataPropertyName = "SEXO"
-        Me.SEXODataGridViewTextBoxColumn.HeaderText = "SEXO"
-        Me.SEXODataGridViewTextBoxColumn.Name = "SEXODataGridViewTextBoxColumn"
-        Me.SEXODataGridViewTextBoxColumn.ReadOnly = True
+        Me.Cargo.HeaderText = "Cargo"
+        Me.Cargo.Name = "Cargo"
+        Me.Cargo.ReadOnly = True
         '
-        'CARGODataGridViewTextBoxColumn
+        'Clave
         '
-        Me.CARGODataGridViewTextBoxColumn.DataPropertyName = "CARGO"
-        Me.CARGODataGridViewTextBoxColumn.HeaderText = "CARGO"
-        Me.CARGODataGridViewTextBoxColumn.Name = "CARGODataGridViewTextBoxColumn"
-        Me.CARGODataGridViewTextBoxColumn.ReadOnly = True
+        Me.Clave.HeaderText = "Clave"
+        Me.Clave.Name = "Clave"
+        Me.Clave.ReadOnly = True
         '
-        'FECHAINGRESODataGridViewTextBoxColumn
+        'Direccion
         '
-        Me.FECHAINGRESODataGridViewTextBoxColumn.DataPropertyName = "FECHA_INGRESO"
-        Me.FECHAINGRESODataGridViewTextBoxColumn.HeaderText = "INGRESO"
-        Me.FECHAINGRESODataGridViewTextBoxColumn.Name = "FECHAINGRESODataGridViewTextBoxColumn"
-        Me.FECHAINGRESODataGridViewTextBoxColumn.ReadOnly = True
+        Me.Direccion.HeaderText = "Direccion"
+        Me.Direccion.Name = "Direccion"
+        Me.Direccion.ReadOnly = True
         '
-        'CLAVEDataGridViewTextBoxColumn
+        'Telefono
         '
-        Me.CLAVEDataGridViewTextBoxColumn.DataPropertyName = "CLAVE"
-        Me.CLAVEDataGridViewTextBoxColumn.HeaderText = "CLAVE"
-        Me.CLAVEDataGridViewTextBoxColumn.Name = "CLAVEDataGridViewTextBoxColumn"
-        Me.CLAVEDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Telefono.HeaderText = "Telefono"
+        Me.Telefono.Name = "Telefono"
+        Me.Telefono.ReadOnly = True
         '
-        'EmpleadosBindingSource
+        'Sexo
         '
-        Me.EmpleadosBindingSource.DataMember = "Empleados"
-        Me.EmpleadosBindingSource.DataSource = Me.DatabaseDataSet
+        Me.Sexo.HeaderText = "Sexo"
+        Me.Sexo.Name = "Sexo"
+        Me.Sexo.ReadOnly = True
         '
-        'DatabaseDataSet
+        'Correo
         '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Correo.HeaderText = "Correo"
+        Me.Correo.Name = "Correo"
+        Me.Correo.ReadOnly = True
         '
         'ProgressBar1
         '
@@ -650,10 +641,6 @@ Partial Class frmFichas
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'EmpleadosTableAdapter
-        '
-        Me.EmpleadosTableAdapter.ClearBeforeFill = True
-        '
         'frmFichas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -677,8 +664,6 @@ Partial Class frmFichas
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.Usuarios1DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -734,17 +719,16 @@ Partial Class frmFichas
     Friend WithEvents cbNacionalidad As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents DatabaseDataSet As Sotware_Farmatics.DatabaseDataSet
-    Friend WithEvents EmpleadosBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents EmpleadosTableAdapter As Sotware_Farmatics.DatabaseDataSetTableAdapters.EmpleadosTableAdapter
-    Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents APELLIDODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CEDULADataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TELEFONODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CORREODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DIRECCIONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents SEXODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CARGODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents FECHAINGRESODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CLAVEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Apellido As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nacionalidad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cedula As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nacimiento As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Ingreso As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cargo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Clave As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Direccion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Telefono As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Sexo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Correo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

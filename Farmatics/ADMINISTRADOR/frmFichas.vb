@@ -1,21 +1,19 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data.Sql
+Imports Sotware_Farmatics
 Public Class frmFichas
 
-    Dim empleado As Empleado
+    Public empleado As Empleado
 
     Private Sub frmFichas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Empleados' Puede moverla o quitarla según sea necesario.
-        ' Estas funciones son las encargadas de llenar el DataGridView con los datos de los Empleados
-        Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
+        empleado.Llenar(Usuarios1DataGridView)
     End Sub
 
     Private Sub btbusqueda_Click(sender As Object, e As EventArgs) Handles btbusqueda.Click
         If txt_Busqueda.Text <> String.Empty Then
-            ' Se verifica que el Empleado exista en la base de datos
-            If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_Busqueda.Text & "'") Then
-                ' Sea el caso que exista el empleado, se imprimiran sus datos en los campos correspondientes
-                ImprimirDatos(New Empleado(txt_Busqueda.Text))
+            empleado = New Empleado(txt_Busqueda.Text)
+            If Not empleado.vacio() Then
+                ImprimirDatos()
             Else
                 ' ERROR: QUiero que aqui pongas una ventana que te pregunte si o no :v
                 ' Seal el caso donde el usuario no exista, se debe activar los campos correspondites para su registros
@@ -23,15 +21,18 @@ Public Class frmFichas
                 ' ERROR: Limpia primero todos los TextBox y esas cosas para que pueda escribir sin problemas.
                 If x = vbYes Then
                     ' ERROR: Si apreta que SI, le habilitas el GroupBox3.Enable = True
-                    activarCampos(True)
+                    Limpiar()
+                    GroupBox1.Enabled = True
+                    btn_registrar.Enabled = True
                     txt_DNI.Text = txt_Busqueda.Text
                     txt_DNI.Focus()
                 End If
             End If
+            
         Else
             MsgBox("Ingrese un dato en el campo")
         End If
-       
+
     End Sub
 
     Private Sub btn_registrar_Click(sender As Object, e As EventArgs) Handles btn_registrar.Click
@@ -43,61 +44,95 @@ Public Class frmFichas
             Else
                 sexo = rb_mujer.Text
             End If
-            If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_DNI.Text & "'") Then
-                If Not empleado.vacio() Then
-                    ' Sea el caso en que este vacia, se registrara el empleado con la informacion de los campos correspondientes
-                    Try
-                        ' Esta funcion se encarga de actualizar los registros de la tabla Empleados en la base de datos
-                        Me.EmpleadosTableAdapter.ActualizarEmpleado(txt_nombre.Text, txt_apellido.Text, txt_DNI.Text, txt_telefono.Text, txt_correo.Text, txt_direccion.Text, sexo, cb_cargo.SelectedItem, empleado.FechaIngreso, txt_clave.Text, empleado.Cedula)
-                        ' Aqui da otro error porque no puede recibir un campo vacio desde la base de datos, y el campo vacio se genera porque el combobox no tiene un valor por defecto.
-
-                        ' Una vez sea insertada la nueva informacion se debe seleccionar el empleado recien registrado
-                        ImprimirDatos(New Empleado(txt_DNI.Text))
-                        ' Esta funcion se encaraga de actualizar el DataGridView 
-                        Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
-                    Catch ex As Exception
-                        MsgBox("Error al tratar de registrar empleado en la base de datos :" + ex.Message)
-
-                    End Try
-                End If
-            Else
-                Try
-                    Me.EmpleadosTableAdapter.AgregarEmpleado(txt_nombre.Text, txt_apellido.Text, txt_DNI.Text, txt_telefono.Text, txt_correo.Text, txt_direccion.Text, sexo, cb_cargo.SelectedItem, System.DateTime.Now, txt_clave.Text)
-                    Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
-                    MsgBox("Usuario registrado con exito")
-                Catch ex As Exception
-                    MsgBox("Error al registrar usuario")
-                End Try
+            empleado = New Empleado()
+            If empleado.vacio() Then
+                empleado.Registrar(txt_nombre.Text, txt_apellido.Text, "Venezolana", txt_DNI.Text, DateTime.Now, cb_cargo.SelectedItem, txt_clave.Text, txt_direccion.Text, txt_telefono.Text, sexo, txt_correo.Text)
+                empleado.Llenar(Usuarios1DataGridView)
+                Limpiar()
             End If
-            ' Esto es muy importante
-            empleado = Nothing
         End If
     End Sub
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
-        ' Se verifica que el empleado a eliminar exista en la base de datos
-        If Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_Busqueda.Text & "'") Then
-            ' Si existe, se elimina con esta funcion
-            Me.EmpleadosTableAdapter.EliminarEmpleado(txt_Busqueda.Text)
-        ElseIf Conexiones.Verificacion("Empleados", "CEDULA ='" & txt_DNI.Text & "'") Then
-            Me.EmpleadosTableAdapter.EliminarEmpleado(txt_DNI.Text)
+        If empleado.vacio() Then
+            Return
         End If
-        Me.EmpleadosTableAdapter.Fill(Me.DatabaseDataSet.Empleados)
-        activarCampos(False)
+        empleado.Eliminar()
+        empleado.Llenar(Usuarios1DataGridView)
+        Limpiar()
+    End Sub
+
+    Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
+        If GroupBox1.Enabled = False Then
+            GroupBox1.Enabled = True
+            Return
+        End If
+        Dim sexo As String
+        If rb_hombre.Checked Then
+            sexo = rb_hombre.Text
+        Else
+            sexo = rb_mujer.Text
+        End If
+        empleado.Modificar(txt_nombre.Text, txt_apellido.Text, "Venezolana", txt_DNI.Text, DateTime.Now, cb_cargo.SelectedItem, txt_clave.Text, txt_direccion.Text, txt_telefono.Text, sexo, txt_correo.Text)
+        empleado.Llenar(Usuarios1DataGridView)
+        Limpiar()
+
     End Sub
 
     Private Sub Usuarios1DataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Usuarios1DataGridView.CellClick
         ' Cuando se seleccione un Empleado en el DatGridView se habilitaran los botones de registro, eliminar y editar
-        btn_registrar.Enabled = True
         btn_eliminar.Enabled = True
         btn_editar.Enabled = True
         ' Se debe seleccionar el empleados con los datos de la fila seleccionada y rellenar los campos necesarios
-        ImprimirDatos(New Empleado(Integer.Parse(Usuarios1DataGridView.CurrentRow.Cells(2).Value)))
+        empleado = New Empleado(Usuarios1DataGridView.CurrentRow.Cells("Cedula").Value)
+        ImprimirDatos()
     End Sub
 
     Private Sub btsalir_Click(sender As Object, e As EventArgs) Handles btsalir.Click
         Me.Close()
     End Sub
+
+    ' ---------------------------------------------------------------------------------------
+    '/- Funciones propias del formulario -/'
+    ' ---------------------------------------------------------------------------------------
+    ' Esta funcion se encaraga de poner la informacion del empleado en sus respectivos campos
+    Private Sub ImprimirDatos()
+        ' Cada vez que se llame esta funcion, la variable empleado tendra un nuevo valor
+        txt_nombre.Text = empleado.Nombre
+        txt_apellido.Text = empleado.Apellido
+        txt_direccion.Text = empleado.Direccion
+        txt_correo.Text = empleado.Correo
+        txt_telefono.Text = empleado.Telefono
+        txt_DNI.Text = empleado.Cedula
+        txt_clave.Text = empleado.Clave
+        cb_cargo.Text = empleado.Cargo
+        If empleado.Sexo = "Masculino" Then
+            rb_hombre.Select()
+        Else
+            rb_mujer.Select()
+        End If
+
+    End Sub
+
+    ' Funcion que se encarga de limpiar los campos y la variable empleado
+    Private Sub Limpiar()
+        If GroupBox1.Enabled Or Not String.IsNullOrEmpty(txt_DNI.Text) Then
+            empleado = Nothing
+            GroupBox1.Enabled = False
+            txt_apellido.Text = ""
+            txt_clave.Text = ""
+            txt_correo.Text = ""
+            txt_direccion.Text = ""
+            txt_DNI.Text = ""
+            txt_nombre.Text = ""
+            txt_telefono.Text = ""
+            btn_registrar.Enabled = False
+            btn_eliminar.Enabled = False
+            btn_editar.Enabled = False
+        End If
+
+    End Sub
+
     '/-----------------------------------------------------------------------------------------------------------------/'
     '/- Validaciones del formulario -/'
     '/-----------------------------------------------------------------------------------------------------------------/'
@@ -152,57 +187,6 @@ Public Class frmFichas
     Private Sub cb_cargo_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles cb_cargo.Validating
         If DirectCast(sender, ComboBox).SelectedIndex = 0 Then
             Me.ErrorProvider1.SetError(sender, "ingrese un dato en esete campo") 'mensage de error
-        End If
-    End Sub
-
-    Private Sub btn_editar_Click(sender As Object, e As EventArgs) Handles btn_editar.Click
-        GroupBox1.Enabled = True 'Este boton es para habilitar los el GroupBox1
-    End Sub
-
- 
-    ' ---------------------------------------------------------------------------------------
-    '/- Funciones propias del formulario -/'
-    ' ---------------------------------------------------------------------------------------
-    ' Esta funcion se encaraga de poner la informacion del empleado en sus respectivos campos
-    Private Sub ImprimirDatos(ByVal datos As Empleado)
-        ' Cada vez que se llame esta funcion, la variable empleado tendra un nuevo valor
-        empleado = datos
-        txt_nombre.Text = datos.Nombre
-        txt_apellido.Text = datos.Apellido
-        txt_direccion.Text = datos.Direccion
-        txt_correo.Text = datos.Correo
-        txt_telefono.Text = datos.Telefono
-        txt_DNI.Text = datos.Cedula
-        txt_clave.Text = datos.Clave
-        cb_cargo.Text = datos.Cargo
-        If datos.Sexo = "Masculino" Then
-            rb_hombre.Select()
-        Else
-            rb_mujer.Select()
-        End If
-
-    End Sub
-
-    Private Sub activarCampos(ByVal x As Boolean)
-        If x = True Then
-            ' Te faltaba poner esto, mejoralo.
-            txt_apellido.Text = ""
-            txt_clave.Text = ""
-            txt_correo.Text = ""
-            txt_direccion.Text = ""
-            txt_DNI.Text = ""
-            txt_nombre.Text = ""
-            txt_telefono.Text = ""
-            GroupBox1.Enabled = True
-            btn_registrar.Enabled = True
-            btn_eliminar.Enabled = True
-            btn_editar.Enabled = True
-            ' ----------------------------
-        Else
-            btn_registrar.Enabled = False
-            btn_eliminar.Enabled = False
-            btn_editar.Enabled = False
-            GroupBox4.Enabled = False
         End If
     End Sub
 End Class

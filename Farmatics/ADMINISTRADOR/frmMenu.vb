@@ -2,14 +2,11 @@
 Public Class frmMenu
 
     ' Esta variable sera la encargada de almacenar los datos del usuario logeado
-    Dim persona As Empleado
+    Public empleado As Empleado
 
-    ' Este es un metodo setter, para otorgarle datos a la variable persona
-    Public Sub Trabajador(ByVal Cedula As String)
-        persona = New Empleado(Cedula)
-    End Sub
 
     Private Sub VerFichasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerFichasToolStripMenuItem.Click
+        frmFichas.empleado = empleado
         frmFichas.Show()
     End Sub
 
@@ -41,10 +38,10 @@ Public Class frmMenu
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
-        lb_datocajero0.Text = persona.Nombre
-        lb_datocajero1.Text = persona.Apellido
-        lb_datocajero2.Text = persona.Cedula
-        lb_datocajero3.Text = persona.Cargo
+        lb_datocajero0.Text = empleado.Nombre
+        lb_datocajero1.Text = empleado.Apellido
+        lb_datocajero2.Text = empleado.Cedula
+        lb_datocajero3.Text = empleado.Cargo
 
         tmr_reloj.Start()
         'TODO: esta línea de código carga datos en la tabla 'DatabaseDataSet.Historial' Puede moverla o quitarla según sea necesario.

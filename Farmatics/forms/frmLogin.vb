@@ -2,7 +2,7 @@
 Imports System.Threading
 Public Class frmLogin
 
-    Dim datos As List(Of String)
+    Private empleado As Empleado
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_user.Focus()
@@ -23,12 +23,21 @@ Public Class frmLogin
                 'MessageBox.Show("datos ingresados correctamente", "registro de ususarios", MessageBoxButtons.OK)
                 ' Verificamos si el usuario existe en la base de datos
                 ' Si el usuario existe se mostrara el siguiente form correspondiente a su cargo!
-                If Conexiones.login(txt_user.Text, txt_pass.Text) Then
-                    MsgBox("usuario correcto")
+                Dim conexion As New Conexion
+                If conexion.Verificacion("Empleados", "CEDULA =" & txt_user.Text & " AND CLAVE ='" & txt_pass.Text & "'") Then
+                    empleado = New Empleado(txt_user.Text)
+                    If empleado.Cargo = "DUEÑO" Or empleado.Cargo = "GERENTE" Then
+                        frmMenu.empleado = empleado
+                        frmMenu.Show()
+                    Else
+                        frmCaja.Show()
+                    End If
+                Else
+                    MsgBox("Usuario o Contraseña - INVALIDOS")
                 End If
-            Else
-            MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
-            End If
+                Else
+                    MessageBox.Show("ingrese datos en los campos", "registro de usuarios", MessageBoxButtons.OK)
+                End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
