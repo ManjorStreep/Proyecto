@@ -67,4 +67,49 @@ Public Class Conexion
         End Try
 
     End Sub
+
+
+    ' -----------------------------------------------------------------------------------------------------------------------------------------------
+
+    Public Sub Cliente(ByVal nombre As String, ByVal cedula As String, ByVal nacionalidad As String, ByVal telefono As String, ByVal direccion As String)
+        If Verificacion("Clientes", "CEDULA = " & cedula) Then
+            Return
+        End If
+
+        Try
+            Conexion.Open()
+            Comando = New OleDbCommand("INSERT INTO Clientes (NOMBRE, CEDULA, NACIONALIDAD, TELEFONO, DIRECCION) VALUES ('" & nombre & "', " & cedula & ", '" & nacionalidad & "', '" & telefono & "', '" & direccion & "')", Conexion)
+            If Comando.ExecuteNonQuery Then
+                MsgBox("Cliente registrado con exito")
+            Else
+                MsgBox("No se ha podido registrar el cliente")
+            End If
+        Catch ex As Exception
+            MsgBox("ERROR Registrar Cliente: " & ex.Message)
+        Finally
+            Conexion.Close()
+        End Try
+
+    End Sub
+
+    Public Function RegistrarCompra(ByVal cedula As String, ByVal nacionalidad As String, ByVal Productos As String, ByVal total As String)
+        Dim Factura As Integer
+        Dim r As New Random()
+        Do
+            Factura = r.Next(1, 10000)
+        Loop While Verificacion("Historial", "FACTURA = " & Factura)
+
+        Try
+            Conexion.Open()
+            Comando = New OleDbCommand("INSERT INTO Historial (FACTURA, CLIENTE_CEDULA, CLIENTE_NACIONALIDAD, PRODUCTOS, TOTAL, FECHA) VALUES (" & Factura & ", " & cedula & ", '" & nacionalidad & "', '" & Productos & "', " & Convert.ToDecimal(total) & ", #" & DateTime.Now.ToString("dd/MM/yyyy") & "#)", Conexion)
+            Comando.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox("ERROR Registrar Compra: " & ex.Message)
+        Finally
+            Conexion.Close()
+        End Try
+
+        Return Factura
+    End Function
+
 End Class

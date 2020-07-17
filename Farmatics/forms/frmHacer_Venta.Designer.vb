@@ -537,7 +537,7 @@ Partial Class frmHacer_Venta
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(537, 352)
         Me.DataGridView1.TabIndex = 83

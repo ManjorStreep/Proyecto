@@ -75,4 +75,9 @@ Public Class frmMenu
     Private Sub ListaDeProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListaDeProductoToolStripMenuItem.Click
         frmInventario.ShowDialog()
     End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+        frmReportesClientes.Show()
+    End Sub
+
 End Class

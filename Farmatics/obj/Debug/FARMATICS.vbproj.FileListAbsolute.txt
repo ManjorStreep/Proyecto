@@ -35,7 +35,6 @@ C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Far
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.frmMenu.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.frmRegistroproductos.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.Resources.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.Form1.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.frmReportesClientes.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\FARMATICS.vbproj.GenerateResource.Cache
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\RdlCompile.cache

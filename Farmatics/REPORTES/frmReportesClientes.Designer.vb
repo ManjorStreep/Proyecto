@@ -22,12 +22,18 @@ Partial Class frmReportesClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.FacturaDataSet = New Sotware_Farmatics.FacturaDataSet()
+        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -39,6 +45,16 @@ Partial Class frmReportesClientes
         Me.GroupBox1.Size = New System.Drawing.Size(285, 55)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources._032_red_cross
+        Me.PictureBox1.Location = New System.Drawing.Point(215, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(39, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -52,20 +68,24 @@ Partial Class frmReportesClientes
         '
         'ReportViewer1
         '
+        ReportDataSource1.Name = "Clientes"
+        ReportDataSource1.Value = Me.ProductoBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sotware_Farmatics.Report2.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(40, 90)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(827, 604)
         Me.ReportViewer1.TabIndex = 2
         '
-        'PictureBox1
+        'FacturaDataSet
         '
-        Me.PictureBox1.Image = Global.Sotware_Farmatics.My.Resources.Resources._032_red_cross
-        Me.PictureBox1.Location = New System.Drawing.Point(215, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(39, 34)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.FacturaDataSet.DataSetName = "FacturaDataSet"
+        Me.FacturaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ProductoBindingSource
+        '
+        Me.ProductoBindingSource.DataMember = "Producto"
+        Me.ProductoBindingSource.DataSource = Me.FacturaDataSet
         '
         'frmReportesClientes
         '
@@ -79,6 +99,8 @@ Partial Class frmReportesClientes
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -86,4 +108,6 @@ Partial Class frmReportesClientes
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents ProductoBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents FacturaDataSet As Sotware_Farmatics.FacturaDataSet
 End Class

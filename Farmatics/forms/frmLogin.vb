@@ -27,9 +27,10 @@ Public Class frmLogin
                 If conexion.Verificacion("Empleados", "CEDULA =" & txt_user.Text & " AND CLAVE ='" & txt_pass.Text & "'") Then
                     empleado = New Empleado(txt_user.Text)
                     If String.Compare(empleado.Cargo, "DUEÑO") Or String.Compare(empleado.Cargo, "GERENTE") Then
-                        frmCaja.empleado = empleado
-                        frmCaja.Show()
+                        frmMenu.empleado = empleado
+                        frmMenu.Show()
                     Else
+                        frmCaja.empleado = empleado
                         frmCaja.Show()
                     End If
                 Else

@@ -75,16 +75,16 @@ Partial Class frmMenu
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.Factura = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nacionalidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Productos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -230,21 +230,21 @@ Partial Class frmMenu
         '
         Me.ClientesToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._009_nurse
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ClientesToolStripMenuItem.Text = "clientes"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._028_doctor
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EmpleadosToolStripMenuItem.Text = "empleados"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._023_dna_structure
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProductosToolStripMenuItem.Text = "productos"
         '
         'HerramientasToolStripMenuItem
@@ -571,6 +571,42 @@ Partial Class frmMenu
         Me.DataGridView1.Size = New System.Drawing.Size(662, 599)
         Me.DataGridView1.TabIndex = 0
         '
+        'Factura
+        '
+        Me.Factura.HeaderText = "Factura"
+        Me.Factura.Name = "Factura"
+        Me.Factura.ReadOnly = True
+        '
+        'Cliente
+        '
+        Me.Cliente.HeaderText = "Cliente"
+        Me.Cliente.Name = "Cliente"
+        Me.Cliente.ReadOnly = True
+        '
+        'Nacionalidad
+        '
+        Me.Nacionalidad.HeaderText = "Nacionalidad"
+        Me.Nacionalidad.Name = "Nacionalidad"
+        Me.Nacionalidad.ReadOnly = True
+        '
+        'Productos
+        '
+        Me.Productos.HeaderText = "Productos"
+        Me.Productos.Name = "Productos"
+        Me.Productos.ReadOnly = True
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
+        '
+        'Fecha
+        '
+        Me.Fecha.HeaderText = "Fecha"
+        Me.Fecha.Name = "Fecha"
+        Me.Fecha.ReadOnly = True
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.DataGridView2)
@@ -621,42 +657,6 @@ Partial Class frmMenu
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(662, 599)
         Me.DataGridView3.TabIndex = 0
-        '
-        'Factura
-        '
-        Me.Factura.HeaderText = "Factura"
-        Me.Factura.Name = "Factura"
-        Me.Factura.ReadOnly = True
-        '
-        'Cliente
-        '
-        Me.Cliente.HeaderText = "Cliente"
-        Me.Cliente.Name = "Cliente"
-        Me.Cliente.ReadOnly = True
-        '
-        'Nacionalidad
-        '
-        Me.Nacionalidad.HeaderText = "Nacionalidad"
-        Me.Nacionalidad.Name = "Nacionalidad"
-        Me.Nacionalidad.ReadOnly = True
-        '
-        'Productos
-        '
-        Me.Productos.HeaderText = "Productos"
-        Me.Productos.Name = "Productos"
-        Me.Productos.ReadOnly = True
-        '
-        'Total
-        '
-        Me.Total.HeaderText = "Total"
-        Me.Total.Name = "Total"
-        Me.Total.ReadOnly = True
-        '
-        'Fecha
-        '
-        Me.Fecha.HeaderText = "Fecha"
-        Me.Fecha.Name = "Fecha"
-        Me.Fecha.ReadOnly = True
         '
         'frmMenu
         '

@@ -23,7 +23,7 @@ Public Class frmHacer_Venta
         For Each fila As DataGridViewRow In DataGridView1.Rows
             precio = precio + Convert.ToDecimal(fila.Cells(4).Value)
         Next
-
+        TextBox6.Text = precio
     End Sub
 
     Private Sub frmHacer_Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -65,19 +65,27 @@ Public Class frmHacer_Venta
             verificarCliente()
         End If
     End Sub
+
     Private Sub verificarCliente()
         If Conexion.Verificacion("Clientes", "CEDULA = " & txt_DniCliente.Text) Then
-            Conexion.Conexion.Open()
-            Conexion.Comando = New OleDb.OleDbCommand("SELECT * FROM Clientes WHERE CEDULA =" & txt_DniCliente.Text)
-            Conexion.Lector = Conexion.Comando.ExecuteReader()
-            While Conexion.Lector.Read()
-                txt_NombreCliente.Text = Conexion.Lector.Item(1)
-                txt_DniCliente.Text = Conexion.Lector.Item(2)
-                txt_TelefonoCLiente.Text = Conexion.Lector.Item(3)
-                txt_DireccionCliente.Text = Conexion.Lector.Item(4)
-            End While
-            'Msgbox("usuario Registrado con exito")
-            activarDatosClientes(False)
+            Try
+                Conexion.Conexion.Open()
+                Conexion.Comando = New OleDb.OleDbCommand("SELECT * FROM Clientes WHERE CEDULA =" & txt_DniCliente.Text, Conexion.Conexion)
+                Conexion.Lector = Conexion.Comando.ExecuteReader()
+                While Conexion.Lector.Read()
+                    txt_NombreCliente.Text = Conexion.Lector.Item(0)
+                    txt_DniCliente.Text = Conexion.Lector.Item(1)
+                    txt_TelefonoCLiente.Text = Conexion.Lector.Item(3)
+                    txt_DireccionCliente.Text = Conexion.Lector.Item(4)
+                End While
+                'Msgbox("usuario Registrado con exito")
+                activarDatosClientes(False)
+                gb_DatosVenta.Enabled = True
+            Catch ex As Exception
+                MsgBox("ERROR al consultar cliente: " & ex.Message)
+            Finally
+                Conexion.Conexion.Close()
+            End Try
         Else
             Dim x As Integer = MsgBox("ERROR USUARIO NO REGISTRADO" & vbNewLine & "¿Desea Registrar a este cliente?", vbYesNo, "Usuario no registrado")
             If x = vbYes Then
@@ -89,8 +97,7 @@ Public Class frmHacer_Venta
     Private Sub btn_Registrar_Click(sender As Object, e As EventArgs) Handles btn_Registrar.Click
         If txt_DniCliente.Text <> "" And txt_DireccionCliente.Text <> "" And txt_NombreCliente.Text <> "" And txt_TelefonoCLiente.Text <> "" Then
             If txt_DireccionCliente.TextLength > 4 And txt_DniCliente.TextLength > 4 And txt_NombreCliente.TextLength > 4 And txt_TelefonoCLiente.TextLength > 4 Then
-                'aca se registran los datos en la DB
-                'TablaCliente.RegistrarCliente(txt_NombreCliente.Text, txt_DniCliente.Text, txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
+                Conexion.Cliente(txt_NombreCliente.Text, txt_DniCliente.Text, "Venezolana", txt_TelefonoCLiente.Text, txt_DireccionCliente.Text)
                 verificarCliente() : gb_DatosVenta.Enabled = True
                 activarDatosClientes(False)  'habilitar el restante del frm para continuar la venta
                 txt_BuscarCodigoID.Focus()
@@ -113,7 +120,7 @@ Public Class frmHacer_Venta
             Return
         End If
         ' Cada vez que se aprete el boton agregar, se enlistara un producto al DataGridView y se actualiza el precio del carrito
-        DataGridView1.Rows.Add(New String() {producto.Codigo, producto.Nombre, producto.Precio, NumericUpDown1.Value, TextBox9.Text})
+        DataGridView1.Rows.Add(New String() {producto.Codigo, producto.Nombre, producto.Precio, NumericUpDown1.Value, producto.Precio * NumericUpDown1.Value})
         ActualizarPrecio() : txt_BuscarCodigoID.Text = ""
     End Sub
 
@@ -128,7 +135,7 @@ Public Class frmHacer_Venta
 
         ' Para hacer la factura usaremos el dataset especificamente creado para eso
         Dim dataset As New FacturaDataSet()
-        Dim datatable As New DataTable()
+        Dim datatable As New DataTable("Factura")
         Dim productos As New StringBuilder()
 
         ' Creamos un DataTable donde se almacenara toda la informacion de los productos 
@@ -157,29 +164,31 @@ Public Class frmHacer_Venta
         ' Le asignamos nueva tabla, que debe ser igual a la borrada anteriormente, pero con lo particular de que esta nueva tabla esta llena de datos
         dataset.Tables.Add(datatable)
 
+        ' Registramos la venta!
+        Dim NumeroFactura As Integer = Conexion.RegistrarCompra(txt_DniCliente.Text, "Venezolana", productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text)
+
         ' Aqui le damos valor a los parametros que usara el reportviewer
-        'Dim parametros As ReportParameter() = New ReportParameter(7) {}
-        'parametros(0) = New ReportParameter("NombreCliente", txt_NombreCliente.Text)
-        'parametros(1) = New ReportParameter("TelefonoCliente", txt_TelefonoCLiente.Text)
-        'parametros(2) = New ReportParameter("DireccionCliente", txt_DireccionCliente.Text)
-        'parametros(3) = New ReportParameter("CedulaCliente", txt_DniCliente.Text)
-        'parametros(4) = New ReportParameter("TotalPagar", TextBox6.Text)
-        'parametros(5) = New ReportParameter("CajeroNombre", empleado.Nombre & " " & empleado.Apellido)
-        'parametros(6) = New ReportParameter("CajeroCargo", empleado.Cargo)
-        '7
-        'parametros(8) = New ReportParameter("NacionalidadCliente", cb_NacionalidadCliente.SelectedItem)
+        Dim parametros As ReportParameter() = New ReportParameter(7) {}
+        parametros(0) = New ReportParameter("NombreCliente", txt_NombreCliente.Text)
+        parametros(1) = New ReportParameter("TelefonoCliente", txt_TelefonoCLiente.Text)
+        parametros(2) = New ReportParameter("DireccionCliente", txt_DireccionCliente.Text)
+        parametros(3) = New ReportParameter("CedulaCliente", txt_DniCliente.Text)
+        parametros(4) = New ReportParameter("TotalPagar", TextBox6.Text)
+        parametros(5) = New ReportParameter("CajeroNombre", empleado.Nombre & " " & empleado.Apellido)
+        parametros(6) = New ReportParameter("CajeroCargo", empleado.Cargo)
         ' AQui debes agregar el numero de factura, si deseas claro. 
         ' Crea la funcion, y si no lo deseas borras este parametro 7 y le pones a la longitud del array 6 en la declaracion!
-        'parametros(7) = New ReportParameter("Factura", "123")
+        parametros(7) = New ReportParameter("Factura", NumeroFactura)
+        'parametros(8) = New ReportParameter("NacionalidadCliente", cb_NacionalidadCliente.SelectedItem)
+        
 
         ' Esto sirve para registrar cliente y la factura en la base de datos
 
-        'en la linea siguiente da error y se cierra solo
-        '
 
-        'Dim Factura As New frmVisualizarReportes()
-        'Factura.Parametros(parametros, dataset)
-        'Factura.Show()
+
+        Dim Factura As New frmVisualizarReportes()
+        Factura.Parametros(parametros, dataset)
+        Factura.Show()
 
     End Sub
 
@@ -235,4 +244,7 @@ Public Class frmHacer_Venta
         frmInventario.Show()
     End Sub
 
+    Private Sub NumericUpDown1_ValueChanged_1(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
+        TextBox9.Text = producto.Precio * NumericUpDown1.Value
+    End Sub
 End Class

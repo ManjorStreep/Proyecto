@@ -8,7 +8,7 @@ Public Class frmVisualizarReportes
     Public Sub Parametros(ByVal parametros As ReportParameter(), ByVal dataset As DataSet)
         ReportViewer1.LocalReport.SetParameters(parametros)
         ProductoBindingSource.DataSource = dataset
-        ProductoBindingSource.DataMember = "Table1"
+        ProductoBindingSource.DataMember = "Factura"
         ReportViewer1.RefreshReport()
 
     End Sub
