@@ -78,7 +78,7 @@ Public Class frmLogin
                 Dim conexion As New Conexion
                 If conexion.Verificacion("Empleados", "CEDULA =" & txtUser.Text & " AND CLAVE ='" & txtPass.Text & "'") Then
                     empleado = New Empleado(txtUser.Text)
-                    If String.Compare(empleado.Cargo, "DUEÑO") Or String.Compare(empleado.Cargo, "GERENTE") Then
+                    If empleado.Cargo.Equals("DUEÑO") Or empleado.Cargo.Equals("GERENTE") Then
                         frmPanelMenu.empleado = empleado
                         frmPanelMenu.Show()
                     Else

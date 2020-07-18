@@ -17,6 +17,7 @@
         'iniciando timer
         '
         tim_1.Start()
+        ' instanciamos una variable tipo producto vacia, solamente para usar su metodo Llenar, para colocar todos los productos en el DataGridView
         producto = New Producto()
         producto.Llenar(DataGridView1)
     End Sub
@@ -34,23 +35,31 @@
         ' Cuando se de doble click a una celda del DataGridView se haran estas acciones.
 
         ' Se envia al frmHacer_Venta el producto que ha sido clickeado 
-        'frmHacer_Venta.SeleccionarProducto(DataGridView1.CurrentRow.Cells(0).Value)
-        ' Se envia al frmHacer_Venta el empleado que ha estado logeado en el sistema
-        'frmHacer_Venta.DatosEmpleado(persona.Cedula)
-        ' De ultimo se muestra el frmHacer_Venta
         frmHacer_Venta.producto = New Producto(DataGridView1.CurrentRow.Cells(0).Value)
+        ' Se envia al frmHacer_Venta el empleado que ha estado logeado en el sistema
         frmHacer_Venta.empleado = empleado
+        ' De ultimo se muestra el frmHacer_Venta
         frmHacer_Venta.Show()
     End Sub
 
     Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
-        For Each filas As DataGridViewRow In DataGridView1.Rows
-            ' Compara lo introducido en TextBox1 con todos los codigos de los productos, y el que sea igual, debe ser seleccionado!
-            ' Use integer, porque no se como comparar 2 Strings, si tu sabes, arreglalo!
-            If Integer.Parse(filas.Cells(0).Value) = Integer.Parse(TextBox1.Text) Then
-                DataGridView1.Rows(filas.Index).Selected = True
+        Dim seleccion As Boolean = False
+        For Each fila As DataGridViewRow In DataGridView1.Rows
+            If TextBox1.Text.Equals(fila.Cells("Codigo").Value) Then
+                seleccion = True
+                DataGridView1.Rows(fila.Index).Selected = seleccion
             End If
         Next
+        If seleccion = False Then
+            For Each fila As DataGridViewRow In DataGridView1.Rows
+                If TextBox1.Text.Equals(fila.Cells("Nombre").Value) Then
+                    DataGridView1.Rows(fila.Index).Selected = seleccion
+                End If
+            Next
+        End If
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

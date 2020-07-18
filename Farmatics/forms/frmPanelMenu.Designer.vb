@@ -54,6 +54,7 @@ Partial Class frmPanelMenu
         Me.panelFormulariosHijos = New System.Windows.Forms.Panel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.panelSubmenuHerramientas.SuspendLayout()
         Me.panelSubmenuReportes.SuspendLayout()
@@ -94,9 +95,10 @@ Partial Class frmPanelMenu
         'panelSubmenuHerramientas
         '
         Me.panelSubmenuHerramientas.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.panelSubmenuHerramientas.Controls.Add(Me.Button1)
         Me.panelSubmenuHerramientas.Controls.Add(Me.Button12)
         Me.panelSubmenuHerramientas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelSubmenuHerramientas.Location = New System.Drawing.Point(0, 606)
+        Me.panelSubmenuHerramientas.Location = New System.Drawing.Point(0, 600)
         Me.panelSubmenuHerramientas.Name = "panelSubmenuHerramientas"
         Me.panelSubmenuHerramientas.Size = New System.Drawing.Size(183, 96)
         Me.panelSubmenuHerramientas.TabIndex = 19
@@ -112,7 +114,7 @@ Partial Class frmPanelMenu
         Me.Button12.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
         Me.Button12.Size = New System.Drawing.Size(183, 36)
         Me.Button12.TabIndex = 0
-        Me.Button12.Text = "Button12"
+        Me.Button12.Text = "Cerrar Sesión"
         Me.Button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button12.UseVisualStyleBackColor = True
         '
@@ -122,7 +124,7 @@ Partial Class frmPanelMenu
         Me.btnHerramientas.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnHerramientas.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.btnHerramientas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHerramientas.Location = New System.Drawing.Point(0, 559)
+        Me.btnHerramientas.Location = New System.Drawing.Point(0, 553)
         Me.btnHerramientas.Name = "btnHerramientas"
         Me.btnHerramientas.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnHerramientas.Size = New System.Drawing.Size(183, 47)
@@ -137,7 +139,7 @@ Partial Class frmPanelMenu
         Me.btnVenta.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnVenta.FlatAppearance.BorderColor = System.Drawing.Color.Gray
         Me.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnVenta.Location = New System.Drawing.Point(0, 512)
+        Me.btnVenta.Location = New System.Drawing.Point(0, 506)
         Me.btnVenta.Name = "btnVenta"
         Me.btnVenta.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnVenta.Size = New System.Drawing.Size(183, 47)
@@ -155,7 +157,7 @@ Partial Class frmPanelMenu
         Me.panelSubmenuReportes.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelSubmenuReportes.Location = New System.Drawing.Point(0, 394)
         Me.panelSubmenuReportes.Name = "panelSubmenuReportes"
-        Me.panelSubmenuReportes.Size = New System.Drawing.Size(183, 118)
+        Me.panelSubmenuReportes.Size = New System.Drawing.Size(183, 112)
         Me.panelSubmenuReportes.TabIndex = 16
         '
         'btnReportesEmpleados
@@ -463,6 +465,21 @@ Partial Class frmPanelMenu
         'Timer1
         '
         '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(0, 36)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(183, 36)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Salir"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'frmPanelMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -530,4 +547,5 @@ Partial Class frmPanelMenu
     Friend WithEvents btnReporteInventario As System.Windows.Forms.Button
     Friend WithEvents btnAdministracionFichas As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

@@ -9,12 +9,14 @@ Public Class frmHacer_Venta
     Private Conexion As New Conexion()
 
     'Esta funcion se encarga de colocar la informacion del producto en pantalla 
-    Private Sub ImprimirProducto()
+    Public Sub ImprimirProducto()
         TextBox7.Text = producto.Nombre
         TextBox8.Text = producto.Administracion
         TextBox9.Text = producto.Precio
         TextBox10.Text = producto.Cantidad
         NumericUpDown1.Value = 1
+        NumericUpDown1.Maximum = producto.Cantidad
+        NumericUpDown1.Minimum = 1
     End Sub
 
     ' Esta funcion se encargara de actualizar el precio de la factura
@@ -42,7 +44,6 @@ Public Class frmHacer_Venta
         TextBox9.Text = producto.Precio * NumericUpDown1.Value
     End Sub
 
-    ' * AQUI DEBES HACER VERIFICACION DE QUE EL TEXTBOX NO ESTE VACIO * 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btn_BuscarCodigoID.Click
         If Me.Validate And txt_BuscarCodigoID.Text = String.Empty Then
             MsgBox("Ingrese datos en el campo")
@@ -119,9 +120,25 @@ Public Class frmHacer_Venta
             ' Si la variable producto no tiene informacion, el flujo de ejecucion de esta funcion se rompera
             Return
         End If
+        ' Esto verifica si el producto ya estaba en el DataGridView
+        For Each fila As DataGridViewRow In DataGridView1.Rows
+            ' Aqui recorremos fila por fila del DataGridView
+            ' Verificamos si el codigo del producto es igual a la celda Codigo de la fila actual
+            If Str(producto.Codigo).Trim().Equals(fila.Cells("Codigo").Value.ToString.Trim()) Then
+                'Dado el caso de que exista el producto en el DataGridView, solo tendra que modificarse la cantidad comprada y el total
+                fila.Cells("Cantidad").Value = NumericUpDown1.Value
+                fila.Cells("Total2").Value = producto.Precio * NumericUpDown1.Value
+                ' Finalmente limpiamos
+                Limpiar()
+                ' Una vez realizado los cambios, rompemos este evento para evitar que se ejecute el codigo de mas abajo
+                Return
+            End If
+        Next
         ' Cada vez que se aprete el boton agregar, se enlistara un producto al DataGridView y se actualiza el precio del carrito
         DataGridView1.Rows.Add(New String() {producto.Codigo, producto.Nombre, producto.Precio, NumericUpDown1.Value, producto.Precio * NumericUpDown1.Value})
         ActualizarPrecio() : txt_BuscarCodigoID.Text = ""
+        ' De ultimo limpiamos
+        Limpiar()
     End Sub
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
@@ -131,12 +148,20 @@ Public Class frmHacer_Venta
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btn_Pagar.Click
+        ' Primero verificamos que existan registro dentro del DataGridView
+        If DataGridView1.Rows.Count <= 0 Or Not producto.vacio() Then
+            ' Si no existen registros, se rompera esta funcion y no se ejecutara
+            MsgBox("No hay registros para pagar O debes agregar el producto al carrito")
+            Return
+        End If
+
         'TODOS LOS TEXTBOX DEBEN ESTAR RELLENOS PARA QUE NO OCURRAN ERRORES, PENDIENTE DE ESO.
 
         ' Para hacer la factura usaremos el dataset especificamente creado para eso
         Dim dataset As New FacturaDataSet()
         Dim datatable As New DataTable("Factura")
         Dim productos As New StringBuilder()
+
 
         ' Creamos un DataTable donde se almacenara toda la informacion de los productos 
         datatable.Columns.Add("Codigo")
@@ -153,7 +178,9 @@ Public Class frmHacer_Venta
             datos("Precio") = fila.Cells(2).Value
             datos("Cantidad") = fila.Cells(3).Value
             datos("Total") = fila.Cells(4).Value
-            productos.Append("PRODUCTO: " & fila.Cells(2).Value & " CANTIDAD: " & fila.Cells(3).Value & " PAGADO: " & fila.Cells(4).Value & " - ")
+            ' Esta funcion se encarga de actualizar la cantidad disponible del producto dentro de la base de datos
+            producto.ActualizarPrecio(fila.Cells(0).Value, fila.Cells(3).Value)
+            productos.Append("PRODUCTO: " & fila.Cells(0).Value & " CANTIDAD: " & fila.Cells(3).Value & " PAGADO: " & fila.Cells(4).Value & " - ")
             datatable.Rows.Add(datos)
         Next
 
@@ -165,6 +192,7 @@ Public Class frmHacer_Venta
         dataset.Tables.Add(datatable)
 
         ' Registramos la venta!
+        ' Esto hara que se registre en la base de datos y de una vez devuelva el numero de factura registrado!
         Dim NumeroFactura As Integer = Conexion.RegistrarCompra(txt_DniCliente.Text, "Venezolana", productos.ToString().Remove(productos.ToString().LastIndexOf(" - ")), TextBox6.Text)
 
         ' Aqui le damos valor a los parametros que usara el reportviewer
@@ -180,7 +208,7 @@ Public Class frmHacer_Venta
         ' Crea la funcion, y si no lo deseas borras este parametro 7 y le pones a la longitud del array 6 en la declaracion!
         parametros(7) = New ReportParameter("Factura", NumeroFactura)
         'parametros(8) = New ReportParameter("NacionalidadCliente", cb_NacionalidadCliente.SelectedItem)
-        
+
 
         ' Esto sirve para registrar cliente y la factura en la base de datos
 
@@ -245,6 +273,28 @@ Public Class frmHacer_Venta
     End Sub
 
     Private Sub NumericUpDown1_ValueChanged_1(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
+        ' SI el producto esta vacio, evitamos que se pueda ejecutar este evento
+        If producto.vacio() Then
+            ' Si esta vacio, rompemos el flujo de ejecucion de esta funcion, evitando que se ejecute el codigo de abajo
+            Return
+        End If
         TextBox9.Text = producto.Precio * NumericUpDown1.Value
+    End Sub
+
+
+    Public Sub Limpiar()
+        producto.Nombre = ""
+        producto.Codigo = 0
+        TextBox7.Text = Nothing
+        TextBox8.Text = Nothing
+        TextBox9.Text = Nothing
+        TextBox10.Text = Nothing
+        NumericUpDown1.Value = 1
+    End Sub
+
+
+    'Cuando se produzca este evento, se limpiara la informacion del producto seleccionado
+    Private Sub btn_EliminarProducto_Click(sender As Object, e As EventArgs) Handles btn_EliminarProducto.Click
+        Limpiar()
     End Sub
 End Class

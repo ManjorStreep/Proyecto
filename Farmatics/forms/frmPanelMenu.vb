@@ -106,30 +106,22 @@ Public Class frmPanelMenu
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        '
-        'call a formulario a mostrar
-        '
+        Me.Close() : frmLogin.Show()
         ocultarSubmenu()
     End Sub
 
     Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
-        '
-        'call a formulario a mostrar
-        '
+        abrirFormulariosHijos(New frmCaja) : ajustarPantallas(Me, frmCaja)
         ocultarSubmenu()
     End Sub
 
     Private Sub btnReporteInventario_Click(sender As Object, e As EventArgs) Handles btnReporteInventario.Click
-        '
-        'call a formulario a mostrar
-        '
+        abrirFormulariosHijos(New frmVisualizarReportes) : ajustarPantallas(Me, frmVisualizarReportes)
         ocultarSubmenu()
     End Sub
 
     Private Sub btnReportesClientes_Click(sender As Object, e As EventArgs) Handles btnReportesClientes.Click
-        '
-        'call a formulario a mostrar
-        '
+        abrirFormulariosHijos(New frmReportesClientes) : ajustarPantallas(Me, frmReportesClientes)
         ocultarSubmenu()
     End Sub
 
@@ -146,6 +138,11 @@ Public Class frmPanelMenu
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnAdministracionFichas.Click
         frmFichas.empleado = empleado
         abrirFormulariosHijos(New frmFichas()) : ajustarPantallas(Me, frmFichas)
+        ocultarSubmenu()
+    End Sub
+
+    Private Sub btnReportesEmpleados_Click(sender As Object, e As EventArgs) Handles btnReportesEmpleados.Click
+        'abrirFormulariosHijos(new frmReportesEmpleados) : ajustarPantallas(me,frmReportesEmpleados)
         ocultarSubmenu()
     End Sub
     '---------------------------------------------------------------------------------------------'
@@ -169,4 +166,10 @@ Public Class frmPanelMenu
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         panelFormulariosHijos.Size = New Size(800, 800)
     End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Exit Sub
+    End Sub
+
+
 End Class
