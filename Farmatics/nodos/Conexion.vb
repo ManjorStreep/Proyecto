@@ -70,15 +70,20 @@ Public Class Conexion
 
 
     ' -----------------------------------------------------------------------------------------------------------------------------------------------
-
+    ' Esta funcion es especialmente para registrar clientes cuando se pulsa el boton registrar!
     Public Sub Cliente(ByVal nombre As String, ByVal cedula As String, ByVal nacionalidad As String, ByVal telefono As String, ByVal direccion As String)
+        ' Primero nos aseguramos de que el cliente ya exista en la base de datos
         If Verificacion("Clientes", "CEDULA = " & cedula) Then
+            ' Si existe detenemos la ejecucion de esta funcion, para evitar que se ejecute del codigo de abajo
             Return
         End If
 
         Try
+            'Abrimos la conexcion a la base de datos
             Conexion.Open()
+            ' Realizamos una consulta SQL correspondiente para ingresar registros a la tabla Clientes
             Comando = New OleDbCommand("INSERT INTO Clientes (NOMBRE, CEDULA, NACIONALIDAD, TELEFONO, DIRECCION) VALUES ('" & nombre & "', " & cedula & ", '" & nacionalidad & "', '" & telefono & "', '" & direccion & "')", Conexion)
+            ' Ejecutamos el comando y verficamos si hubieron cambio en los registros
             If Comando.ExecuteNonQuery Then
                 MsgBox("Cliente registrado con exito")
             Else
@@ -87,28 +92,40 @@ Public Class Conexion
         Catch ex As Exception
             MsgBox("ERROR Registrar Cliente: " & ex.Message)
         Finally
+            ' Finalmente cerramos la conexion a la base de datos
             Conexion.Close()
         End Try
 
     End Sub
 
+    ' Esta funcion es unicamente para cuando se realiza la compra y se debe registrar a la base de datos
+    ' Esta funcion regresa el numero de factura correspondiente al registrado
     Public Function RegistrarCompra(ByVal cedula As String, ByVal nacionalidad As String, ByVal Productos As String, ByVal total As String)
+        'Delcaramos variable que sera devuelta
         Dim Factura As Integer
+        ' Declaramos una variable tipo Random, que se encargara de crear un numero aleatrorio
         Dim r As New Random()
+        ' Usamos un Do Loop While, porque debemos generar primero el codigo de factura y luego verificar que ese codigo no exsta en la base de datos
         Do
             Factura = r.Next(1, 10000)
+            ' Esta instruccion se repetira hasta que se consiga un numero que no este registrado en la base de datos
         Loop While Verificacion("Historial", "FACTURA = " & Factura)
 
+        ' Procedemos a hacer el procedimiento correspondiente para insertar registro a la tabla Historial de la base de datos
         Try
+            ' Abrimos Conexion a la base de datos
             Conexion.Open()
+            ' Hacemos una consulta SQL correspondiente para insertar nuevos registros
             Comando = New OleDbCommand("INSERT INTO Historial (FACTURA, CLIENTE_CEDULA, CLIENTE_NACIONALIDAD, PRODUCTOS, TOTAL, FECHA) VALUES (" & Factura & ", " & cedula & ", '" & nacionalidad & "', '" & Productos & "', " & Convert.ToDecimal(total) & ", #" & DateTime.Now.ToString("dd/MM/yyyy") & "#)", Conexion)
+            ' Ejecutamos el comando
             Comando.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox("ERROR Registrar Compra: " & ex.Message)
         Finally
+            ' Finalmente cerramos la conexion a la base de datos
             Conexion.Close()
         End Try
-
+        ' De ultimo, regresamos el numero de factura generado
         Return Factura
     End Function
 

@@ -116,6 +116,23 @@ Public Class Producto
         End Try
     End Sub
 
+    ' Esta funcion se encargara de actualizar la cantidad de producto disponible despues de realizar una compra
+    Public Sub ActualizarPrecio(ByVal codigo As String, ByVal cantidad As String)
+        If Verificacion(ProductoTabla, "CODIGO =" & codigo) Then
+            Try
+                Conexion.Open()
+                Comando = New OleDbCommand("UPDATE " & ProductoTabla & " SET CANTIDAD = CANTIDAD -" & cantidad & " WHERE CODIGO = " & codigo, Conexion)
+                Comando.ExecuteNonQuery()
+            Catch ex As Exception
+                MsgBox("ERROR al actualizar precio del producto: " & codigo & " - " & ex.Message)
+            Finally
+                Conexion.Close()
+            End Try
+
+        End If
+    End Sub
+
+
     ' Esta funcion devolvera false si no hay datos en la clase
     Public Function vacio()
         If String.IsNullOrEmpty(Nombre) Or Codigo = 0 Or Codigo = Nothing Then

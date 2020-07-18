@@ -13,7 +13,6 @@ C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_F
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.frmMenu.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.frmRegistroproductos.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.Resources.resources
-C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.Form1.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.frmReportesClientes.resources
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.vbproj.GenerateResource.Cache
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\RdlCompile.cache
@@ -22,3 +21,4 @@ C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.xml
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.pdb
 C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\FARMATICS.vbprojResolveAssemblyReference.cache
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Release\Sotware_Farmatics.frmPanelMenu.resources
