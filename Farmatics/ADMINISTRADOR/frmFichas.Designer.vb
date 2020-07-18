@@ -651,12 +651,11 @@ Partial Class frmFichas
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Usuarios1DataGridView)
         Me.ForeColor = System.Drawing.SystemColors.Control
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmFichas"
-        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FICHAS DE EMPLEADOS"
         Me.GroupBox2.ResumeLayout(False)

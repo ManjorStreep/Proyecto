@@ -56,7 +56,7 @@ Public Class frmMenu
     End Sub
 
     Private Sub tmr_reloj_Tick(sender As Object, e As EventArgs) Handles tmr_reloj.Tick
-        SsTxt_Fecha.Text = DatosSistema.obtenerFecha("Fecha")
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

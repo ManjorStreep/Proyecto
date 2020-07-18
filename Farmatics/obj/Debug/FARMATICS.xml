@@ -6,7 +6,71 @@ FARMATICS
 </name>
 </assembly>
 <members>
-<member name="P:Sotware_Farmatics.My.Resources.Resources.ResourceManager">
+<member name="T:Sotware_Farmatics.FacturaDataSet.ProductoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.ResourceManager">
 	<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
@@ -215,11 +279,223 @@ FARMATICS
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources._like">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources._next">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.add">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.bar_chart">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.book">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.bookmark">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.cancel">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.check">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.check_mark">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.checked">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.close">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.communication">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.communication_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.communication_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.communication_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.communication_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.communication_5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.communication_6">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Sotware_Farmatics.My.Resources.Resources.cslogin_94432">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.cursor">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.cursor_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.cursor_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.delete">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.dislike">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.dislike_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Sotware_Farmatics.My.Resources.Resources.doctor">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.down_arrow">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.download">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.download_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.download_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.edit">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.email">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.email_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.expand">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.expand_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.export">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.forbidden">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.heart">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.heart_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.heart_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.import">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.import_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.import_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.left_arrow">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.left_arrow_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.letter">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.levels">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.levels_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.like_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.list">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.list_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.list_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.list_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.list_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.login">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -235,7 +511,459 @@ FARMATICS
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.logout">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.megaphone">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.menu">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.menu_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.menu_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.microphone">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.minimize">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.minimize_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.minimize_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.minimize_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.more">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.more_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.move">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.move_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.mute">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.networking">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.next_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.organization">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.orientation">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.padlock">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.padlock_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.paper_plane">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.password">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.photo_camera">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.picture">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.pie_chart">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.pie_chart_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.pie_chart_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.placeholder">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.plus">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.previous">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.previous_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Sotware_Farmatics.My.Resources.Resources.profile_2092113_960_720">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_6">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_7">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_8">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.repeat_9">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.right_arrow">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.right_arrow_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.save">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.search">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.shuffle">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.smartphone">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.smartphone_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.sort">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.sort_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speaker">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_10">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_11">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_12">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_13">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_14">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_15">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_16">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_17">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_18">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_19">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_20">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_21">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_22">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_23">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_24">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_25">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_26">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_27">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_28">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_6">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_7">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_8">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.speech_bubble_9">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.star">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.stick_man">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.stick_man_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.stick_man_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.stick_man_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.stick_man_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.sticker">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.sticker_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.sticker_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.sticker_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.sticker_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.tap">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_6">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_7">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.telephone_8">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_10">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_3">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_6">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_7">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_8">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.transfer_9">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -243,73 +971,37 @@ FARMATICS
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.up_arrow">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.upload">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.upload_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.upload_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.user">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.user_1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Sotware_Farmatics.My.Resources.Resources.user_2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="T:Sotware_Farmatics.My.Resources.Resources">
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
 </members>

@@ -68,6 +68,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -113,10 +114,10 @@
     <Compile Include="FacturaDataSet.vb">
       <DependentUpon>FacturaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmInventario.Designer.vb">
+    <Compile Include="ADMINISTRADOR\frmInventario.Designer.vb">
       <DependentUpon>frmInventario.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmInventario.vb">
+    <Compile Include="ADMINISTRADOR\frmInventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\frmCaja.vb">
@@ -156,6 +157,12 @@
     <Compile Include="ADMINISTRADOR\frmRegistroproductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\frmPanelMenu.Designer.vb">
+      <DependentUpon>frmPanelMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmPanelMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -191,7 +198,7 @@
       <DependentUpon>frmVisualizarReportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ADMINISTRADOR\Report1.rdlc" />
-    <EmbeddedResource Include="forms\frmInventario.resx">
+    <EmbeddedResource Include="ADMINISTRADOR\frmInventario.resx">
       <DependentUpon>frmInventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmCaja.resx">
@@ -211,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADMINISTRADOR\frmRegistroproductos.resx">
       <DependentUpon>frmRegistroproductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmPanelMenu.resx">
+      <DependentUpon>frmPanelMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -291,6 +301,179 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="iconfinder_12-lan-connected-512x512_265522.ico" />
+    <None Include="Resources\user-2.png" />
+    <None Include="Resources\user-1.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\upload-2.png" />
+    <None Include="Resources\upload-1.png" />
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\up-arrow.png" />
+    <None Include="Resources\transfer-10.png" />
+    <None Include="Resources\transfer-9.png" />
+    <None Include="Resources\transfer-8.png" />
+    <None Include="Resources\transfer-7.png" />
+    <None Include="Resources\transfer-6.png" />
+    <None Include="Resources\transfer-5.png" />
+    <None Include="Resources\transfer-4.png" />
+    <None Include="Resources\transfer-3.png" />
+    <None Include="Resources\transfer-2.png" />
+    <None Include="Resources\transfer-1.png" />
+    <None Include="Resources\transfer.png" />
+    <None Include="Resources\telephone-8.png" />
+    <None Include="Resources\telephone-7.png" />
+    <None Include="Resources\telephone-6.png" />
+    <None Include="Resources\telephone-5.png" />
+    <None Include="Resources\telephone-4.png" />
+    <None Include="Resources\telephone-3.png" />
+    <None Include="Resources\telephone-2.png" />
+    <None Include="Resources\telephone-1.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\tap.png" />
+    <None Include="Resources\stick-man-4.png" />
+    <None Include="Resources\stick-man-3.png" />
+    <None Include="Resources\stick-man-2.png" />
+    <None Include="Resources\stick-man-1.png" />
+    <None Include="Resources\stick-man.png" />
+    <None Include="Resources\sticker-4.png" />
+    <None Include="Resources\sticker-3.png" />
+    <None Include="Resources\sticker-2.png" />
+    <None Include="Resources\sticker-1.png" />
+    <None Include="Resources\sticker.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\speech-bubble-28.png" />
+    <None Include="Resources\speech-bubble-27.png" />
+    <None Include="Resources\speech-bubble-26.png" />
+    <None Include="Resources\speech-bubble-25.png" />
+    <None Include="Resources\speech-bubble-24.png" />
+    <None Include="Resources\speech-bubble-23.png" />
+    <None Include="Resources\speech-bubble-22.png" />
+    <None Include="Resources\speech-bubble-21.png" />
+    <None Include="Resources\speech-bubble-20.png" />
+    <None Include="Resources\speech-bubble-19.png" />
+    <None Include="Resources\speech-bubble-18.png" />
+    <None Include="Resources\speech-bubble-17.png" />
+    <None Include="Resources\speech-bubble-16.png" />
+    <None Include="Resources\speech-bubble-15.png" />
+    <None Include="Resources\speech-bubble-14.png" />
+    <None Include="Resources\speech-bubble-13.png" />
+    <None Include="Resources\speech-bubble-12.png" />
+    <None Include="Resources\speech-bubble-11.png" />
+    <None Include="Resources\speech-bubble-10.png" />
+    <None Include="Resources\speech-bubble-9.png" />
+    <None Include="Resources\speech-bubble-8.png" />
+    <None Include="Resources\speech-bubble-7.png" />
+    <None Include="Resources\speech-bubble-6.png" />
+    <None Include="Resources\speech-bubble-5.png" />
+    <None Include="Resources\speech-bubble-4.png" />
+    <None Include="Resources\speech-bubble-3.png" />
+    <None Include="Resources\speech-bubble-2.png" />
+    <None Include="Resources\speech-bubble-1.png" />
+    <None Include="Resources\speech-bubble.png" />
+    <None Include="Resources\speaker.png" />
+    <None Include="Resources\sort-1.png" />
+    <None Include="Resources\sort.png" />
+    <None Include="Resources\smartphone-1.png" />
+    <None Include="Resources\smartphone.png" />
+    <None Include="Resources\shuffle.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\right-arrow-1.png" />
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\repeat-9.png" />
+    <None Include="Resources\repeat-8.png" />
+    <None Include="Resources\repeat-7.png" />
+    <None Include="Resources\repeat-6.png" />
+    <None Include="Resources\repeat-5.png" />
+    <None Include="Resources\repeat-4.png" />
+    <None Include="Resources\repeat-3.png" />
+    <None Include="Resources\repeat-2.png" />
+    <None Include="Resources\repeat-1.png" />
+    <None Include="Resources\repeat.png" />
+    <None Include="Resources\previous-1.png" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\placeholder.png" />
+    <None Include="Resources\pie-chart-2.png" />
+    <None Include="Resources\pie-chart-1.png" />
+    <None Include="Resources\pie-chart.png" />
+    <None Include="Resources\picture.png" />
+    <None Include="Resources\photo-camera.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\paper-plane.png" />
+    <None Include="Resources\padlock-1.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\orientation.png" />
+    <None Include="Resources\organization.png" />
+    <None Include="Resources\next-1.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\networking.png" />
+    <None Include="Resources\mute.png" />
+    <None Include="Resources\move-1.png" />
+    <None Include="Resources\move.png" />
+    <None Include="Resources\more-1.png" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\minimize-3.png" />
+    <None Include="Resources\minimize-2.png" />
+    <None Include="Resources\minimize-1.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\microphone.png" />
+    <None Include="Resources\menu-2.png" />
+    <None Include="Resources\menu-1.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\megaphone.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\list-4.png" />
+    <None Include="Resources\list-3.png" />
+    <None Include="Resources\list-2.png" />
+    <None Include="Resources\list-1.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\like-1.png" />
+    <None Include="Resources\like.png" />
+    <None Include="Resources\levels-1.png" />
+    <None Include="Resources\levels.png" />
+    <None Include="Resources\letter.png" />
+    <None Include="Resources\left-arrow-1.png" />
+    <None Include="Resources\left-arrow.png" />
+    <None Include="Resources\import-2.png" />
+    <None Include="Resources\import-1.png" />
+    <None Include="Resources\import.png" />
+    <None Include="Resources\heart-2.png" />
+    <None Include="Resources\heart-1.png" />
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\forbidden.png" />
+    <None Include="Resources\export.png" />
+    <None Include="Resources\expand-1.png" />
+    <None Include="Resources\expand.png" />
+    <None Include="Resources\email-1.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\download-2.png" />
+    <None Include="Resources\download-1.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\down-arrow.png" />
+    <None Include="Resources\dislike-1.png" />
+    <None Include="Resources\dislike.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\cursor-2.png" />
+    <None Include="Resources\cursor-1.png" />
+    <None Include="Resources\cursor.png" />
+    <None Include="Resources\communication-6.png" />
+    <None Include="Resources\communication-5.png" />
+    <None Include="Resources\communication-4.png" />
+    <None Include="Resources\communication-3.png" />
+    <None Include="Resources\communication-2.png" />
+    <None Include="Resources\communication-1.png" />
+    <None Include="Resources\communication.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\check-mark.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\bookmark.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\bar-chart.png" />
+    <None Include="Resources\add.png" />
     <None Include="Resources\050-ambulance.png" />
     <None Include="Resources\049-medical insurance.png" />
     <None Include="Resources\048-medical.png" />

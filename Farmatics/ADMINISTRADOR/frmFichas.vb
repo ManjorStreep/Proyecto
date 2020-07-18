@@ -3,7 +3,7 @@ Imports System.Data.Sql
 Imports Sotware_Farmatics
 Public Class frmFichas
 
-    Public empleado As Empleado
+    Public empleado As New Empleado
 
     Private Sub frmFichas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         empleado.Llenar(Usuarios1DataGridView)

@@ -230,21 +230,21 @@ Partial Class frmMenu
         '
         Me.ClientesToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._009_nurse
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.ClientesToolStripMenuItem.Text = "clientes"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._028_doctor
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.EmpleadosToolStripMenuItem.Text = "empleados"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Image = Global.Sotware_Farmatics.My.Resources.Resources._023_dna_structure
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.ProductosToolStripMenuItem.Text = "productos"
         '
         'HerramientasToolStripMenuItem

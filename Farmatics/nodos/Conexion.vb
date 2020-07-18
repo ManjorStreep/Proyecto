@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Conexion
-    Public Property Conexion As OleDbConnection = New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Darwin\Proyectos\Visual basic\Farmatics\Farmatics\Database.mdb")
+    Public Property Conexion As OleDbConnection = New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Yigs-Family\Desktop\putos\Farmatics\Database.mdb")
     Public Property Comando As OleDbCommand
     Public Property Lector As OleDbDataReader
     Public Property Adaptador As OleDbDataAdapter
