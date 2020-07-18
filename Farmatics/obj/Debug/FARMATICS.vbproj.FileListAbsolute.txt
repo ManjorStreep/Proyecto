@@ -66,3 +66,4 @@ C:\Users\Yigs-Family\Desktop\putos\FARMATICS\bin\Debug\FARMATICS.exe
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\bin\Debug\FARMATICS.pdb
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\bin\Debug\FARMATICS.xml
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmPanelMenu.resources
+C:\Users\Darwin\Proyectos\Visual basic\Farmatics\FARMATICS\obj\Debug\Sotware_Farmatics.frmPanelMenu.resources

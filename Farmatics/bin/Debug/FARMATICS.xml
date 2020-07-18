@@ -6,71 +6,7 @@ FARMATICS
 </name>
 </assembly>
 <members>
-<member name="T:Sotware_Farmatics.FacturaDataSet.ProductoDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Sotware_Farmatics.FacturaDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="P:Sotware_Farmatics.My.Resources.Resources.ResourceManager">
+<member name="P:Sotware_Farmatics.My.Resources.Resources.ResourceManager">
 	<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
@@ -1002,6 +938,70 @@ Represents a strongly typed in-memory cache of data.
 </member><member name="T:Sotware_Farmatics.My.Resources.Resources">
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.EmpleadosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ClientesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.HistorialRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet.ProductosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Sotware_Farmatics.FacturaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
 </members>
