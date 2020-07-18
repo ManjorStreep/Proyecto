@@ -25,7 +25,6 @@ Partial Class frmPanelMenu
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.panelSubmenuHerramientas = New System.Windows.Forms.Panel()
-        Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.btnHerramientas = New System.Windows.Forms.Button()
         Me.btnVenta = New System.Windows.Forms.Button()
@@ -35,9 +34,9 @@ Partial Class frmPanelMenu
         Me.btnReportesClientes = New System.Windows.Forms.Button()
         Me.btnReportes = New System.Windows.Forms.Button()
         Me.panelSubMenuAdministrador = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnAdministracionProductos = New System.Windows.Forms.Button()
+        Me.btnAdministracionInventario = New System.Windows.Forms.Button()
+        Me.btnAdministracionFichas = New System.Windows.Forms.Button()
         Me.btnAdministración = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -95,28 +94,12 @@ Partial Class frmPanelMenu
         'panelSubmenuHerramientas
         '
         Me.panelSubmenuHerramientas.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.panelSubmenuHerramientas.Controls.Add(Me.Button11)
         Me.panelSubmenuHerramientas.Controls.Add(Me.Button12)
         Me.panelSubmenuHerramientas.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelSubmenuHerramientas.Location = New System.Drawing.Point(0, 606)
         Me.panelSubmenuHerramientas.Name = "panelSubmenuHerramientas"
-        Me.panelSubmenuHerramientas.Size = New System.Drawing.Size(183, 73)
+        Me.panelSubmenuHerramientas.Size = New System.Drawing.Size(183, 96)
         Me.panelSubmenuHerramientas.TabIndex = 19
-        '
-        'Button11
-        '
-        Me.Button11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(0, 36)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button11.Size = New System.Drawing.Size(183, 36)
-        Me.Button11.TabIndex = 1
-        Me.Button11.Text = "Button11"
-        Me.Button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button11.UseVisualStyleBackColor = True
         '
         'Button12
         '
@@ -238,59 +221,59 @@ Partial Class frmPanelMenu
         'panelSubMenuAdministrador
         '
         Me.panelSubMenuAdministrador.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.panelSubMenuAdministrador.Controls.Add(Me.Button8)
-        Me.panelSubMenuAdministrador.Controls.Add(Me.Button7)
-        Me.panelSubMenuAdministrador.Controls.Add(Me.Button6)
+        Me.panelSubMenuAdministrador.Controls.Add(Me.btnAdministracionProductos)
+        Me.panelSubMenuAdministrador.Controls.Add(Me.btnAdministracionInventario)
+        Me.panelSubMenuAdministrador.Controls.Add(Me.btnAdministracionFichas)
         Me.panelSubMenuAdministrador.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelSubMenuAdministrador.Location = New System.Drawing.Point(0, 235)
         Me.panelSubMenuAdministrador.Name = "panelSubMenuAdministrador"
         Me.panelSubMenuAdministrador.Size = New System.Drawing.Size(183, 112)
         Me.panelSubMenuAdministrador.TabIndex = 14
         '
-        'Button8
+        'btnAdministracionProductos
         '
-        Me.Button8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(0, 72)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button8.Size = New System.Drawing.Size(183, 36)
-        Me.Button8.TabIndex = 2
-        Me.Button8.Text = "Registro de Productos"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.btnAdministracionProductos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAdministracionProductos.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnAdministracionProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdministracionProductos.ForeColor = System.Drawing.Color.White
+        Me.btnAdministracionProductos.Location = New System.Drawing.Point(0, 72)
+        Me.btnAdministracionProductos.Name = "btnAdministracionProductos"
+        Me.btnAdministracionProductos.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Me.btnAdministracionProductos.Size = New System.Drawing.Size(183, 36)
+        Me.btnAdministracionProductos.TabIndex = 2
+        Me.btnAdministracionProductos.Text = "Registro de Productos"
+        Me.btnAdministracionProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdministracionProductos.UseVisualStyleBackColor = True
         '
-        'Button7
+        'btnAdministracionInventario
         '
-        Me.Button7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(0, 36)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button7.Size = New System.Drawing.Size(183, 36)
-        Me.Button7.TabIndex = 1
-        Me.Button7.Text = "Inventario"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btnAdministracionInventario.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAdministracionInventario.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnAdministracionInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdministracionInventario.ForeColor = System.Drawing.Color.White
+        Me.btnAdministracionInventario.Location = New System.Drawing.Point(0, 36)
+        Me.btnAdministracionInventario.Name = "btnAdministracionInventario"
+        Me.btnAdministracionInventario.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Me.btnAdministracionInventario.Size = New System.Drawing.Size(183, 36)
+        Me.btnAdministracionInventario.TabIndex = 1
+        Me.btnAdministracionInventario.Text = "Inventario"
+        Me.btnAdministracionInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdministracionInventario.UseVisualStyleBackColor = True
         '
-        'Button6
+        'btnAdministracionFichas
         '
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(0, 0)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(183, 36)
-        Me.Button6.TabIndex = 0
-        Me.Button6.Text = "Fichas de Empleados"
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btnAdministracionFichas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAdministracionFichas.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnAdministracionFichas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdministracionFichas.ForeColor = System.Drawing.Color.White
+        Me.btnAdministracionFichas.Location = New System.Drawing.Point(0, 0)
+        Me.btnAdministracionFichas.Name = "btnAdministracionFichas"
+        Me.btnAdministracionFichas.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
+        Me.btnAdministracionFichas.Size = New System.Drawing.Size(183, 36)
+        Me.btnAdministracionFichas.TabIndex = 0
+        Me.btnAdministracionFichas.Text = "Fichas de Empleados"
+        Me.btnAdministracionFichas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdministracionFichas.UseVisualStyleBackColor = True
         '
         'btnAdministración
         '
@@ -379,11 +362,11 @@ Partial Class frmPanelMenu
         Me.panelHeaderTop.Controls.Add(Me.btnCerrar)
         Me.panelHeaderTop.Controls.Add(Me.btnMinimizar)
         Me.panelHeaderTop.Controls.Add(Me.btnMaximizar)
-        Me.panelHeaderTop.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.panelHeaderTop.Cursor = System.Windows.Forms.Cursors.Default
         Me.panelHeaderTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelHeaderTop.Location = New System.Drawing.Point(200, 0)
         Me.panelHeaderTop.Name = "panelHeaderTop"
-        Me.panelHeaderTop.Size = New System.Drawing.Size(700, 32)
+        Me.panelHeaderTop.Size = New System.Drawing.Size(700, 25)
         Me.panelHeaderTop.TabIndex = 1
         '
         'lbFechaHora
@@ -391,7 +374,7 @@ Partial Class frmPanelMenu
         Me.lbFechaHora.AutoSize = True
         Me.lbFechaHora.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbFechaHora.ForeColor = System.Drawing.Color.White
-        Me.lbFechaHora.Location = New System.Drawing.Point(417, 8)
+        Me.lbFechaHora.Location = New System.Drawing.Point(469, 5)
         Me.lbFechaHora.Name = "lbFechaHora"
         Me.lbFechaHora.Size = New System.Drawing.Size(149, 17)
         Me.lbFechaHora.TabIndex = 6
@@ -403,7 +386,7 @@ Partial Class frmPanelMenu
         Me.lbCargo.AutoSize = True
         Me.lbCargo.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbCargo.ForeColor = System.Drawing.Color.White
-        Me.lbCargo.Location = New System.Drawing.Point(245, 8)
+        Me.lbCargo.Location = New System.Drawing.Point(297, 5)
         Me.lbCargo.Name = "lbCargo"
         Me.lbCargo.Size = New System.Drawing.Size(56, 17)
         Me.lbCargo.TabIndex = 5
@@ -414,7 +397,7 @@ Partial Class frmPanelMenu
         Me.lbUser.AutoSize = True
         Me.lbUser.Font = New System.Drawing.Font("Ebrima", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbUser.ForeColor = System.Drawing.Color.White
-        Me.lbUser.Location = New System.Drawing.Point(31, 8)
+        Me.lbUser.Location = New System.Drawing.Point(83, 5)
         Me.lbUser.Name = "lbUser"
         Me.lbUser.Size = New System.Drawing.Size(67, 17)
         Me.lbUser.TabIndex = 2
@@ -423,10 +406,11 @@ Partial Class frmPanelMenu
         'btnCerrar
         '
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnCerrar.Image = Global.Sotware_Farmatics.My.Resources.Resources.close
-        Me.btnCerrar.Location = New System.Drawing.Point(663, 4)
+        Me.btnCerrar.Location = New System.Drawing.Point(631, 0)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(25, 25)
+        Me.btnCerrar.Size = New System.Drawing.Size(23, 25)
         Me.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.TabStop = False
@@ -434,10 +418,11 @@ Partial Class frmPanelMenu
         'btnMinimizar
         '
         Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnMinimizar.Image = Global.Sotware_Farmatics.My.Resources.Resources.minimize_1
-        Me.btnMinimizar.Location = New System.Drawing.Point(601, 4)
+        Me.btnMinimizar.Location = New System.Drawing.Point(654, 0)
         Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(25, 25)
+        Me.btnMinimizar.Size = New System.Drawing.Size(23, 25)
         Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnMinimizar.TabIndex = 3
         Me.btnMinimizar.TabStop = False
@@ -445,25 +430,28 @@ Partial Class frmPanelMenu
         'btnMaximizar
         '
         Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMaximizar.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnMaximizar.Image = Global.Sotware_Farmatics.My.Resources.Resources.expand
-        Me.btnMaximizar.Location = New System.Drawing.Point(632, 4)
+        Me.btnMaximizar.Location = New System.Drawing.Point(677, 0)
         Me.btnMaximizar.Name = "btnMaximizar"
-        Me.btnMaximizar.Size = New System.Drawing.Size(25, 25)
+        Me.btnMaximizar.Size = New System.Drawing.Size(23, 25)
         Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnMaximizar.TabIndex = 2
         Me.btnMaximizar.TabStop = False
         '
         'panelFormulariosHijos
         '
+        Me.panelFormulariosHijos.AutoSize = True
         Me.panelFormulariosHijos.Controls.Add(Me.PictureBox6)
         Me.panelFormulariosHijos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelFormulariosHijos.Location = New System.Drawing.Point(200, 32)
+        Me.panelFormulariosHijos.Location = New System.Drawing.Point(200, 25)
         Me.panelFormulariosHijos.Name = "panelFormulariosHijos"
-        Me.panelFormulariosHijos.Size = New System.Drawing.Size(700, 468)
+        Me.panelFormulariosHijos.Size = New System.Drawing.Size(700, 475)
         Me.panelFormulariosHijos.TabIndex = 2
         '
         'PictureBox6
         '
+        Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox6.Image = Global.Sotware_Farmatics.My.Resources.Resources._041_electrocardiogram
         Me.PictureBox6.Location = New System.Drawing.Point(224, 100)
         Me.PictureBox6.Name = "PictureBox6"
@@ -479,12 +467,15 @@ Partial Class frmPanelMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(900, 500)
         Me.Controls.Add(Me.panelFormulariosHijos)
         Me.Controls.Add(Me.panelHeaderTop)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(900, 500)
         Me.Name = "frmPanelMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -505,6 +496,7 @@ Partial Class frmPanelMenu
         Me.panelFormulariosHijos.ResumeLayout(False)
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -521,22 +513,21 @@ Partial Class frmPanelMenu
     Friend WithEvents btnMinimizar As System.Windows.Forms.PictureBox
     Friend WithEvents btnMaximizar As System.Windows.Forms.PictureBox
     Friend WithEvents panelSubMenuAdministrador As System.Windows.Forms.Panel
-    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents btnAdministracionInventario As System.Windows.Forms.Button
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents panelSubmenuHerramientas As System.Windows.Forms.Panel
-    Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents Button12 As System.Windows.Forms.Button
     Friend WithEvents btnHerramientas As System.Windows.Forms.Button
     Friend WithEvents btnVenta As System.Windows.Forms.Button
     Friend WithEvents panelSubmenuReportes As System.Windows.Forms.Panel
     Friend WithEvents btnReportesClientes As System.Windows.Forms.Button
     Friend WithEvents btnReportes As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents btnAdministracionProductos As System.Windows.Forms.Button
     Friend WithEvents panelFormulariosHijos As System.Windows.Forms.Panel
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents btnReportesEmpleados As System.Windows.Forms.Button
     Friend WithEvents btnReporteInventario As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents btnAdministracionFichas As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

@@ -33,6 +33,10 @@
             MsgBox("Solo se puede ingresar valores de tipo número", MsgBoxStyle.Exclamation, "Ingreso de Número")
         End If
     End Sub
-    'Funcion para las validaciones de campo usando el objeto errorProvider
+
+    Public Sub adaptadorDePantallas(FormPadre As Form, FormHijo As Form)
+        FormPadre.Size = New System.Drawing.Size(FormHijo.Height, FormHijo.Width)
+
+    End Sub
 
 End Module

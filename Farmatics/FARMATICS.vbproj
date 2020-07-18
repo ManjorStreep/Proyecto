@@ -145,12 +145,6 @@
     <Compile Include="forms\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ADMINISTRADOR\frmMenu.Designer.vb">
-      <DependentUpon>frmMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ADMINISTRADOR\frmMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ADMINISTRADOR\frmRegistroproductos.Designer.vb">
       <DependentUpon>frmRegistroproductos.vb</DependentUpon>
     </Compile>
@@ -212,9 +206,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ADMINISTRADOR\frmMenu.resx">
-      <DependentUpon>frmMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ADMINISTRADOR\frmRegistroproductos.resx">
       <DependentUpon>frmRegistroproductos.vb</DependentUpon>

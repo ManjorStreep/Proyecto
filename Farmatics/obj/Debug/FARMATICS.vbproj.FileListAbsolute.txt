@@ -54,7 +54,6 @@ C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmCaja
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmFichas.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmHacer_Venta.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmLogin.resources
-C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmMenu.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmRegistroproductos.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.Resources.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmReportesClientes.resources

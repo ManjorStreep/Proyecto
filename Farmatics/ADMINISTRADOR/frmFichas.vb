@@ -28,7 +28,6 @@ Public Class frmFichas
                     txt_DNI.Focus()
                 End If
             End If
-            
         Else
             MsgBox("Ingrese un dato en el campo")
         End If

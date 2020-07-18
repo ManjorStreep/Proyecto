@@ -30,6 +30,7 @@ Public Class frmLogin
     'Componentes del Formulario 
     '---------------------------------------------------------------------------------------------'
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         CustomizarComponentes() ' inicializa el componente
         txtUser.Focus()
         txtUser.Text = "" : txtPass.Text = ""
