@@ -23,6 +23,7 @@ Partial Class frmCaja
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCaja))
         Me.gbPerfil = New System.Windows.Forms.GroupBox()
         Me.lb_datocajero3 = New System.Windows.Forms.Label()
         Me.lb_datocajero2 = New System.Windows.Forms.Label()
@@ -496,10 +497,12 @@ Partial Class frmCaja
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmCaja"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Text = "Caja "
         Me.gbPerfil.ResumeLayout(False)
         Me.gbPerfil.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

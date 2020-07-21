@@ -30,10 +30,12 @@ Partial Class frmReportesClientes
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ProductoBindingSource
@@ -72,20 +74,25 @@ Partial Class frmReportesClientes
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(24, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(172, 36)
+        Me.Label1.Size = New System.Drawing.Size(130, 36)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Empleados"
+        Me.Label1.Text = "Clientes"
         '
         'ReportViewer1
         '
         ReportDataSource1.Name = "Clientes"
-        ReportDataSource1.Value = Me.ProductoBindingSource
+        ReportDataSource1.Value = Me.ClientesBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sotware_Farmatics.Report2.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sotware_Farmatics.ReporteCliente.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(40, 90)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(827, 604)
         Me.ReportViewer1.TabIndex = 2
+        '
+        'ClientesBindingSource
+        '
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me.FacturaDataSet
         '
         'frmReportesClientes
         '
@@ -103,6 +110,7 @@ Partial Class frmReportesClientes
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -112,4 +120,5 @@ Partial Class frmReportesClientes
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents ProductoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents FacturaDataSet As Sotware_Farmatics.FacturaDataSet
+    Friend WithEvents ClientesBindingSource As System.Windows.Forms.BindingSource
 End Class

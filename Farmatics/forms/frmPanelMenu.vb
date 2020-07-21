@@ -112,6 +112,7 @@ Public Class frmPanelMenu
 
     Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
         abrirFormulariosHijos(New frmCaja) : ajustarPantallas(Me, frmCaja)
+        frmCaja.Empleado = Me.empleado
         ocultarSubmenu()
     End Sub
 
@@ -136,7 +137,7 @@ Public Class frmPanelMenu
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnAdministracionFichas.Click
-        frmFichas.empleado = empleado
+        frmFichas.empleado = New Empleado
         abrirFormulariosHijos(New frmFichas()) : ajustarPantallas(Me, frmFichas)
         ocultarSubmenu()
     End Sub
@@ -168,7 +169,7 @@ Public Class frmPanelMenu
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Exit Sub
+        Application.Exit()
     End Sub
 
 

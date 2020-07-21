@@ -81,12 +81,13 @@ Public Class frmLogin
                     If empleado.Cargo.Equals("DUEÑO") Or empleado.Cargo.Equals("GERENTE") Then
                         frmPanelMenu.empleado = empleado
                         frmPanelMenu.Show()
-                        Me.Close()
+                        Me.Hide()
                     Else
                         frmCaja.empleado = empleado
+                        frmCaja.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
                         frmCaja.Show()
-                        Me.Close()
 
+                        Me.Hide()
                     End If
                 Else
                     MsgBox("Usuario o Contraseña - INVALIDOS")

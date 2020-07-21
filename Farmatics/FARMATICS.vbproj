@@ -94,10 +94,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.Designer.vb">
-      <DependentUpon>AboutBox1.vb</DependentUpon>
+    <Compile Include="frmDatosSoftware.Designer.vb">
+      <DependentUpon>frmDatosSoftware.vb</DependentUpon>
     </Compile>
-    <Compile Include="AboutBox1.vb">
+    <Compile Include="frmDatosSoftware.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ADMINISTRADOR\frmVisualizarReportes.Designer.vb">
@@ -172,10 +172,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="nodos\Conexion.vb" />
-    <Compile Include="nodos\DatosSistema.vb" />
-    <Compile Include="nodos\Empleado.vb" />
-    <Compile Include="nodos\Producto.vb" />
+    <Compile Include="Clases\Conexion.vb" />
+    <Compile Include="Clases\DatosSistema.vb" />
+    <Compile Include="Clases\Empleado.vb" />
+    <Compile Include="Clases\Producto.vb" />
     <Compile Include="REPORTES\frmReportesClientes.Designer.vb">
       <DependentUpon>frmReportesClientes.vb</DependentUpon>
     </Compile>
@@ -185,8 +185,8 @@
     <Compile Include="REPORTES\Reportes.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.vb</DependentUpon>
+    <EmbeddedResource Include="frmDatosSoftware.resx">
+      <DependentUpon>frmDatosSoftware.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ADMINISTRADOR\frmVisualizarReportes.resx">
       <DependentUpon>frmVisualizarReportes.vb</DependentUpon>

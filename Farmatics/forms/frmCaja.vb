@@ -2,12 +2,11 @@
 
 
     ' Esta variable sera la encargada de almacenar los datos del usuario logeado
-    Public empleado As Empleado
+    Public Empleado As New Empleado
     Public producto As Producto
 
 
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
         lb_datocajero0.Text = empleado.Nombre
         lb_datocajero1.Text = empleado.Apellido
@@ -59,7 +58,8 @@
         End If
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
+    Private Sub btn_facturar_Click(sender As Object, e As EventArgs) Handles btn_facturar.Click
+        frmHacer_Venta.empleado = Me.empleado
+        frmHacer_Venta.ShowDialog()
     End Sub
 End Class

@@ -3,7 +3,6 @@ C:\Users\Yigs-Family\Desktop\putos\FARMATICS\bin\Debug\Database.mdb
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\bin\Debug\FARMATICS.exe
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\bin\Debug\FARMATICS.pdb
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\bin\Debug\FARMATICS.xml
-C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.AboutBox1.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmVisualizarReportes.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmInventario.resources
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmCaja.resources
@@ -20,3 +19,4 @@ C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\RdlCompile.compiled
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\FARMATICS.exe
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\FARMATICS.xml
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\FARMATICS.pdb
+C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmDatosSoftware.resources
