@@ -4,7 +4,7 @@ Imports System.Runtime.InteropServices
 Public Class frmPanelMenu
     Private DimencionPantalla = Me.Size
     ' Esta variable sera la encargada de almacenar los datos del usuario logeado
-    Public empleado As Empleado
+    Public empleado_X As Empleado
     Private tabla As New Conexion()
     '---------------------------------------------------------------------------------------------'
     'Añadiendo funcion de arrastrar o mover el formulario / Drag Form
@@ -65,10 +65,10 @@ Public Class frmPanelMenu
     '---------------------------------------------------------------------------------------------'
     Private Sub frmPanelMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultarSubmenu()
-        lbUser.Text += empleado.Nombre & " " & empleado.Apellido
-        lbCargo.Text += empleado.Cargo
+        lbUser.Text += empleado_X.Nombre & " " & empleado_X.Apellido
+        lbCargo.Text += empleado_X.Cargo
 
-        Timer1.Start()
+        ' Timer1.Start()
 
 
     End Sub
@@ -98,21 +98,15 @@ Public Class frmPanelMenu
         mostrarSubmenu(panelSubmenuHerramientas)
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs)
-        '
-        'call a formulario a mostrar
-        '
-        ocultarSubmenu()
-    End Sub
-
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         Me.Close() : frmLogin.Show()
         ocultarSubmenu()
     End Sub
 
     Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
+        frmCaja.getDni =
         abrirFormulariosHijos(New frmCaja) : ajustarPantallas(Me, frmCaja)
-        frmCaja.Empleado = Me.empleado
+
         ocultarSubmenu()
     End Sub
 
@@ -137,7 +131,7 @@ Public Class frmPanelMenu
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnAdministracionFichas.Click
-        frmFichas.empleado = New Empleado
+        frmFichas.empleado = empleado_X
         abrirFormulariosHijos(New frmFichas()) : ajustarPantallas(Me, frmFichas)
         ocultarSubmenu()
     End Sub
@@ -162,10 +156,6 @@ Public Class frmPanelMenu
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lbFechaHora.Text = DatosSistema.obtenerFecha("Fecha")
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        panelFormulariosHijos.Size = New Size(800, 800)
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click

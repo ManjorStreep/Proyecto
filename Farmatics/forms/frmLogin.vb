@@ -79,12 +79,12 @@ Public Class frmLogin
                 If conexion.Verificacion("Empleados", "CEDULA =" & txtUser.Text & " AND CLAVE ='" & txtPass.Text & "'") Then
                     empleado = New Empleado(txtUser.Text)
                     If empleado.Cargo.Equals("DUEÑO") Or empleado.Cargo.Equals("GERENTE") Then
-                        frmPanelMenu.empleado = empleado
+                        frmPanelMenu.empleado_X = empleado
                         frmPanelMenu.Show()
                         Me.Hide()
                     Else
                         frmCaja.empleado = empleado
-                        frmCaja.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+                        frmCaja.FormBorderStyle = Windows.Forms.FormBorderStyle.Fixed3D
                         frmCaja.Show()
 
                         Me.Hide()

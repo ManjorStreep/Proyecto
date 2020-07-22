@@ -2,11 +2,15 @@
 
 
     ' Esta variable sera la encargada de almacenar los datos del usuario logeado
-    Public Empleado As New Empleado
+    Public getDni As String
+
+    Public empleado = New Empleado(getDni)
+
     Public producto As Producto
 
 
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
         lb_datocajero0.Text = empleado.Nombre
         lb_datocajero1.Text = empleado.Apellido
@@ -15,7 +19,7 @@
 
         'iniciando timer
         '
-        tim_1.Start()
+        'tim_1.Start()
         ' instanciamos una variable tipo producto vacia, solamente para usar su metodo Llenar, para colocar todos los productos en el DataGridView
         producto = New Producto()
         producto.Llenar(DataGridView1)
@@ -59,7 +63,16 @@
     End Sub
 
     Private Sub btn_facturar_Click(sender As Object, e As EventArgs) Handles btn_facturar.Click
-        frmHacer_Venta.empleado = Me.empleado
+        frmHacer_Venta.empleado = empleado
         frmHacer_Venta.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmLogin.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
