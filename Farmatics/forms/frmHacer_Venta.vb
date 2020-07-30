@@ -4,55 +4,37 @@ Public Class frmHacer_Venta
 
 
     ' Estas variables son las que se encargaran de gestionar la informacion de la base de datos!
+    Private Conexion As New Conexion()
+    Dim getCode As String
     Public producto As Producto
     Public empleado As Empleado
-    Private Conexion As New Conexion()
-
-    'Esta funcion se encarga de colocar la informacion del producto en pantalla 
-    Public Sub ImprimirProducto()
-        TextBox7.Text = producto.Nombre
-        TextBox8.Text = producto.Administracion
-        TextBox9.Text = producto.Precio
-        TextBox10.Text = producto.Cantidad
-        NumericUpDown1.Value = 1
-        NumericUpDown1.Maximum = producto.Cantidad
-        NumericUpDown1.Minimum = 1
-    End Sub
-
-    ' Esta funcion se encargara de actualizar el precio de la factura
-    Private Sub ActualizarPrecio()
-        Dim precio As Decimal = 0.0
-        For Each fila As DataGridViewRow In DataGridView1.Rows
-            precio = precio + Convert.ToDecimal(fila.Cells(4).Value)
-        Next
-        TextBox6.Text = precio
-    End Sub
 
     Private Sub frmHacer_Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         lb_codigoEmpleado.Text = empleado.Cedula
         lb_nombreEmpleado.Text = empleado.Nombre
-        ImprimirProducto()
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
-        Me.Close()
     End Sub
 
     ' En este evento, cuando el valor del NumericUpDown1 sea cambiado, se multipicara el precio base del producto por el numero seleccionado
     Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs)
-        TextBox9.Text = producto.Precio * NumericUpDown1.Value
+        txt_PrecioProducto.Text = producto.Precio * NumericUpDown1.Value
+    End Sub
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        ' Por cada producto del DataGridView sea dobleclickeado se borrara y se actualizara el precio del carrio nuevamente
+        DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
+        ActualizarPrecio()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btn_BuscarCodigoID.Click
+        getCode = txt_BuscarCodigoID.Text
         If Me.Validate And txt_BuscarCodigoID.Text = String.Empty Then
             MsgBox("Ingrese datos en el campo")
         Else
-            producto = New Producto(txt_BuscarCodigoID.Text)
-            If producto.vacio() Then
+            Me.producto = New Producto(getCode)
+            If Me.producto.vacio() Then
                 MsgBox("Este producto no existe!")
             Else
-                ImprimirProducto()
+                ImprimirProducto(getCode)
             End If
         End If
 
@@ -63,37 +45,12 @@ Public Class frmHacer_Venta
         If txt_DniCliente.Text = String.Empty Then
             MsgBox("Ingrese datos en este campo")
         Else
+
             verificarCliente()
         End If
     End Sub
 
-    Private Sub verificarCliente()
-        If Conexion.Verificacion("Clientes", "CEDULA = " & txt_DniCliente.Text) Then
-            Try
-                Conexion.Conexion.Open()
-                Conexion.Comando = New OleDb.OleDbCommand("SELECT * FROM Clientes WHERE CEDULA =" & txt_DniCliente.Text, Conexion.Conexion)
-                Conexion.Lector = Conexion.Comando.ExecuteReader()
-                While Conexion.Lector.Read()
-                    txt_NombreCliente.Text = Conexion.Lector.Item(0)
-                    txt_DniCliente.Text = Conexion.Lector.Item(1)
-                    txt_TelefonoCLiente.Text = Conexion.Lector.Item(3)
-                    txt_DireccionCliente.Text = Conexion.Lector.Item(4)
-                End While
-                'Msgbox("usuario Registrado con exito")
-                activarDatosClientes(False)
-                gb_DatosVenta.Enabled = True
-            Catch ex As Exception
-                MsgBox("ERROR al consultar cliente: " & ex.Message)
-            Finally
-                Conexion.Conexion.Close()
-            End Try
-        Else
-            Dim x As Integer = MsgBox("ERROR USUARIO NO REGISTRADO" & vbNewLine & "¿Desea Registrar a este cliente?", vbYesNo, "Usuario no registrado")
-            If x = vbYes Then
-                activarDatosClientes(True)
-            End If
-        End If
-    End Sub
+    
 
     Private Sub btn_Registrar_Click(sender As Object, e As EventArgs) Handles btn_Registrar.Click
         If txt_DniCliente.Text <> "" And txt_DireccionCliente.Text <> "" And txt_NombreCliente.Text <> "" And txt_TelefonoCLiente.Text <> "" Then
@@ -139,12 +96,6 @@ Public Class frmHacer_Venta
         ActualizarPrecio() : txt_BuscarCodigoID.Text = ""
         ' De ultimo limpiamos
         Limpiar()
-    End Sub
-
-    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
-        ' Por cada producto del DataGridView sea dobleclickeado se borrara y se actualizara el precio del carrio nuevamente
-        DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
-        ActualizarPrecio()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btn_Pagar.Click
@@ -209,11 +160,7 @@ Public Class frmHacer_Venta
         parametros(7) = New ReportParameter("Factura", NumeroFactura)
         'parametros(8) = New ReportParameter("NacionalidadCliente", cb_NacionalidadCliente.SelectedItem)
 
-
         ' Esto sirve para registrar cliente y la factura en la base de datos
-
-
-
         Dim Factura As New frmVisualizarReportes()
         Factura.Parametros(parametros, dataset)
         Factura.Show()
@@ -221,6 +168,19 @@ Public Class frmHacer_Venta
     End Sub
 
     Private Sub btn_Salir_Click(sender As Object, e As EventArgs) Handles btn_Salir.Click
+        Me.Close()
+    End Sub
+    'Cuando se produzca este evento, se limpiara la informacion del producto seleccionado
+    Private Sub btn_EliminarProducto_Click(sender As Object, e As EventArgs) Handles btn_EliminarProducto.Click
+        Limpiar()
+    End Sub
+
+    ' Cuando se aprete el boton inventario, se mostrara el frmInventario
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btn_MostrarInventario.Click
+        frmInventario.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
         Me.Close()
     End Sub
 
@@ -253,6 +213,46 @@ Public Class frmHacer_Venta
 
     '/-----------------------------------------------------------------------------------------------------------------/
 
+    Private Sub NumericUpDown1_ValueChanged_1(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
+        ' SI el producto esta vacio, evitamos que se pueda ejecutar este evento
+        If producto.vacio() Then
+            ' Si esta vacio, rompemos el flujo de ejecucion de esta funcion, evitando que se ejecute el codigo de abajo
+            Return
+        End If
+        txt_PrecioProducto.Text = producto.Precio * NumericUpDown1.Value
+    End Sub
+
+    'Esta funcion se encarga de colocar la informacion del producto en pantalla 
+    Public Sub ImprimirProducto(codigo)
+
+        txt_NombreProducto.Text = producto.Nombre
+        txt_tipoProducto.Text = producto.Administracion
+        txt_PrecioProducto.Text = producto.Precio
+        txt_productosStock.Text = producto.Cantidad
+        NumericUpDown1.Value = 1
+        NumericUpDown1.Maximum = producto.Cantidad
+        NumericUpDown1.Minimum = 1
+    End Sub
+
+    ' Esta funcion se encargara de actualizar el precio de la factura
+    Private Sub ActualizarPrecio()
+        Dim precio As Decimal = 0.0
+        For Each fila As DataGridViewRow In DataGridView1.Rows
+            precio = precio + Convert.ToDecimal(fila.Cells(4).Value)
+        Next
+        TextBox6.Text = precio
+    End Sub
+
+    Public Sub Limpiar()
+        producto.Nombre = ""
+        producto.Codigo = 0
+        txt_NombreProducto.Text = Nothing
+        txt_tipoProducto.Text = Nothing
+        txt_PrecioProducto.Text = Nothing
+        txt_productosStock.Text = Nothing
+        NumericUpDown1.Value = 1
+    End Sub
+
     Private Sub activarDatosClientes(ByVal x As Boolean)
         If x = True Then
             txt_NombreCliente.Enabled = True : txt_NombreCliente.Text = ""
@@ -267,34 +267,32 @@ Public Class frmHacer_Venta
         End If
     End Sub
 
-    ' Cuando se aprete el boton inventario, se mostrara el frmInventario
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btn_MostrarInventario.Click
-        frmInventario.Show()
-    End Sub
-
-    Private Sub NumericUpDown1_ValueChanged_1(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged
-        ' SI el producto esta vacio, evitamos que se pueda ejecutar este evento
-        If producto.vacio() Then
-            ' Si esta vacio, rompemos el flujo de ejecucion de esta funcion, evitando que se ejecute el codigo de abajo
-            Return
+    Private Sub verificarCliente()
+        If Conexion.Verificacion("Clientes", "CEDULA = " & txt_DniCliente.Text) Then
+            Try
+                Conexion.Conexion.Open()
+                Conexion.Comando = New OleDb.OleDbCommand("SELECT * FROM Clientes WHERE CEDULA =" & txt_DniCliente.Text, Conexion.Conexion)
+                Conexion.Lector = Conexion.Comando.ExecuteReader()
+                While Conexion.Lector.Read()
+                    txt_NombreCliente.Text = Conexion.Lector.Item(0)
+                    txt_DniCliente.Text = Conexion.Lector.Item(1)
+                    txt_TelefonoCLiente.Text = Conexion.Lector.Item(3)
+                    txt_DireccionCliente.Text = Conexion.Lector.Item(4)
+                End While
+                MsgBox("usuario encontrado con exito" & vbNewLine & "Precione aceptar para continuar con la compra")
+                activarDatosClientes(False)
+                gb_DatosVenta.Enabled = True
+            Catch ex As Exception
+                MsgBox("ERROR al consultar cliente: " & ex.Message)
+            Finally
+                Conexion.Conexion.Close()
+            End Try
+        Else
+            Dim x As Integer = MsgBox("ERROR USUARIO NO REGISTRADO" & vbNewLine & "¿Desea Registrar a este cliente?", vbYesNo, "Usuario no registrado")
+            If x = vbYes Then
+                activarDatosClientes(True)
+            End If
         End If
-        TextBox9.Text = producto.Precio * NumericUpDown1.Value
     End Sub
 
-
-    Public Sub Limpiar()
-        producto.Nombre = ""
-        producto.Codigo = 0
-        TextBox7.Text = Nothing
-        TextBox8.Text = Nothing
-        TextBox9.Text = Nothing
-        TextBox10.Text = Nothing
-        NumericUpDown1.Value = 1
-    End Sub
-
-
-    'Cuando se produzca este evento, se limpiara la informacion del producto seleccionado
-    Private Sub btn_EliminarProducto_Click(sender As Object, e As EventArgs) Handles btn_EliminarProducto.Click
-        Limpiar()
-    End Sub
 End Class

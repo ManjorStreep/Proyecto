@@ -3,7 +3,7 @@ Imports System.Data.Sql
 Imports Sotware_Farmatics
 Public Class frmFichas
 
-    Public empleado As New Empleado
+    Public empleado As Empleado
 
     Private Sub frmFichas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         empleado.Llenar(Usuarios1DataGridView)
@@ -184,8 +184,8 @@ Public Class frmFichas
     End Sub
 
     Private Sub cb_cargo_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles cb_cargo.Validating
-        If DirectCast(sender, ComboBox).SelectedIndex = 0 Then
-            Me.ErrorProvider1.SetError(sender, "ingrese un dato en esete campo") 'mensage de error
-        End If
+        'If DirectCast(sender, ComboBox).SelectedIndex = 0 Then
+        '    Me.ErrorProvider1.SetError(sender, "ingrese un dato en esete campo") 'mensage de error
+        'End If
     End Sub
 End Class

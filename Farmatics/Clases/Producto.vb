@@ -36,7 +36,12 @@ Public Class Producto
     End Sub
 
     Public Sub New()
-
+        Codigo = 0
+        Nombre = ""
+        Cantidad = 0
+        Precio = 0
+        Prescripcion = False
+        Administracion = ""
     End Sub
 
     Public Sub Registrar(ByVal pCodigo As String, ByVal pNombre As String, ByVal pCantidad As Integer, ByVal pPrecio As Decimal, ByVal pPrescripcion As Boolean, ByVal pAdministracion As String)
@@ -135,7 +140,7 @@ Public Class Producto
 
     ' Esta funcion devolvera false si no hay datos en la clase
     Public Function vacio()
-        If String.IsNullOrEmpty(Nombre) Or Codigo = 0 Or Codigo = Nothing Then
+        If Me.Nombre = String.Empty Or Codigo = 0 Or Codigo = Nothing Then
             Return True
         Else
             Return False

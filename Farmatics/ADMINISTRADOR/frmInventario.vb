@@ -14,7 +14,7 @@
         ' Se envia al frmHacer_Venta el producto que ha sido clickeado 
         frmHacer_Venta.producto = New Producto(DataGridView1.CurrentRow.Cells(0).Value)
         ' Luego imprimimos el producto enviado al frmHacer_Venta
-        frmHacer_Venta.ImprimirProducto()
+        frmHacer_Venta.ImprimirProducto(producto.Codigo)
 
         ' Y de ultimo cerramos este formulario
         Me.Close()

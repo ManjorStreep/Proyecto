@@ -2,13 +2,16 @@
 
 
     ' Esta variable sera la encargada de almacenar los datos del usuario logeado
-    Public getDni As String
 
-    Public empleado = New Empleado(getDni)
+    Public empleado As Empleado
 
     Public producto As Producto
 
-
+    Public Sub cajaPadre(ByVal dato As Boolean, ByVal dni As String)
+        If dato = True Then
+            empleado = New Empleado(dni)
+        End If
+    End Sub
     Private Sub frmCaja_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ' Aqui es indispensable que antes de llamar al metodo Show() de este form, primero debes otorgase datos a la variable persona
@@ -72,7 +75,4 @@
         Me.Close()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 End Class

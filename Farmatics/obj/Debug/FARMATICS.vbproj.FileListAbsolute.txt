@@ -20,3 +20,4 @@ C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\FARMATICS.exe
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\FARMATICS.xml
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\FARMATICS.pdb
 C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\Sotware_Farmatics.frmDatosSoftware.resources
+C:\Users\Yigs-Family\Desktop\putos\FARMATICS\obj\Debug\FARMATICS.vbprojResolveAssemblyReference.cache

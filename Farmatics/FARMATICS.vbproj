@@ -219,9 +219,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\Copia de Report2.rdlc" />
     <EmbeddedResource Include="REPORTES\frmReportesClientes.resx">
       <DependentUpon>frmReportesClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\ReportInventario.rdlc" />
     <EmbeddedResource Include="REPORTES\Report2.rdlc" />
   </ItemGroup>
   <ItemGroup>

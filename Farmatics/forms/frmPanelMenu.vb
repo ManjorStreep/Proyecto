@@ -104,35 +104,44 @@ Public Class frmPanelMenu
     End Sub
 
     Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
-        frmCaja.getDni =
-        abrirFormulariosHijos(New frmCaja) : ajustarPantallas(Me, frmCaja)
-
+        frmCaja.cajaPadre(True, CStr(empleado_X.Cedula))
+        ajustarPantallas(Me, frmCaja)
+        abrirFormulariosHijos(frmCaja)
         ocultarSubmenu()
     End Sub
 
     Private Sub btnReporteInventario_Click(sender As Object, e As EventArgs) Handles btnReporteInventario.Click
-        abrirFormulariosHijos(New frmVisualizarReportes) : ajustarPantallas(Me, frmVisualizarReportes)
+
+        ajustarPantallas(Me, frmVisualizarReportes)
+        abrirFormulariosHijos(frmVisualizarReportes)
         ocultarSubmenu()
     End Sub
 
     Private Sub btnReportesClientes_Click(sender As Object, e As EventArgs) Handles btnReportesClientes.Click
-        abrirFormulariosHijos(New frmReportesClientes) : ajustarPantallas(Me, frmReportesClientes)
+
+        ajustarPantallas(Me, frmReportesClientes)
+        abrirFormulariosHijos(New frmReportesClientes)
         ocultarSubmenu()
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btnAdministracionProductos.Click
-        abrirFormulariosHijos(New frmRegistroproductos) : ajustarPantallas(Me, frmRegistroproductos)
+
+        ajustarPantallas(Me, frmRegistroproductos)
+        abrirFormulariosHijos(frmRegistroproductos)
         ocultarSubmenu()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnAdministracionInventario.Click
-        abrirFormulariosHijos(New frmInventario) : ajustarPantallas(Me, frmInventario)
+
+        ajustarPantallas(Me, frmInventario)
+        abrirFormulariosHijos(frmInventario)
         ocultarSubmenu()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btnAdministracionFichas.Click
         frmFichas.empleado = empleado_X
-        abrirFormulariosHijos(New frmFichas()) : ajustarPantallas(Me, frmFichas)
+        ajustarPantallas(Me, frmFichas)
+        abrirFormulariosHijos(frmFichas)
         ocultarSubmenu()
     End Sub
 

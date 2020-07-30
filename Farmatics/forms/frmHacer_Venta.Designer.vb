@@ -33,12 +33,12 @@ Partial Class frmHacer_Venta
         Me.btn_Pagar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.txt_productosStock = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txt_PrecioProducto = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txt_NombreProducto = New System.Windows.Forms.TextBox()
+        Me.txt_tipoProducto = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cb_NacionalidadCliente = New System.Windows.Forms.ComboBox()
@@ -82,6 +82,7 @@ Partial Class frmHacer_Venta
         Me.btn_AgregarProducto = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -155,13 +156,14 @@ Partial Class frmHacer_Venta
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox1.Controls.Add(Me.TextBox10)
+        Me.GroupBox1.Controls.Add(Me.txt_productosStock)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox9)
+        Me.GroupBox1.Controls.Add(Me.txt_PrecioProducto)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.txt_NombreProducto)
+        Me.GroupBox1.Controls.Add(Me.txt_tipoProducto)
         Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
@@ -179,14 +181,14 @@ Partial Class frmHacer_Venta
         Me.NumericUpDown1.Size = New System.Drawing.Size(39, 23)
         Me.NumericUpDown1.TabIndex = 84
         '
-        'TextBox10
+        'txt_productosStock
         '
-        Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(47, 133)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(90, 23)
-        Me.TextBox10.TabIndex = 93
+        Me.txt_productosStock.Enabled = False
+        Me.txt_productosStock.Location = New System.Drawing.Point(47, 133)
+        Me.txt_productosStock.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_productosStock.Name = "txt_productosStock"
+        Me.txt_productosStock.Size = New System.Drawing.Size(90, 23)
+        Me.txt_productosStock.TabIndex = 93
         '
         'Label2
         '
@@ -199,14 +201,14 @@ Partial Class frmHacer_Venta
         Me.Label2.TabIndex = 92
         Me.Label2.Text = "STOCK"
         '
-        'TextBox9
+        'txt_PrecioProducto
         '
-        Me.TextBox9.Enabled = False
-        Me.TextBox9.Location = New System.Drawing.Point(135, 86)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(90, 23)
-        Me.TextBox9.TabIndex = 91
+        Me.txt_PrecioProducto.Enabled = False
+        Me.txt_PrecioProducto.Location = New System.Drawing.Point(135, 86)
+        Me.txt_PrecioProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_PrecioProducto.Name = "txt_PrecioProducto"
+        Me.txt_PrecioProducto.Size = New System.Drawing.Size(90, 23)
+        Me.txt_PrecioProducto.TabIndex = 91
         '
         'Label1
         '
@@ -219,23 +221,23 @@ Partial Class frmHacer_Venta
         Me.Label1.TabIndex = 90
         Me.Label1.Text = "PRECIO"
         '
-        'TextBox7
+        'txt_NombreProducto
         '
-        Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(39, 39)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(178, 23)
-        Me.TextBox7.TabIndex = 88
+        Me.txt_NombreProducto.Enabled = False
+        Me.txt_NombreProducto.Location = New System.Drawing.Point(39, 39)
+        Me.txt_NombreProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_NombreProducto.Name = "txt_NombreProducto"
+        Me.txt_NombreProducto.Size = New System.Drawing.Size(178, 23)
+        Me.txt_NombreProducto.TabIndex = 88
         '
-        'TextBox8
+        'txt_tipoProducto
         '
-        Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(17, 86)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(90, 23)
-        Me.TextBox8.TabIndex = 89
+        Me.txt_tipoProducto.Enabled = False
+        Me.txt_tipoProducto.Location = New System.Drawing.Point(17, 86)
+        Me.txt_tipoProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.txt_tipoProducto.Name = "txt_tipoProducto"
+        Me.txt_tipoProducto.Size = New System.Drawing.Size(90, 23)
+        Me.txt_tipoProducto.TabIndex = 89
         '
         'Label17
         '
@@ -690,6 +692,17 @@ Partial Class frmHacer_Venta
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Location = New System.Drawing.Point(149, 115)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(82, 16)
+        Me.Label6.TabIndex = 94
+        Me.Label6.Text = "CANTIDAD"
+        '
         'frmHacer_Venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
@@ -779,12 +792,12 @@ Partial Class frmHacer_Venta
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents btn_Salir As System.Windows.Forms.Button
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_productosStock As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Private WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Private WithEvents txt_PrecioProducto As System.Windows.Forms.TextBox
     Private WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_NombreProducto As System.Windows.Forms.TextBox
+    Friend WithEvents txt_tipoProducto As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents btn_MostrarInventario As System.Windows.Forms.Button
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
@@ -795,4 +808,5 @@ Partial Class frmHacer_Venta
     Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Total2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

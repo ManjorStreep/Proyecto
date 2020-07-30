@@ -24,29 +24,19 @@ Partial Class frmReportesClientes
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FacturaDataSet = New Sotware_Farmatics.FacturaDataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.FacturaDataSet = New Sotware_Farmatics.FacturaDataSet()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ProductoBindingSource
-        '
-        Me.ProductoBindingSource.DataMember = "Producto"
-        Me.ProductoBindingSource.DataSource = Me.FacturaDataSet
-        '
-        'FacturaDataSet
-        '
-        Me.FacturaDataSet.DataSetName = "FacturaDataSet"
-        Me.FacturaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
@@ -81,7 +71,7 @@ Partial Class frmReportesClientes
         'ReportViewer1
         '
         ReportDataSource1.Name = "Clientes"
-        ReportDataSource1.Value = Me.ClientesBindingSource
+        ReportDataSource1.Value = Nothing
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sotware_Farmatics.ReporteCliente.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(40, 90)
@@ -89,10 +79,18 @@ Partial Class frmReportesClientes
         Me.ReportViewer1.Size = New System.Drawing.Size(827, 604)
         Me.ReportViewer1.TabIndex = 2
         '
+        'FacturaDataSet
+        '
+        Me.FacturaDataSet.DataSetName = "FacturaDataSet"
+        Me.FacturaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'ClientesBindingSource
         '
         Me.ClientesBindingSource.DataMember = "Clientes"
-        Me.ClientesBindingSource.DataSource = Me.FacturaDataSet
+        '
+        'ProductoBindingSource
+        '
+        Me.ProductoBindingSource.DataMember = "Producto"
         '
         'frmReportesClientes
         '
@@ -105,12 +103,12 @@ Partial Class frmReportesClientes
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmReportesClientes"
         Me.Text = "Form2"
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -118,7 +116,7 @@ Partial Class frmReportesClientes
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents ProductoBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents FacturaDataSet As Sotware_Farmatics.FacturaDataSet
     Friend WithEvents ClientesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents FacturaDataSet As Sotware_Farmatics.FacturaDataSet
+    Friend WithEvents ProductoBindingSource As System.Windows.Forms.BindingSource
 End Class
