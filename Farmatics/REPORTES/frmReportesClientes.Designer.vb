@@ -30,12 +30,10 @@ Partial Class frmReportesClientes
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.FacturaDataSet = New Sotware_Farmatics.FacturaDataSet()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -71,9 +69,9 @@ Partial Class frmReportesClientes
         'ReportViewer1
         '
         ReportDataSource1.Name = "Clientes"
-        ReportDataSource1.Value = Nothing
+        ReportDataSource1.Value = Me.ClientesBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sotware_Farmatics.ReporteCliente.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Sotware_Farmatics.Clientes.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(40, 90)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(827, 604)
@@ -87,10 +85,7 @@ Partial Class frmReportesClientes
         'ClientesBindingSource
         '
         Me.ClientesBindingSource.DataMember = "Clientes"
-        '
-        'ProductoBindingSource
-        '
-        Me.ProductoBindingSource.DataMember = "Producto"
+        Me.ClientesBindingSource.DataSource = Me.FacturaDataSet
         '
         'frmReportesClientes
         '
@@ -108,7 +103,6 @@ Partial Class frmReportesClientes
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FacturaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -118,5 +112,4 @@ Partial Class frmReportesClientes
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents ClientesBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents FacturaDataSet As Sotware_Farmatics.FacturaDataSet
-    Friend WithEvents ProductoBindingSource As System.Windows.Forms.BindingSource
 End Class

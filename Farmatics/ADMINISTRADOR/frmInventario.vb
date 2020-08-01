@@ -1,6 +1,8 @@
 ﻿Public Class frmInventario
 
     Dim producto As Producto
+    Public Property habilitar As Boolean = False
+ 
 
     Private Sub frmInventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' instanciamos la variable producto como un nuevo objeto tipo producto, pero vacio
@@ -10,13 +12,16 @@
     End Sub
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
-        ' Cuando se de dobleclick a algun registro del DataGridView se ejecutara esto
-        ' Se envia al frmHacer_Venta el producto que ha sido clickeado 
-        frmHacer_Venta.producto = New Producto(DataGridView1.CurrentRow.Cells(0).Value)
-        ' Luego imprimimos el producto enviado al frmHacer_Venta
-        frmHacer_Venta.ImprimirProducto(producto.Codigo)
+        ' Siempre y cuando este la variable click en TRUE, puede usar la opcion de dobleclick para seleccionar producto
+        If habilitar Then
+            ' Cuando se de dobleclick a algun registro del DataGridView se ejecutara esto
+            ' Se envia al frmHacer_Venta el producto que ha sido clickeado 
+            frmHacer_Venta.producto = New Producto(DataGridView1.CurrentRow.Cells(0).Value)
+            ' Luego imprimimos el producto enviado al frmHacer_Venta
+            frmHacer_Venta.ImprimirProducto(producto.Codigo)
 
-        ' Y de ultimo cerramos este formulario
-        Me.Close()
+            ' Y de ultimo cerramos este formulario
+            Me.Close()
+        End If
     End Sub
 End Class

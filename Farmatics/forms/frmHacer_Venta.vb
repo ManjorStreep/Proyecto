@@ -85,7 +85,8 @@ Public Class frmHacer_Venta
                 'Dado el caso de que exista el producto en el DataGridView, solo tendra que modificarse la cantidad comprada y el total
                 fila.Cells("Cantidad").Value = NumericUpDown1.Value
                 fila.Cells("Total2").Value = producto.Precio * NumericUpDown1.Value
-                ' Finalmente limpiamos
+                ' Finalmente limpiamos y actualizamos el precio
+                ActualizarPrecio()
                 Limpiar()
                 ' Una vez realizado los cambios, rompemos este evento para evitar que se ejecute el codigo de mas abajo
                 Return
@@ -161,7 +162,7 @@ Public Class frmHacer_Venta
         'parametros(8) = New ReportParameter("NacionalidadCliente", cb_NacionalidadCliente.SelectedItem)
 
         ' Esto sirve para registrar cliente y la factura en la base de datos
-        Dim Factura As New frmVisualizarReportes()
+        Dim Factura As New frmReportesFactura()
         Factura.Parametros(parametros, dataset)
         Factura.Show()
 
@@ -177,7 +178,9 @@ Public Class frmHacer_Venta
 
     ' Cuando se aprete el boton inventario, se mostrara el frmInventario
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btn_MostrarInventario.Click
-        frmInventario.Show()
+        Dim inventario As New frmInventario()
+        inventario.habilitar = True
+        inventario.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click

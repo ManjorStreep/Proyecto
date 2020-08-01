@@ -100,10 +100,16 @@
     <Compile Include="frmDatosSoftware.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ADMINISTRADOR\frmVisualizarReportes.Designer.vb">
-      <DependentUpon>frmVisualizarReportes.vb</DependentUpon>
+    <Compile Include="REPORTES\frmReportesInventario.Designer.vb">
+      <DependentUpon>frmReportesInventario.vb</DependentUpon>
     </Compile>
-    <Compile Include="ADMINISTRADOR\frmVisualizarReportes.vb">
+    <Compile Include="REPORTES\frmReportesInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTES\frmReportesFactura.Designer.vb">
+      <DependentUpon>frmReportesFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\frmReportesFactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FacturaDataSet.Designer.vb">
@@ -176,22 +182,31 @@
     <Compile Include="Clases\DatosSistema.vb" />
     <Compile Include="Clases\Empleado.vb" />
     <Compile Include="Clases\Producto.vb" />
+    <Compile Include="REPORTES\frmReportesEmpleados.Designer.vb">
+      <DependentUpon>frmReportesEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTES\frmReportesEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="REPORTES\frmReportesClientes.Designer.vb">
       <DependentUpon>frmReportesClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="REPORTES\frmReportesClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="REPORTES\Reportes.vb" />
+    <Compile Include="Clases\Reportes.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmDatosSoftware.resx">
       <DependentUpon>frmDatosSoftware.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ADMINISTRADOR\frmVisualizarReportes.resx">
-      <DependentUpon>frmVisualizarReportes.vb</DependentUpon>
+    <EmbeddedResource Include="REPORTES\frmReportesInventario.resx">
+      <DependentUpon>frmReportesInventario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ADMINISTRADOR\Report1.rdlc" />
+    <EmbeddedResource Include="REPORTES\frmReportesFactura.resx">
+      <DependentUpon>frmReportesFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\Factura.rdlc" />
     <EmbeddedResource Include="ADMINISTRADOR\frmInventario.resx">
       <DependentUpon>frmInventario.vb</DependentUpon>
     </EmbeddedResource>
@@ -219,12 +234,15 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTES\Copia de Report2.rdlc" />
+    <EmbeddedResource Include="REPORTES\frmReportesEmpleados.resx">
+      <DependentUpon>frmReportesEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\Empleados.rdlc" />
     <EmbeddedResource Include="REPORTES\frmReportesClientes.resx">
       <DependentUpon>frmReportesClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTES\ReportInventario.rdlc" />
-    <EmbeddedResource Include="REPORTES\Report2.rdlc" />
+    <EmbeddedResource Include="REPORTES\Inventario.rdlc" />
+    <EmbeddedResource Include="REPORTES\Clientes.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FacturaDataSet.xsc">

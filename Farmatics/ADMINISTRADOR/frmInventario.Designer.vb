@@ -22,8 +22,6 @@ Partial Class frmInventario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -31,7 +29,6 @@ Partial Class frmInventario
         Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Prescripcion = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Administracion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,11 +38,9 @@ Partial Class frmInventario
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Cantidad, Me.Precio, Me.Prescripcion, Me.Administracion})
-        Me.DataGridView1.DataSource = Me.ProductosBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 68)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -101,12 +96,10 @@ Partial Class frmInventario
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmInventario"
         Me.Text = "Form1"
-        CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents ProductosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents CODIGODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NOMBREDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents VALORDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn

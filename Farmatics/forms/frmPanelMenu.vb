@@ -112,8 +112,8 @@ Public Class frmPanelMenu
 
     Private Sub btnReporteInventario_Click(sender As Object, e As EventArgs) Handles btnReporteInventario.Click
 
-        ajustarPantallas(Me, frmVisualizarReportes)
-        abrirFormulariosHijos(frmVisualizarReportes)
+        ajustarPantallas(Me, frmReportesInventario)
+        abrirFormulariosHijos(New frmReportesInventario)
         ocultarSubmenu()
     End Sub
 
@@ -134,7 +134,7 @@ Public Class frmPanelMenu
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnAdministracionInventario.Click
 
         ajustarPantallas(Me, frmInventario)
-        abrirFormulariosHijos(frmInventario)
+        abrirFormulariosHijos(New frmInventario)
         ocultarSubmenu()
     End Sub
 
@@ -146,7 +146,7 @@ Public Class frmPanelMenu
     End Sub
 
     Private Sub btnReportesEmpleados_Click(sender As Object, e As EventArgs) Handles btnReportesEmpleados.Click
-        'abrirFormulariosHijos(new frmReportesEmpleados) : ajustarPantallas(me,frmReportesEmpleados)
+        abrirFormulariosHijos(New frmReportesEmpleados) : ajustarPantallas(Me, frmReportesEmpleados)
         ocultarSubmenu()
     End Sub
     '---------------------------------------------------------------------------------------------'
